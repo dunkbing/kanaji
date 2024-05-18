@@ -3,6 +3,10 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { all } from "../data/words/all";
 import { isKana, toRomaji } from "wanakana";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+
 const Typerace = () => {
   const [expression, setExpression] = useState("");
   const [useKanji, setUseKanji] = useState(false);
@@ -79,8 +83,8 @@ const Typerace = () => {
     getWord();
     input.value = "";
   };
-  const handleUseKanji = () => {
-    setUseKanji(!useKanji);
+  const handleUseKanji = (use) => {
+    setUseKanji(use);
   };
   return (
     <div className="flex flex-col mx-4 lg:mx-96 py-4 lg:p-8 space-y-6 lg:space-y-8">
@@ -98,10 +102,18 @@ const Typerace = () => {
           <span className="my-auto">{convertTime(time)}</span>
         </div>
       </div>
-      <div className="flex flex-col mx-auto text-center space-y-2 lg:space-y-8">
+      <div className="flex flex-col mx-auto text-center items-center space-y-2 lg:space-y-8">
         <span className="text-4xl lg:text-6xl font-bold">
           {useKanji ? expression : word}
         </span>
+        <div className="flex items-center space-x-2">
+          <Label
+            htmlFor="useKanji"
+          >
+            Kanji
+          </Label>
+          <Switch id="useKanji" onCheckedChange={handleUseKanji} />
+        </div>
         <span className="text-primary text-base capitalize">{meaning}</span>
       </div>
       <div className="flex flex-col lg:flex-row mx-auto space-y-6 lg:space-y-0 lg:space-x-2">
@@ -116,36 +128,20 @@ const Typerace = () => {
           id="inputWord"
           placeholder={result ? "Please Reset" : "Type the answer"}
         />
-        <button
-          className=" mx-auto bg-primary hover:bg-opacity-70 bg-opacity-80 text-white focus:outline-none active:ring-2 active:ring-primary px-5 py-3 rounded-lg ring-offset-2"
+        <Button
+          className="hover:bg-opacity-70 bg-opacity-80 focus:outline-none active:ring-2 active:ring-primary px-5 py-3 rounded-lg ring-offset-2"
           onClick={() => handlePass()}
         >
           Pass
-        </button>
+        </Button>
       </div>
       <div className="flex mx-auto space-x-2">
-        <button
+        <Button
           className="mx-auto bg-gray-200 active:ring-2 active:ring-primary ring-offset-2 bg-opacity-80 hover:bg-opacity-70 focus:outline-none px-5 py-3 rounded-lg cursor-pointer"
-          onClick={() => handleReset()}
+          onClick={handleReset}
         >
           Reset
-        </button>
-        <label
-          htmlFor="useKanji"
-          className={
-            (useKanji ? "bg-blue-400 text-white" : "bg-gray-200") +
-            " flex mx-auto hover:bg-opacity-80 px-5 py-3 rounded-lg cursor-pointer focus-within:ring-2 focus-within:ring-primary"
-          }
-        >
-          <span>Kanji</span>
-          <input
-            className="hidden"
-            onChange={() => handleUseKanji()}
-            type="checkbox"
-            name="useKanji"
-            id="useKanji"
-          />
-        </label>
+        </Button>
       </div>
       <span className={(!result ? "hidden " : "") + "text-center"}>
         Congratulations, your score is {lastScore}

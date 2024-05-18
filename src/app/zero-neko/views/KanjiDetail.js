@@ -6,6 +6,7 @@ import { isKanji } from "nihongo/src/analysers";
 
 import KanjiListDetail from "../components/KanjiListDetail";
 import KanjiWordContainer from "../components/KanjiWordContainer";
+import { Button } from "../../../components/ui/button";
 
 const KanjiDetail = (props) => {
   const kanji = props.kanji;
@@ -99,7 +100,7 @@ const KanjiDetail = (props) => {
             sendWordsLength={(wordsLength) => setWordsLength(wordsLength)}
           />
         </div>
-        <button
+        <Button
           className={
             (wordsLimit > wordsLength || wordsLength === 0 ? "hidden " : "") +
             "transition-colors mt-12 duration-300 mx-auto border-b-2 border-black hover:border-primary hover:text-primary hover:cursor-pointer"
@@ -109,7 +110,7 @@ const KanjiDetail = (props) => {
           }}
         >
           More Words
-        </button>
+        </Button>
       </div>
     </>
   );

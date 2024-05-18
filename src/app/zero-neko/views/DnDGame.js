@@ -7,6 +7,8 @@ import H2 from "../components/H2";
 import CategoryRadioButton from "../components/CategoryRadioButton";
 import DropsContainer from "../components/DropsContainer";
 import DragsContainer from "../components/DragsContainer";
+import { Button } from "@/components/ui/button";
+import { useMemo } from "react";
 
 const DnDGame = () => {
   const [dragItem, setDragItem] = useState(null);
@@ -18,9 +20,18 @@ const DnDGame = () => {
   const [timeCount, setTimeCount] = useState(false);
   const [isStartDisabled, setIsStartDisabled] = useState(false);
   //audio
-  const [correctAudio] = useState(new Audio("/sfx/correct.wav"));
-  const [wrongAudio] = useState(new Audio("/sfx/wrong.wav"));
-  const [winAudio] = useState(new Audio("/sfx/win.wav"));
+  const correctAudio = useMemo(() => {
+    if (typeof Audio !== "undefined") return new Audio("/sfx/correct.wav");
+    return null;
+  }, []);
+  const wrongAudio = useMemo(() => {
+    if (typeof Audio !== "undefined") return new Audio("/sfx/wrong.wav");
+    return null;
+  }, []);
+  const winAudio = useMemo(() => {
+    if (typeof Audio !== "undefined") return new Audio("/sfx/win.wav");
+    return null;
+  }, []);
 
   const onDrop = (item) => {
     if (item === dragItem) {
@@ -33,6 +44,7 @@ const DnDGame = () => {
       setDragItem(null);
     }
   };
+
   useEffect(() => {
     const interval = setInterval(() => {
       timeCount && setTime((t) => t + 1);
@@ -135,7 +147,7 @@ const DnDGame = () => {
           </div>
         </div>
         <div className="flex">
-          <button
+          <Button
             onClick={() => handleStart()}
             className={`flex transition-all delay-75 px-6 py-4 lg:px-8 mt-4 text-lg lg:text-3xl rounded-lg mx-auto bg-gray-200 ${
               isStartDisabled ? "text-gray-400" : "text-gray-600"
@@ -156,7 +168,7 @@ const DnDGame = () => {
                 <path stroke="currentColor" d="M19 12H4.75"></path>
               </svg>
             </div>
-          </button>
+          </Button>
         </div>
       </div>
       <div
@@ -166,7 +178,7 @@ const DnDGame = () => {
         }
       >
         <div className="flex lg:mx-6">
-          <button
+          <Button
             onClick={() => handleBack()}
             className="transtion duration-150 space-x-2 mr-auto md:mr-2 bg-gray-200 hover:bg-primary hover:text-white px-5 py-2 lg:px-7 lg:py-3 rounded-lg text-base flex focus:outline-none focus:ring-2 focus:ring-primary ring-offset-2"
           >
@@ -180,13 +192,13 @@ const DnDGame = () => {
               </svg>
             </div>
             <span className="my-auto">Back</span>
-          </button>
-          <button
+          </Button>
+          <Button
             onClick={() => handleReset()}
             className="flex transtion duration-150 text-base bg-gray-200 px-5 py-2 lg:px-7 lg:py-3 space-x-2 active:ring-2 focus:outline-none active:ring-primary ring-offset-2 bg-opacity-80 hover:bg-opacity-70 rounded-lg"
           >
             <span className="my-auto">Reset</span>
-          </button>
+          </Button>
           <div className="flex space-x-2 bg-green-200 px-5 py-2 lg:px-7 lg:py-3 rounded-lg  lg:text-lg ml-auto">
             <div className="my-auto">
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">

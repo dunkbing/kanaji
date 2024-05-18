@@ -21,7 +21,7 @@ const Kana = (props) => {
   return (
     <div className="text-center lg:mx-36">
       <H1 span={props.symbol} text={props.title} />
-      <div className="grid grid-cols-1 lg:grid-cols-2 px-3 py-4 lg:p-6 shadow-inner mx-1 bg-gray-200 rounded-lg space-y-4 lg:space-y-0">
+      <div className="grid grid-cols-1 lg:grid-cols-2 px-3 py-4 lg:p-6 mx-1 rounded-lg space-y-4 lg:space-y-0 border-2 border-black bg-white p-5 shadow-base">
         <Suspense fallback={<FallbackLoading height="96" />}>
           <KanaContainer kana={kana} />
         </Suspense>

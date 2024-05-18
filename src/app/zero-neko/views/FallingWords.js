@@ -7,6 +7,67 @@ import { TextStyle } from "pixi.js";
 
 import { all } from "../data/words/all";
 
+const difficulties = [
+  {
+    id: 0,
+    name: "Beginner",
+    speed: 3,
+    words: {
+      hiragana: all.filter(
+        (word) => word.expression.length < 4 && isHiragana(word.expression),
+      ),
+      katakana: all.filter(
+        (word) => word.expression.length < 4 && isKatakana(word.expression),
+      ),
+    },
+  },
+  {
+    id: 1,
+    name: "Easy",
+    speed: 8,
+    words: {
+      hiragana: all.filter(
+        (word) => word.expression.length < 4 && isHiragana(word.expression),
+      ),
+      katakana: all.filter(
+        (word) => word.expression.length < 4 && isKatakana(word.expression),
+      ),
+    },
+  },
+  {
+    id: 2,
+    name: "Medium",
+    speed: 12,
+    words: {
+      hiragana: all.filter(
+        (word) =>
+          word.expression.length < 5 &&
+          isHiragana(word.expression) &&
+          word.expression.length > 3,
+      ),
+      katakana: all.filter(
+        (word) =>
+          word.expression.length < 5 &&
+          isKatakana(word.expression) &&
+          word.expression.length > 3,
+      ),
+    },
+  },
+  {
+    id: 3,
+    name: "Hard",
+    speed: 16,
+    words: {
+      hiragana: all.filter(
+        (word) => word.expression.length > 3 && isHiragana(word.expression),
+      ),
+      katakana: all.filter(
+        (word) => word.expression.length > 3 && isKatakana(word.expression),
+      ),
+    },
+  },
+];
+
 const FallingWords = () => {
   const [words, setWords] = useState([]);
   const [isStarted, setIsStarted] = useState(false);
@@ -15,66 +76,6 @@ const FallingWords = () => {
   const [inputColor, changeInputColor] = useState("");
   const [score, setScore] = useState(0);
   const [chosenAlphabet, setChosenAlphabet] = useState("hiragana");
-  const difficulties = [
-    {
-      id: 0,
-      name: "Beginner",
-      speed: 3,
-      words: {
-        hiragana: all.filter(
-          (word) => word.expression.length < 4 && isHiragana(word.expression),
-        ),
-        katakana: all.filter(
-          (word) => word.expression.length < 4 && isKatakana(word.expression),
-        ),
-      },
-    },
-    {
-      id: 1,
-      name: "Easy",
-      speed: 8,
-      words: {
-        hiragana: all.filter(
-          (word) => word.expression.length < 4 && isHiragana(word.expression),
-        ),
-        katakana: all.filter(
-          (word) => word.expression.length < 4 && isKatakana(word.expression),
-        ),
-      },
-    },
-    {
-      id: 2,
-      name: "Medium",
-      speed: 12,
-      words: {
-        hiragana: all.filter(
-          (word) =>
-            word.expression.length < 5 &&
-            isHiragana(word.expression) &&
-            word.expression.length > 3,
-        ),
-        katakana: all.filter(
-          (word) =>
-            word.expression.length < 5 &&
-            isKatakana(word.expression) &&
-            word.expression.length > 3,
-        ),
-      },
-    },
-    {
-      id: 3,
-      name: "Hard",
-      speed: 16,
-      words: {
-        hiragana: all.filter(
-          (word) => word.expression.length > 3 && isHiragana(word.expression),
-        ),
-        katakana: all.filter(
-          (word) => word.expression.length > 3 && isKatakana(word.expression),
-        ),
-      },
-    },
-  ];
 
   const [game, setGame] = useState();
 
@@ -90,20 +91,22 @@ const FallingWords = () => {
   }
 
   useEffect(() => {
-    if (window) return;
+    if (typeof window === 'undefined') return;
 
     function handleResize() {
       loadGame();
     }
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [window]);
+  }, []);
 
   function loadGame(difficultyId, alphabet) {
     difficultyId = Number.isFinite(difficultyId)
       ? difficultyId
       : selectedDifficulty;
     alphabet = alphabet ? alphabet : chosenAlphabet;
+    if (typeof window === 'undefined') return;
+
     const game = new Game(difficulties[difficultyId], alphabet);
     let words = [game.getRandomWord()];
     setGame(game);
@@ -242,6 +245,7 @@ const FallingWords = () => {
 
 class Game {
   constructor(difficulty, alphabet) {
+    debugger
     this.width = window.innerWidth / 2;
     this.height = window.innerWidth / 4;
     if (window.innerHeight > window.innerWidth) {
@@ -254,6 +258,7 @@ class Game {
       return new Word(word, this.width);
     });
   }
+
   getRandomWord() {
     let word = this.words[Math.floor(Math.random() * this.words.length)];
     word.id = Math.floor(Math.random() * 1000000);

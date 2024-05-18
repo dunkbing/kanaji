@@ -5,12 +5,14 @@ import axios from "axios";
 import H1 from "../components/H1";
 import CategoryFilterButton from "../components/CategoryFilterButton";
 import KanjiContainer from "../components/KanjiContainer";
+import { Button } from "@/components/ui/button";
 
 const Kanji = () => {
   const [kanjiList, setKanjiList] = useState([]);
   const [filter, setFilter] = useState("grade-1");
   const [modal, setModal] = useState(false);
   const [checkData, setCheckData] = useState(true);
+
   useEffect(() => {
     const fetchData = async () => {
       axios.get("https://kanjiapi.dev/v1/kanji/" + filter).then((response) => {
@@ -28,10 +30,11 @@ const Kanji = () => {
     setFilter(newFilter);
     setModal(false);
   };
+
   return (
     <div className="relative text-center lg:mx-36">
       <H1 span={"漢字"} text={"Kanji"} />
-      <div className="flex flex-col pb-4 px-1 ">
+      <div className="flex flex-col pb-4 px-1 border-2 border-black bg-white p-5 shadow-base">
         <div className="flex flex-col lg:flex-row pt-4">
           {/* Modal */}
           <div className="relative lg:ml-2 my-auto">
@@ -39,7 +42,7 @@ const Kanji = () => {
             <span className="text-sm pb-3 pl-1 pt-0 text-left capitalize block">
               {'Filter: Searched "' + filter + '"'}
             </span>
-            <button
+            <Button
               onClick={() => {
                 setModal(!modal);
               }}
@@ -62,7 +65,7 @@ const Kanji = () => {
                   d="M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z"
                 />
               </svg>
-            </button>
+            </Button>
             {/* Modal */}
             <div
               className={
@@ -114,7 +117,7 @@ const Kanji = () => {
           {/* Modal End */}
         </div>
       </div>
-      <ul className="grid grid-cols-4 lg:grid-cols-6 items-center xl:grid-cols-9 px-3 py-4 lg:p-6 mx-1 gap-2 lg:gap-3 rounded-lg lg:space-y-0 bg-gray-200 shadow-inner">
+      <ul className="mt-2 grid grid-cols-4 lg:grid-cols-6 items-center xl:grid-cols-9 px-3 py-4 lg:p-6 mx-1 gap-2 lg:gap-3 rounded-lg lg:space-y-0 border-2 border-black bg-white p-5 shadow-base">
         <KanjiContainer
           kanjiList={kanjiList}
           filter={filter}

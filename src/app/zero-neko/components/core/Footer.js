@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useContext } from 'react';
 
 //Data
@@ -14,7 +12,7 @@ const logoIcon = '/images/logo-icon.svg';
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-gray-100 pt-8 pb-4 ">
+    <footer className="flex flex-col bg-white pt-8 pb-4">
       <div className="grid grid-cols-12 mx-8 lg:mx-32">
         <div className="col-span-12 lg:col-span-3 mb-4 lg:mb-8">
           <img
@@ -39,11 +37,11 @@ const Footer = () => {
           <span>Made with 🧡 by </span>
           <a
             className="hover:text-primary border-dashed border-b-2 border-gray-900 hover:border-primary"
-            href="https://aldi-maulidi.vercel.app/"
+            href="https://db99.dev"
             target="_blank"
             rel="noreferrer"
           >
-            nursm{' '}
+            dunkbing{' '}
           </a>
         </span>
         <span className="lg:ml-auto">
