@@ -1,21 +1,21 @@
 export const me = [
     {
-        path: "https://www.github.com/aldy-san",
+        path: "https://www.github.com/dunkbing",
         title: "Github",
         icon: ""
     },
     {
-        path: "https://www.twitter.com/ald_iiii",
+        path: "https://x.com/dunkbingg",
         title: "Twitter",
         icon: ""
     },
     {
-        path: "https://www.instagram.com/nur.sm_",
+        path: "https://www.instagram.com/dunkbingg",
         title: "Instagram",
         icon: ""
     },
     {
-        path: "http://aldi-maulidi.vercel.app/",
+        path: "https://db99.dev",
         title: "Website",
         icon: ""
     }

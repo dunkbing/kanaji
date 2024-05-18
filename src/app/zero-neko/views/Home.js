@@ -29,7 +29,7 @@ const Home = () => {
               Languange.
             </h1>
             <p className="text-base lg:text-2xl mt-4 mb-6 lg:mt-8 w-10/12 lg:leading-normal mx-auto lg:mx-0">
-              Zeroneko is a website that provide dictionary and game to help
+              Kanaji is a website that provide dictionary and game to help
               everyone learn Japanese language.
             </p>
             <ButtonInstalPWA />
