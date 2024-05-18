@@ -1,5 +1,6 @@
 import React from 'react';
-import logoIconWhite from '../assets/logo-icon-white.svg';
+
+const logoIcon = '/images/logo-icon.svg';
 
 const FallbackLoading = (props) => {
   return (
@@ -16,7 +17,7 @@ const FallbackLoading = (props) => {
     >
       <img
         className={!props.text && !props.span ? 'm-auto' : 'm-auto mb-8'}
-        src={logoIconWhite}
+        src={logoIcon}
         alt="logo-loading"
         width="100"
       />

@@ -1,9 +1,9 @@
-import Layout from '@/app/zero-neko/components/core/Layout';
+import Kana from '../zero-neko/views/Kana';
 
 export const metadata = {
-  title: 'Home'
+  title: 'Hiragana'
 }
 
-export default function Home() {
-  return <Layout />;
+export default function HiraPage() {
+  return <Kana title={metadata.title} />;
 }

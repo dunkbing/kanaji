@@ -1,11 +1,14 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
 
 import H1 from '../components/H1';
 import WordsContainer from '../components/WordsContainer';
 
 const Search = () => {
-  const location = usePathname();
+  const searchParams = useSearchParams()
+
   const [words, setWords] = useState();
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
@@ -15,16 +18,12 @@ const Search = () => {
     const fetchData = async () => {
       setData([]);
       setCheckData(true);
-      const searchParams = new URLSearchParams(location.search);
-      const wordParams = searchParams.get('words');
+      const wordParams = searchParams.get('words')
       if (words !== wordParams) {
         setPage(1);
         setWords(wordParams);
       }
-      const proxy = 'https://zeroneko-corsproxy.herokuapp.com/';
-      const url =
-        proxy +
-        'http://jisho.org/api/v1/search/words?keyword=' +
+      const url = 'http://jisho.org/api/v1/search/words?keyword=' +
         encodeURIComponent(wordParams) +
         (page ? '&page=' + page : '');
       const response = await fetch(url);
@@ -36,7 +35,7 @@ const Search = () => {
       window.scrollTo(0, 0);
     };
     fetchData();
-  }, [page, location, words]);
+  }, [page, words, searchParams]);
 
   return (
     <>

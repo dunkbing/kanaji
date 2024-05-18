@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
-import axios from 'axios';
-import { isKanji } from 'nihongo/src/analysers';
+"use client";
 
-import KanjiListDetail from '../components/KanjiListDetail';
-import KanjiWordContainer from '../components/KanjiWordContainer';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { isKanji } from "nihongo/src/analysers";
 
-const KanjiDetail = () => {
-  const location = usePathname();
-  const kanji = location.split('/')[2];
+import KanjiListDetail from "../components/KanjiListDetail";
+import KanjiWordContainer from "../components/KanjiWordContainer";
+
+const KanjiDetail = (props) => {
+  const kanji = props.kanji;
+  console.log(kanji)
   const [kanjiDetail, setKanjiDetail] = useState([]);
   const [wordsLimit, setWordsLimit] = useState(5);
   const [wordsLength, setWordsLength] = useState(0);
@@ -16,7 +17,7 @@ const KanjiDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       setKanjiDetail([]);
-      axios.get('https://kanjiapi.dev/v1/kanji/' + kanji).then((response) => {
+      axios.get("https://kanjiapi.dev/v1/kanji/" + kanji).then((response) => {
         setKanjiDetail(response.data);
         window.scrollTo(0, 0);
       });
@@ -36,7 +37,7 @@ const KanjiDetail = () => {
         <div className="flex flex-col lg:flex-row lg:mb-0 lg:space-x-20">
           <div className="flex flex-col mx-auto text-center mr-auto mb-8">
             <h1 className="text-7xl lg:text-9xl font-semibold mb-6 lg:mt-8 lg:mb-12 text-center">
-              {kanjiDetail.kanji ? kanjiDetail.kanji : '-'}
+              {kanjiDetail.kanji ? kanjiDetail.kanji : "-"}
             </h1>
             <span>
               Heisig Keyword
@@ -48,7 +49,7 @@ const KanjiDetail = () => {
               </a>
             </span>
             <p className="font-black text-xl lg:text-4xl mb-4 capitalize py-3">
-              {kanjiDetail ? kanjiDetail.heisig_en : 'One'}
+              {kanjiDetail ? kanjiDetail.heisig_en : "One"}
             </p>
             <table className="table-auto text-left">
               <thead>
@@ -56,21 +57,21 @@ const KanjiDetail = () => {
                   <th>Grade</th>
                   <th>:</th>
                   <th className="font-normal">
-                    {kanjiDetail.grade ? kanjiDetail.grade : '-'}
+                    {kanjiDetail.grade ? kanjiDetail.grade : "-"}
                   </th>
                 </tr>
                 <tr>
                   <th>JLPT</th>
                   <th>:</th>
                   <th className="font-normal">
-                    {kanjiDetail.jlpt ? kanjiDetail.jlpt : '-'}
+                    {kanjiDetail.jlpt ? kanjiDetail.jlpt : "-"}
                   </th>
                 </tr>
                 <tr>
                   <th>Stroke</th>
                   <th>:</th>
                   <th className="font-normal">
-                    {kanjiDetail.stroke_count ? kanjiDetail.stroke_count : '-'}
+                    {kanjiDetail.stroke_count ? kanjiDetail.stroke_count : "-"}
                   </th>
                 </tr>
               </thead>
@@ -100,8 +101,8 @@ const KanjiDetail = () => {
         </div>
         <button
           className={
-            (wordsLimit > wordsLength || wordsLength === 0 ? 'hidden ' : '') +
-            'transition-colors mt-12 duration-300 mx-auto border-b-2 border-black hover:border-primary hover:text-primary hover:cursor-pointer'
+            (wordsLimit > wordsLength || wordsLength === 0 ? "hidden " : "") +
+            "transition-colors mt-12 duration-300 mx-auto border-b-2 border-black hover:border-primary hover:text-primary hover:cursor-pointer"
           }
           onClick={() => {
             setWordsLimit(wordsLimit + 5);
