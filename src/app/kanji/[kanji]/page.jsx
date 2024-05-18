@@ -1,5 +1,7 @@
 import KanjiDetail from '@/app/zero-neko/views/KanjiDetail';
 
+export const runtime = 'edge';
+
 export const metadata = {
   title: 'Kanji'
 }
