@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
-import H1 from '../components/H1';
+import H1 from "../components/H1";
 
-const Kana = () => {
+const Game = () => {
   const gameIcon = (
     <div className="fill-current transform scale-150 mb-5">
       <svg
@@ -16,9 +16,10 @@ const Kana = () => {
       </svg>
     </div>
   );
+
   return (
     <div className="flex flex-col text-center lg:mx-36">
-      <H1 span={gameIcon} text={'Game'} />
+      <H1 span={gameIcon} text={"Game"} />
       <div className="flex flex-col space-y-6">
         <div className="flex flex-col space-y-4 mx-8">
           <Link
@@ -39,10 +40,6 @@ const Kana = () => {
           >
             <span>Falling Words</span>
           </Link>
-          {/* <li className="text-gray-600 dark:text-gray-300 bg-gray-200  dark:bg-gray-900  text-xl mx-auto py-3 px-6 rounded-full ">
-                        <span>Typeracing</span>
-                        <span className="block text-primary text-sm"> Soon </span>
-                    </li> */}
         </div>
         <span className="text-base max-w-prose  mx-auto">
           More Games Coming Soon
@@ -52,4 +49,4 @@ const Kana = () => {
   );
 };
 
-export default Kana;
+export default Game;

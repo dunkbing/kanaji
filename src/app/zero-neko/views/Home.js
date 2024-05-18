@@ -1,11 +1,13 @@
+"use client";
+
 import React from "react";
-import Link from "next/link";
 import { Fade } from "react-reveal";
 
 import ButtonInstalPWA from "../components/ButtonInstalPWA";
+import Faq from "../../../components/faq";
+import Game from "./Game";
 
 const illus = "/images/illus.svg";
-const searchIllus = "/images/searchIllus.svg";
 
 const Home = () => {
   return (
@@ -26,77 +28,22 @@ const Home = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-red-500 to-red-800">
                 Japanese
               </span>{" "}
-              Languange.
             </h1>
             <p className="text-base lg:text-2xl mt-4 mb-6 lg:mt-8 w-10/12 lg:leading-normal mx-auto lg:mx-0">
-              Kanaji is a website that provide dictionary and game to help
-              everyone learn Japanese language.
+              Kanaji is an online platform that helps learners master Japanese
+              through its comprehensive dictionary and engaging interactive
+              games.
             </p>
             <ButtonInstalPWA />
           </div>
         </section>
       </Fade>
       <Fade bottom>
-        <section className="flex flex-col m-8">
-          <h1 className="animate-bounce block text-4xl text-center font-black uppercase my-4">
-            How to search?
-          </h1>
+        <section className="flex flex-col justify-center m-8">
+          <Game />
           <hr className="h-1 w-48 bg-primary border-none mx-auto mb-9 lg:mb-12 " />
-          <div className="flex flex-col lg:flex-row gap-8">
-            <div className="mx-auto order-last lg:order-first">
-              <img src={searchIllus} alt="" width="300" />
-            </div>
-            <div className="mx-auto text-lg my-auto space-y-4">
-              <p>Here a few example to search words or kanji.</p>
-              <ul className="list-disc list-inside space-y-1">
-                <li>
-                  Search by English:{" "}
-                  <Link
-                    className="border-dashed border-b-2 border-current hover:text-primary hover:border-primary"
-                    href='/search?words="food"'
-                  >
-                    &quot;food&quot;
-                  </Link>
-                </li>
-                <li>
-                  Search by Romaji:{" "}
-                  <Link
-                    className="border-dashed border-b-2 border-current hover:text-primary hover:border-primary"
-                    href="/search?words=ai"
-                  >
-                    ai
-                  </Link>
-                </li>
-                <li>
-                  Search by Kana:{" "}
-                  <Link
-                    className="border-dashed border-b-2 border-current hover:text-primary hover:border-primary"
-                    href="/search?words=あお"
-                  >
-                    あお
-                  </Link>
-                </li>
-                <li>
-                  Search by Kanji:{" "}
-                  <Link
-                    className="border-dashed border-b-2 border-current hover:text-primary hover:border-primary"
-                    href="/search?words=犬"
-                  >
-                    犬
-                  </Link>
-                </li>
-                <li>
-                  Search by Tag:{" "}
-                  <Link
-                    className="border-dashed border-b-2 border-current hover:text-primary hover:border-primary"
-                    href="/search?words=%23jlpt-n3 %23adjective"
-                  >
-                    #jlpt-n3 #adjective
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <Faq />
+          <hr className="h-1 w-48 bg-primary border-none mx-auto mb-9 lg:mb-12 " />
         </section>
       </Fade>
     </div>

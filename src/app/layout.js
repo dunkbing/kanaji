@@ -1,4 +1,3 @@
-import { Inter } from "next/font/google";
 import { DM_Sans } from "next/font/google";
 
 import Header from "./zero-neko/components/core/Header";
@@ -6,7 +5,6 @@ import BottomNav from "./zero-neko/components/core/BottomNav";
 import Footer from "./zero-neko/components/core/Footer";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {

@@ -25,6 +25,7 @@ const Kanji = () => {
     };
     fetchData();
   }, [filter]);
+
   const changeFilter = (newFilter) => {
     setKanjiList([]);
     setFilter(newFilter);

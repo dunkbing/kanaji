@@ -13,8 +13,8 @@ const logoIcon = "/images/logo-icon.svg";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-white pt-8 pb-4">
-      <div className="flex flex-row justify-center mx-8 lg:mx-32">
+    <footer className="flex flex-col bg-main pt-8 pb-4">
+      <div className="flex flex-row justify-center   mx-8 lg:mx-32">
         <div className="flex flex-col mb-4 lg:mb-8">
           <Image
             src="/images/logo.png"
