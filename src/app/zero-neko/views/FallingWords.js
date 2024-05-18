@@ -1,108 +1,110 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { toRomaji, isHiragana, isKatakana } from 'wanakana';
-import { Stage, Text, Graphics } from '@inlet/react-pixi';
-import { TextStyle } from 'pixi.js';
+"use client";
 
-import { all } from '../data/words/all';
+import React, { useState, useEffect, useRef } from "react";
+import { toRomaji, isHiragana, isKatakana } from "wanakana";
+import { Stage, Text, Graphics } from "@inlet/react-pixi";
+import { TextStyle } from "pixi.js";
+
+import { all } from "../data/words/all";
 
 const FallingWords = () => {
   const [words, setWords] = useState([]);
   const [isStarted, setIsStarted] = useState(false);
   const [selectedDifficulty, setDifficulty] = useState(0);
-  const [currentText, setCurrentText] = useState('');
-  const [inputColor, changeInputColor] = useState('');
+  const [currentText, setCurrentText] = useState("");
+  const [inputColor, changeInputColor] = useState("");
   const [score, setScore] = useState(0);
-  const [chosenAlphabet, setChosenAlphabet] = useState('hiragana');
+  const [chosenAlphabet, setChosenAlphabet] = useState("hiragana");
   const difficulties = [
     {
       id: 0,
-      name: 'Beginner',
+      name: "Beginner",
       speed: 3,
       words: {
         hiragana: all.filter(
-          (word) => word.expression.length < 4 && isHiragana(word.expression)
+          (word) => word.expression.length < 4 && isHiragana(word.expression),
         ),
         katakana: all.filter(
-          (word) => word.expression.length < 4 && isKatakana(word.expression)
+          (word) => word.expression.length < 4 && isKatakana(word.expression),
         ),
       },
     },
     {
       id: 1,
-      name: 'Easy',
+      name: "Easy",
       speed: 8,
       words: {
         hiragana: all.filter(
-          (word) => word.expression.length < 4 && isHiragana(word.expression)
+          (word) => word.expression.length < 4 && isHiragana(word.expression),
         ),
         katakana: all.filter(
-          (word) => word.expression.length < 4 && isKatakana(word.expression)
+          (word) => word.expression.length < 4 && isKatakana(word.expression),
         ),
       },
     },
     {
       id: 2,
-      name: 'Medium',
+      name: "Medium",
       speed: 12,
       words: {
         hiragana: all.filter(
           (word) =>
             word.expression.length < 5 &&
             isHiragana(word.expression) &&
-            word.expression.length > 3
+            word.expression.length > 3,
         ),
         katakana: all.filter(
           (word) =>
             word.expression.length < 5 &&
             isKatakana(word.expression) &&
-            word.expression.length > 3
+            word.expression.length > 3,
         ),
       },
     },
     {
       id: 3,
-      name: 'Hard',
+      name: "Hard",
       speed: 16,
       words: {
         hiragana: all.filter(
-          (word) => word.expression.length > 3 && isHiragana(word.expression)
+          (word) => word.expression.length > 3 && isHiragana(word.expression),
         ),
         katakana: all.filter(
-          (word) => word.expression.length > 3 && isKatakana(word.expression)
+          (word) => word.expression.length > 3 && isKatakana(word.expression),
         ),
       },
     },
   ];
 
-  const [game, setGame] = useState(
-    new Game(difficulties[selectedDifficulty], chosenAlphabet)
-  );
+  const [game, setGame] = useState();
 
   //#TODO: Add more interactivity, maybe spawn new words randomly, or also provide the world translation
   //needs polishing overall
   function handleDifficultyChange(id) {
     setDifficulty(id);
     loadGame(id);
-    setCurrentText('');
-    changeInputColor('');
+    setCurrentText("");
+    changeInputColor("");
     setIsStarted(true);
     setScore(0);
   }
 
   useEffect(() => {
+    if (window) return;
+
     function handleResize() {
       loadGame();
     }
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  });
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [window]);
 
   function loadGame(difficultyId, alphabet) {
     difficultyId = Number.isFinite(difficultyId)
       ? difficultyId
       : selectedDifficulty;
     alphabet = alphabet ? alphabet : chosenAlphabet;
-    let game = new Game(difficulties[difficultyId], alphabet);
+    const game = new Game(difficulties[difficultyId], alphabet);
     let words = [game.getRandomWord()];
     setGame(game);
     setWords(words);
@@ -117,8 +119,8 @@ const FallingWords = () => {
     });
     words.forEach((word) => {
       if (word.y < game.height - 5) return;
-      setCurrentText('You lost!, set difficulty to start game again..');
-      changeInputColor('#dc2626');
+      setCurrentText("You lost!, set difficulty to start game again..");
+      changeInputColor("#dc2626");
       setIsStarted(false);
     });
     setWords(w);
@@ -130,20 +132,20 @@ const FallingWords = () => {
   function handleInput(e) {
     let value = e.target.value;
     setCurrentText(value);
-    if (!value.endsWith(' ') || words.length === 0) return;
+    if (!value.endsWith(" ") || words.length === 0) return;
     value = value.trim();
     let correctWord = words.findIndex(
-      (word) => word.text === value || word.romanization === value
+      (word) => word.text === value || word.romanization === value,
     );
     if (correctWord > -1) {
-      setCurrentText('');
-      changeInputColor('#10b981');
+      setCurrentText("");
+      changeInputColor("#10b981");
       setScore(score + words[correctWord].text.length);
       words.splice(correctWord, 1, game.getRandomWord()); //removes word and adds a new one
       setWords(words);
     } else {
-      changeInputColor('#dc2626');
-      console.log('wrong word');
+      changeInputColor("#dc2626");
+      console.log("wrong word");
     }
   }
   useInterval(tick, 50);
@@ -156,8 +158,8 @@ const FallingWords = () => {
             key={difficulty.id}
             className={`${
               difficulty.id === selectedDifficulty
-                ? 'bg-primary'
-                : 'bg-gray-200'
+                ? "bg-primary"
+                : "bg-gray-200"
             } p-2 px-4 bg-opacity-80 hover:bg-opacity-70 rounded-lg cursor-pointer`}
             onClick={() => handleDifficultyChange(difficulty.id)}
           >
@@ -176,56 +178,55 @@ const FallingWords = () => {
       </div>
 
       <div className="flex-col space-y-2 ">
-        <div
-          className="rounded-lg bg-gray-200"
-          style={{ overflow: 'hidden' }}
-        >
-          <Stage
-            width={game.width}
-            height={game.height}
-            options={{
-              autoDensity: true,
-              transparent: true,
-            }}
-          >
-            <Text
-              text={`Score: ${score}`}
-              x={10}
-              y={10}
-              style={
-                new TextStyle({
-                  align: 'center',
-                  fill: 0x73c96b,
-                  fontSize: 20,
-                })
-              }
-            />
-
-            {words.map((word) => (
+        <div className="rounded-lg bg-gray-200" style={{ overflow: "hidden" }}>
+          {!!game && (
+            <Stage
+              width={game.width}
+              height={game.height}
+              options={{
+                autoDensity: true,
+                transparent: true,
+              }}
+            >
               <Text
-                key={word.id}
-                text={word.text}
-                x={word.x}
-                y={word.y}
+                text={`Score: ${score}`}
+                x={10}
+                y={10}
                 style={
                   new TextStyle({
-                    align: 'center',
-                    fill: 0xf76d70,
+                    align: "center",
+                    fill: 0x73c96b,
+                    fontSize: 20,
                   })
                 }
               />
-            ))}
 
-            <Graphics
-              x={10}
-              y={game.height - 10}
-              draw={(g) => {
-                g.beginFill(0xdc2626);
-                g.drawRect(0, 0, game.width - 20, 4);
-                g.endFill();
-              }}
-            />
-          </Stage>
+              {words.map((word) => (
+                <Text
+                  key={word.id}
+                  text={word.text}
+                  x={word.x}
+                  y={word.y}
+                  style={
+                    new TextStyle({
+                      align: "center",
+                      fill: 0xf76d70,
+                    })
+                  }
+                />
+              ))}
+
+              <Graphics
+                x={10}
+                y={game.height - 10}
+                draw={(g) => {
+                  g.beginFill(0xdc2626);
+                  g.drawRect(0, 0, game.width - 20, 4);
+                  g.endFill();
+                }}
+              />
+            </Stage>
+          )}
         </div>
         <input
           placeholder="Type here, space to check"

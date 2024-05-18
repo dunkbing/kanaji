@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
+import React, { useState } from "react";
+import Link from "next/link";
 
 const NavLinks = (props) => {
   const [show, setShow] = useState(false);
@@ -9,11 +9,11 @@ const NavLinks = (props) => {
   return (
     <li className="relative group" onClick={() => setShow(!show)}>
       <Link
-        exact={props.nav.path === '/'}
-        href={props.nav.type === 'dropdown' ? '' : props.nav.path}
+        exact={props.nav.path === "/"}
+        href={props.nav.type === "dropdown" ? "" : props.nav.path}
         className={
-          (props.nav.type !== 'dropdown' ? 'flex' : 'hidden ') +
-          'transition-all  delay-150 flex text-gray-500 hover:text-gray-700 font-semibold text-lg tracking-wider'
+          (props.nav.type !== "dropdown" ? "flex" : "hidden ") +
+          "transition-all  delay-150 flex text-gray-500 hover:text-gray-700 font-semibold text-lg tracking-wider"
         }
         // activeClassName="filter brightness-50 dark:brightness-100 dark:text-white"
       >
@@ -21,12 +21,12 @@ const NavLinks = (props) => {
       </Link>
       <div
         className={
-          (props.nav.type === 'dropdown' ? 'flex' : 'hidden ') +
-          ' transition-all delay-150  text-gray-500 hover:text-gray-700 font-semibold text-lg tracking-wider cursor-pointer'
+          (props.nav.type === "dropdown" ? "flex" : "hidden ") +
+          " transition-all delay-150  text-gray-500 hover:text-gray-700 font-semibold text-lg tracking-wider cursor-pointer"
         }
       >
         <span>{props.nav.title}</span>
-        <div className={(show ? 'transform rotate-180 ' : '') + 'my-auto'}>
+        <div className={(show ? "transform rotate-180 " : "") + "my-auto"}>
           <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
             <path
               stroke="currentColor"
@@ -37,32 +37,38 @@ const NavLinks = (props) => {
       </div>
       <div
         className={
-          (props.nav.type !== 'dropdown'
-            ? 'hidden'
+          (props.nav.type !== "dropdown"
+            ? "hidden"
             : show
-            ? 'flex'
-            : 'hidden') +
-          ' absolute justify-center top-12 -left-16 w-32 z-10 bg-gray-200 p-4 rounded-md border border-gray-200'
+              ? "flex"
+              : "hidden") +
+          " absolute justify-center top-12 -left-16 w-32 z-10 bg-gray-200 p-4 rounded-md border border-gray-200"
         }
       >
         <ul className="flex flex-col space-y-3">
           <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
-            href={'/game/pairing-kana'}
+            href={"/game/pairing-kana"}
           >
             Pairing Kana
           </Link>
           <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
-            href={'/game/typerace'}
+            href={"/game/typerace"}
           >
-            Typeracing
+            Type Racing
           </Link>
           <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
-            href={'/game/fallingWords'}
+            href={"/game/falling-words"}
           >
             Falling Words
+          </Link>
+          <Link
+            className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
+            href={"/game"}
+          >
+            All
           </Link>
         </ul>
       </div>

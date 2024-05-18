@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
+"use client";
 
-import { kana } from '../data/kana';
-import H2 from '../components/H2';
-import CategoryRadioButton from '../components/CategoryRadioButton';
-import DropsContainer from '../components/DropsContainer';
-import DragsContainer from '../components/DragsContainer';
+import React, { useState, useEffect } from "react";
+
+import { kana } from "../data/kana";
+import H2 from "../components/H2";
+import CategoryRadioButton from "../components/CategoryRadioButton";
+import DropsContainer from "../components/DropsContainer";
+import DragsContainer from "../components/DragsContainer";
 
 const DnDGame = () => {
   const [dragItem, setDragItem] = useState(null);
-  const [from, setFrom] = useState('Hiragana');
-  const [to, setTo] = useState('Romaji');
+  const [from, setFrom] = useState("Hiragana");
+  const [to, setTo] = useState("Romaji");
   const [game, setGame] = useState(false);
   const [correct, setCorrect] = useState([]);
   const [time, setTime] = useState(0);
   const [timeCount, setTimeCount] = useState(false);
   const [isStartDisabled, setIsStartDisabled] = useState(false);
   //audio
-  const [correctAudio] = useState(new Audio('/sfx/correct.wav'));
-  const [wrongAudio] = useState(new Audio('/sfx/wrong.wav'));
-  const [winAudio] = useState(new Audio('/sfx/win.wav'));
+  const [correctAudio] = useState(new Audio("/sfx/correct.wav"));
+  const [wrongAudio] = useState(new Audio("/sfx/wrong.wav"));
+  const [winAudio] = useState(new Audio("/sfx/win.wav"));
 
   const onDrop = (item) => {
     if (item === dragItem) {
@@ -52,12 +54,12 @@ const DnDGame = () => {
   }, [from, to]);
 
   const convertTime = (num) => {
-    let res = '';
+    let res = "";
     let minutes = Math.floor(num / 60);
     let sec = num % 60;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    sec = sec < 10 ? '0' + sec : sec;
-    res = minutes + ' : ' + sec;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    sec = sec < 10 ? "0" + sec : sec;
+    res = minutes + " : " + sec;
     return res;
   };
   const handleStart = () => {
@@ -81,8 +83,8 @@ const DnDGame = () => {
       </h1>
       <div
         className={
-          (game ? 'hidden' : 'flex') +
-          ' rounded-xl border-gray-800 py-12 flex-col mx-auto'
+          (game ? "hidden" : "flex") +
+          " rounded-xl border-gray-800 py-12 flex-col mx-auto"
         }
       >
         <span className="text-xl lg:text-3xl text-center font-black mb-3">
@@ -92,20 +94,20 @@ const DnDGame = () => {
           <div className="flex flex-col space-y-4">
             <H2 text="From" />
             <CategoryRadioButton
-              name={'from'}
-              value={'Romaji'}
+              name={"from"}
+              value={"Romaji"}
               checked={from}
               onSend={(x) => setFrom(x)}
             />
             <CategoryRadioButton
-              name={'from'}
-              value={'Hiragana'}
+              name={"from"}
+              value={"Hiragana"}
               checked={from}
               onSend={(x) => setFrom(x)}
             />
             <CategoryRadioButton
-              name={'from'}
-              value={'Katakana'}
+              name={"from"}
+              value={"Katakana"}
               checked={from}
               onSend={(x) => setFrom(x)}
             />
@@ -113,20 +115,20 @@ const DnDGame = () => {
           <div className="flex flex-col space-y-4">
             <H2 text="To" />
             <CategoryRadioButton
-              name={'to'}
-              value={'Romaji'}
+              name={"to"}
+              value={"Romaji"}
               checked={to}
               onSend={(x) => setTo(x)}
             />
             <CategoryRadioButton
-              name={'to'}
-              value={'Hiragana'}
+              name={"to"}
+              value={"Hiragana"}
               checked={to}
               onSend={(x) => setTo(x)}
             />
             <CategoryRadioButton
-              name={'to'}
-              value={'Katakana'}
+              name={"to"}
+              value={"Katakana"}
               checked={to}
               onSend={(x) => setTo(x)}
             />
@@ -136,13 +138,11 @@ const DnDGame = () => {
           <button
             onClick={() => handleStart()}
             className={`flex transition-all delay-75 px-6 py-4 lg:px-8 mt-4 text-lg lg:text-3xl rounded-lg mx-auto bg-gray-200 ${
-              isStartDisabled
-                ? 'text-gray-400'
-                : 'text-gray-600'
+              isStartDisabled ? "text-gray-400" : "text-gray-600"
             } ${
-              !isStartDisabled && 'hover:bg-primary hover:text-white'
+              !isStartDisabled && "hover:bg-primary hover:text-white"
             } focus:ring-2 focus:ring-primary ring-offset-4 focus:outline-none ${
-              isStartDisabled && 'cursor-not-allowed'
+              isStartDisabled && "cursor-not-allowed"
             }`}
             disabled={isStartDisabled}
           >
@@ -161,8 +161,8 @@ const DnDGame = () => {
       </div>
       <div
         className={
-          (game ? 'flex' : 'hidden') +
-          ' flex-col space-y-8 px-4 py-8 rounded-md select-none mt-4'
+          (game ? "flex" : "hidden") +
+          " flex-col space-y-8 px-4 py-8 rounded-md select-none mt-4"
         }
       >
         <div className="flex lg:mx-6">
