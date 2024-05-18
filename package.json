@@ -9,14 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@inlet/react-pixi": "^6.8.0",
+    "axios": "^1.6.8",
+    "next": "14.2.3",
+    "nihongo": "^1.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.3"
+    "react-responsive": "^10.0.0",
+    "react-reveal": "^1.2.2",
+    "wanakana": "^5.3.1"
   },
   "devDependencies": {
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3"
+    "eslint-config-next": "14.2.3",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
   }
 }

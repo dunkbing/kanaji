@@ -1,0 +1,32 @@
+'use client';
+
+import React from 'react';
+
+import { navLinks } from '../../data/navLinks';
+import SearchBox from '../SearchBox';
+import NavLinks from './NavLinks';
+
+const Header = () => {
+  return (
+    <nav className="bg-gray-50 text-gray-700 py-6 lg:py-0 border-b-2">
+      <div className="flex flex-row mx-4 lg:mx-32 content-center">
+        <a className="content-center hidden xl:flex" href="/">
+          <img src="/images/logo-full-white.svg" alt="logo-full" width="180" height="" />
+        </a>
+        <a className="flex content-center mx-auto xl:hidden" href="/">
+          <img src="/images/logo-icon-white.svg" alt="logo-full" width="35" height="0" />
+        </a>
+        <div className="hidden lg:flex justify-center m-auto h-1/2 px-8">
+          <SearchBox />
+        </div>
+        <ul className="flex-row hidden lg:flex space-x-5 my-5 lg:py-3 mr-10">
+          {navLinks.map((nav, idx) => {
+            return <NavLinks key={idx} nav={nav} />;
+          })}
+        </ul>
+      </div>
+    </nav>
+  );
+};
+
+export default Header;
