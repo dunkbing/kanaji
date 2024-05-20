@@ -1,72 +1,18 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { toRomaji, isHiragana, isKatakana } from "wanakana";
-import { Stage, Text, Graphics } from "@inlet/react-pixi";
+import { toRomaji } from "wanakana";
+import { Stage, Text, Graphics } from "@pixi/react";
 import { TextStyle } from "pixi.js";
-
-import { all } from "../data/words/all";
-
-const difficulties = [
-  {
-    id: 0,
-    name: "Beginner",
-    speed: 3,
-    words: {
-      hiragana: all.filter(
-        (word) => word.expression.length < 4 && isHiragana(word.expression),
-      ),
-      katakana: all.filter(
-        (word) => word.expression.length < 4 && isKatakana(word.expression),
-      ),
-    },
-  },
-  {
-    id: 1,
-    name: "Easy",
-    speed: 8,
-    words: {
-      hiragana: all.filter(
-        (word) => word.expression.length < 4 && isHiragana(word.expression),
-      ),
-      katakana: all.filter(
-        (word) => word.expression.length < 4 && isKatakana(word.expression),
-      ),
-    },
-  },
-  {
-    id: 2,
-    name: "Medium",
-    speed: 12,
-    words: {
-      hiragana: all.filter(
-        (word) =>
-          word.expression.length < 5 &&
-          isHiragana(word.expression) &&
-          word.expression.length > 3,
-      ),
-      katakana: all.filter(
-        (word) =>
-          word.expression.length < 5 &&
-          isKatakana(word.expression) &&
-          word.expression.length > 3,
-      ),
-    },
-  },
-  {
-    id: 3,
-    name: "Hard",
-    speed: 16,
-    words: {
-      hiragana: all.filter(
-        (word) => word.expression.length > 3 && isHiragana(word.expression),
-      ),
-      katakana: all.filter(
-        (word) => word.expression.length > 3 && isKatakana(word.expression),
-      ),
-    },
-  },
-];
+import { difficulties } from "@/app/zero-neko/data/constants";
+import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const FallingWords = () => {
   const [words, setWords] = useState([]);
@@ -91,7 +37,7 @@ const FallingWords = () => {
   }
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // if (typeof window === 'undefined' || typeof document === 'undefined') return;
 
     function handleResize() {
       loadGame();
@@ -105,7 +51,7 @@ const FallingWords = () => {
       ? difficultyId
       : selectedDifficulty;
     alphabet = alphabet ? alphabet : chosenAlphabet;
-    if (typeof window === 'undefined') return;
+    if (typeof window === "undefined") return;
 
     const game = new Game(difficulties[difficultyId], alphabet);
     let words = [game.getRandomWord()];
@@ -138,7 +84,7 @@ const FallingWords = () => {
     if (!value.endsWith(" ") || words.length === 0) return;
     value = value.trim();
     let correctWord = words.findIndex(
-      (word) => word.text === value || word.romanization === value,
+      (word) => word.text === value || word.romanization === value
     );
     if (correctWord > -1) {
       setCurrentText("");
@@ -155,9 +101,9 @@ const FallingWords = () => {
 
   return (
     <div className="flex flex-col items-center space-y-2">
-      <div className="flex flex-wrap gap-1 p-2">
+      <div className="flex flex-row gap-1 p-2">
         {difficulties.map((difficulty) => (
-          <button
+          <Button
             key={difficulty.id}
             className={`${
               difficulty.id === selectedDifficulty
@@ -167,28 +113,29 @@ const FallingWords = () => {
             onClick={() => handleDifficultyChange(difficulty.id)}
           >
             {difficulty.name}
-          </button>
+          </Button>
         ))}
-        <div className="bg-gray-200 bg-opacity-80 hover:bg-opacity-70 rounded-lg">
-          <select
-            className="bg-gray-200 bg-transparent outline-none my-2 mx-4"
-            onChange={(e) => handleAlphabetChange(e.target.value.toLowerCase())}
-          >
-            <option key="Hiragana">Hiragana</option>
-            <option key="Katakana">Katakana</option>
-          </select>
-        </div>
       </div>
+      <Select defaultValue="hiragana" onValueChange={handleAlphabetChange}>
+        <SelectTrigger className="w-fit">
+          <SelectValue placeholder="Select kana" />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="hiragana">Hiragana</SelectItem>
+          <SelectItem value="katakana">Katakana</SelectItem>
+        </SelectContent>
+      </Select>
 
       <div className="flex-col space-y-2 ">
         <div className="rounded-lg bg-gray-200" style={{ overflow: "hidden" }}>
-          {!!game && (
+          {!!game && typeof document !== "undefined" && (
             <Stage
               width={game.width}
               height={game.height}
               options={{
                 autoDensity: true,
                 transparent: true,
+                background: 0x1099bb,
               }}
             >
               <Text
@@ -245,7 +192,7 @@ const FallingWords = () => {
 
 class Game {
   constructor(difficulty, alphabet) {
-    debugger
+    debugger;
     this.width = window.innerWidth / 2;
     this.height = window.innerWidth / 4;
     if (window.innerHeight > window.innerWidth) {

@@ -56,12 +56,12 @@ const NavLinks = (props) => {
           >
             Type Racing
           </Link>
-          {/* <Link
+          <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
             href={"/game/falling-words"}
           >
             Falling Words
-          </Link> */}
+          </Link>
           <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
             href={"/game"}
