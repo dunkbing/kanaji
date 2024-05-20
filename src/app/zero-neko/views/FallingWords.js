@@ -11,8 +11,10 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue
 } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
 const FallingWords = () => {
   const [words, setWords] = useState([]);
@@ -37,8 +39,6 @@ const FallingWords = () => {
   }
 
   useEffect(() => {
-    // if (typeof window === 'undefined' || typeof document === 'undefined') return;
-
     function handleResize() {
       loadGame();
     }
@@ -88,7 +88,7 @@ const FallingWords = () => {
     );
     if (correctWord > -1) {
       setCurrentText("");
-      changeInputColor("#10b981");
+      changeInputColor("white");
       setScore(score + words[correctWord].text.length);
       words.splice(correctWord, 1, game.getRandomWord()); //removes word and adds a new one
       setWords(words);
@@ -101,7 +101,8 @@ const FallingWords = () => {
 
   return (
     <div className="flex flex-col items-center space-y-2">
-      <div className="flex flex-row gap-1 p-2">
+      <h1 className="text-lg font-semibold">Select a level</h1>
+      <div className="flex flex-row gap-2 p-2">
         {difficulties.map((difficulty) => (
           <Button
             key={difficulty.id}
@@ -115,20 +116,21 @@ const FallingWords = () => {
             {difficulty.name}
           </Button>
         ))}
+        <Select defaultValue="hiragana" onValueChange={handleAlphabetChange}>
+          <SelectTrigger className="w-fit">
+            <SelectValue placeholder="Select kana" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="hiragana">Hiragana</SelectItem>
+            <SelectItem value="katakana">Katakana</SelectItem>
+          </SelectContent>
+        </Select>
       </div>
-      <Select defaultValue="hiragana" onValueChange={handleAlphabetChange}>
-        <SelectTrigger className="w-fit">
-          <SelectValue placeholder="Select kana" />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="hiragana">Hiragana</SelectItem>
-          <SelectItem value="katakana">Katakana</SelectItem>
-        </SelectContent>
-      </Select>
 
       <div className="flex-col space-y-2 ">
-        <div className="rounded-lg bg-gray-200" style={{ overflow: "hidden" }}>
-          {!!game && typeof document !== "undefined" && (
+      {!!game && typeof document !== "undefined" && (
+        <div className="" style={{ overflow: "hidden" }}>
+          
             <Stage
               width={game.width}
               height={game.height}
@@ -176,15 +178,16 @@ const FallingWords = () => {
                 }}
               />
             </Stage>
-          )}
+          
+          <Input
+            placeholder="Type here, space to check"
+            className="w-full"
+            style={{ backgroundColor: inputColor }}
+            onChange={(e) => handleInput(e)}
+            value={currentText}
+          />
         </div>
-        <input
-          placeholder="Type here, space to check"
-          className={`outline-none w-full p-2 hover:bg-opacity-70  rounded-lg bg-gray-200 text-black`}
-          style={{ backgroundColor: inputColor }}
-          onChange={(e) => handleInput(e)}
-          value={currentText}
-        />
+      )}
       </div>
     </div>
   );

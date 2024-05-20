@@ -35,7 +35,7 @@ const Game = () => {
             <span>Typerace</span>
           </Link>
           <Link
-            href="game/fallingWords"
+            href="game/falling-words"
             className="text-gray-600 bg-gray-200 hover:bg-gray-300 text-xl py-3 w-full rounded-lg cursor-pointer"
           >
             <span>Falling Words</span>
