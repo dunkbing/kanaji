@@ -149,10 +149,10 @@ const DnDGame = () => {
         <div className="flex">
           <Button
             onClick={() => handleStart()}
-            className={`flex transition-all delay-75 px-6 py-4 lg:px-8 mt-4 text-lg lg:text-3xl rounded-lg mx-auto bg-gray-200 ${
+            className={`flex transition-all delay-75 px-6 lg:px-8 mt-4 text-lg lg:text-3xl rounded-lg mx-auto bg-gray-200 ${
               isStartDisabled ? "text-gray-400" : "text-gray-600"
             } ${
-              !isStartDisabled && "hover:bg-primary hover:text-white"
+              !isStartDisabled && "hover:bg-primary"
             } focus:ring-2 focus:ring-primary ring-offset-4 focus:outline-none ${
               isStartDisabled && "cursor-not-allowed"
             }`}

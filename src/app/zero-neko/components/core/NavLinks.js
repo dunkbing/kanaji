@@ -46,15 +46,15 @@ const NavLinks = (props) => {
         <ul className="flex flex-col space-y-3">
           <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
-            href={"/game/pairing-kana"}
-          >
-            Pairing Kana
-          </Link>
-          <Link
-            className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
             href={"/game/typerace"}
           >
             Type Racing
+          </Link>
+          <Link
+            className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
+            href={"/game/pairing-kana"}
+          >
+            Pairing Kana
           </Link>
           <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"

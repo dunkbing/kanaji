@@ -6,6 +6,7 @@ import { isKana, toRomaji } from "wanakana";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
+import { Input } from "@/components/ui/input";
 
 const Typerace = () => {
   const [expression, setExpression] = useState("");
@@ -117,27 +118,25 @@ const Typerace = () => {
         <span className="text-primary text-base capitalize">{meaning}</span>
       </div>
       <div className="flex flex-col lg:flex-row mx-auto space-y-6 lg:space-y-0 lg:space-x-2">
-        <input
+      <Input
           onChange={(e) => handleChange(e)}
           ref={(node) => (input = node)}
           autoComplete="off"
           disabled={result === true ? true : false}
-          className="mx-auto transition-all duration-150 border-2 border-gray-200 focus:border-primary px-5 py-2 rounded-lg focus:outline-none text-center"
           type="text"
           name="inputWord"
           id="inputWord"
           placeholder={result ? "Please Reset" : "Type the answer"}
         />
         <Button
-          className="hover:bg-opacity-70 bg-opacity-80 focus:outline-none active:ring-2 active:ring-primary px-5 py-3 rounded-lg ring-offset-2"
-          onClick={() => handlePass()}
+          onClick={handlePass}
         >
           Pass
         </Button>
       </div>
       <div className="flex mx-auto space-x-2">
         <Button
-          className="mx-auto bg-gray-200 active:ring-2 active:ring-primary ring-offset-2 bg-opacity-80 hover:bg-opacity-70 focus:outline-none px-5 py-3 rounded-lg cursor-pointer"
+          className="bg-gray-200"
           onClick={handleReset}
         >
           Reset

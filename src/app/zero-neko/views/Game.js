@@ -23,16 +23,16 @@ const Game = () => {
       <div className="flex flex-col space-y-6">
         <div className="flex flex-col space-y-4 mx-8">
           <Link
+            href="game/typerace"
+            className="text-gray-600 bg-gray-200 hover:bg-gray-300 text-xl py-3 w-full rounded-lg cursor-pointer"
+          >
+            <span>Type Racing</span>
+          </Link>
+          <Link
             href="game/pairing-kana"
             className="text-gray-600 bg-gray-200 hover:bg-gray-300 text-xl py-3 w-full rounded-lg cursor-pointer"
           >
             <span>Pairing Kana</span>
-          </Link>
-          <Link
-            href="game/typerace"
-            className="text-gray-600 bg-gray-200 hover:bg-gray-300 text-xl py-3 w-full rounded-lg cursor-pointer"
-          >
-            <span>Typerace</span>
           </Link>
           <Link
             href="game/falling-words"
