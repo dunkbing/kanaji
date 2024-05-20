@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { Fade } from "react-reveal";
 
 import ButtonInstalPWA from "../components/ButtonInstalPWA";
 import Faq from "../../../components/faq";
@@ -12,7 +11,6 @@ const illus = "/images/illus.svg";
 const Home = () => {
   return (
     <div className="mx-1 lg:mx-32 lg:mr-52">
-      <Fade bottom>
         <section className="flex flex-col lg:flex-row lg:mt-12 p-2 lg:p-8 rounded-lg">
           <div className="flex mx-auto mb-6 lg:mb-0 lg:order-last w-11/12 lg:w-2/5">
             <img
@@ -37,15 +35,12 @@ const Home = () => {
             <ButtonInstalPWA />
           </div>
         </section>
-      </Fade>
-      <Fade bottom>
         <section className="flex flex-col justify-center m-8">
           <Game />
           <hr className="h-1 w-48 bg-primary border-none mx-auto mb-9 lg:mb-12 " />
           <Faq />
           <hr className="h-1 w-48 bg-primary border-none mx-auto mb-9 lg:mb-12 " />
         </section>
-      </Fade>
     </div>
   );
 };
