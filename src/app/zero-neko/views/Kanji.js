@@ -110,14 +110,21 @@ const Kanji = () => {
                   checked={filter}
                   onSend={(theFilter) => changeFilter(theFilter)}
                 />
-                {/* <RadioInput category="joyo" checked={filter} onSend={(theFilter) => changeFilter(theFilter)}/>
-                                <RadioInput category="jinmeiyo" checked={filter} onSend={(theFilter) => changeFilter(theFilter)}/> */}
               </div>
             </div>
           </div>
           {/* Modal End */}
         </div>
       </div>
+      <article className="my-8 mx-auto max-w-2xl">
+        <h2 className="text-2xl font-bold mb-4">Kanji: Unlocking the Depth of Japanese Language</h2>
+        <p className="text-lg mb-4">
+          Kanji, the logographic characters adapted from Chinese, form the backbone of the Japanese writing system. Learning kanji is essential for understanding the nuances and complexities of the language. Our kanji page provides a structured approach to mastering these characters based on their grade levels in Japanese schools.
+        </p>
+        <p className="text-lg">
+          Embark on your journey to kanji mastery with our interactive charts, rich examples, and engaging quizzes, and unlock the full potential of your Japanese language skills!
+        </p>
+      </article>
       <ul className="mt-2 grid grid-cols-4 lg:grid-cols-6 items-center xl:grid-cols-9 px-3 py-4 lg:p-6 mx-1 gap-2 lg:gap-3 rounded-lg lg:space-y-0 border-2 border-black bg-white p-5 shadow-base">
         <KanjiContainer
           kanjiList={kanjiList}
