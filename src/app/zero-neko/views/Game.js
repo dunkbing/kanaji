@@ -34,12 +34,12 @@ const Game = () => {
           >
             <span>Typerace</span>
           </Link>
-          <Link
+          {/* <Link
             href="game/fallingWords"
             className="text-gray-600 bg-gray-200 hover:bg-gray-300 text-xl py-3 w-full rounded-lg cursor-pointer"
           >
             <span>Falling Words</span>
-          </Link>
+          </Link> */}
         </div>
         <span className="text-base max-w-prose  mx-auto">
           More Games Coming Soon

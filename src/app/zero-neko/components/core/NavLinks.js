@@ -9,13 +9,11 @@ const NavLinks = (props) => {
   return (
     <li className="relative group" onClick={() => setShow(!show)}>
       <Link
-        exact={props.nav.path === "/"}
         href={props.nav.type === "dropdown" ? "" : props.nav.path}
         className={
           (props.nav.type !== "dropdown" ? "flex" : "hidden ") +
           "transition-all  delay-150 flex text-gray-500 hover:text-gray-700 font-semibold text-lg tracking-wider"
         }
-        // activeClassName="filter brightness-50 dark:brightness-100 dark:text-white"
       >
         <span>{props.nav.title}</span>
       </Link>
@@ -58,12 +56,12 @@ const NavLinks = (props) => {
           >
             Type Racing
           </Link>
-          <Link
+          {/* <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
             href={"/game/falling-words"}
           >
             Falling Words
-          </Link>
+          </Link> */}
           <Link
             className="font-bold text-gray-900 hover:text-gray-700 whitespace-nowrap"
             href={"/game"}
