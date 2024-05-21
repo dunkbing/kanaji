@@ -1,5 +1,5 @@
 const homeIcon = (
-  <div className="flex justify-center mx-auto">
+  <div className="mx-auto flex justify-center">
     <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
       <path
         stroke="currentColor"
@@ -14,7 +14,7 @@ const homeIcon = (
 );
 
 const gameIcon = (
-  <div className="flex justify-center mx-auto fill-current transform scale-75">
+  <div className="mx-auto flex scale-75 transform justify-center fill-current">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="24"
@@ -28,29 +28,29 @@ const gameIcon = (
 
 export const navLinks = [
   {
-    path: '/',
+    path: "/",
     icon: homeIcon,
-    title: 'Home',
+    title: "Home",
   },
   {
-    path: '/hiragana',
-    icon: 'あ',
-    title: 'Hiragana',
+    path: "/hiragana",
+    icon: "あ",
+    title: "Hiragana",
   },
   {
-    path: '/katakana',
-    icon: 'ア',
-    title: 'Katakana',
+    path: "/katakana",
+    icon: "ア",
+    title: "Katakana",
   },
   {
-    path: '/kanji',
-    icon: '漢字',
-    title: 'Kanji',
+    path: "/kanji",
+    icon: "漢字",
+    title: "Kanji",
   },
   {
-    path: '/game',
+    path: "/game",
     icon: gameIcon,
-    title: 'Game',
-    type: 'dropdown',
+    title: "Game",
+    type: "dropdown",
   },
 ];

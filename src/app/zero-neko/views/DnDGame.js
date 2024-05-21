@@ -89,17 +89,17 @@ const DnDGame = () => {
     setTimeCount(true);
   };
   return (
-    <div className="flex flex-col lg:mx-20 py-4 lg:p-4">
-      <h1 className="text-3xl lg:text-4xl font-bold text-center">
+    <div className="flex flex-col py-4 lg:mx-20 lg:p-4">
+      <h1 className="text-center text-3xl font-bold lg:text-4xl">
         Pairing Kana
       </h1>
       <div
         className={
           (game ? "hidden" : "flex") +
-          " rounded-xl border-gray-800 py-12 flex-col mx-auto"
+          " mx-auto flex-col rounded-xl border-gray-800 py-12"
         }
       >
-        <span className="text-xl lg:text-3xl text-center font-black mb-3">
+        <span className="mb-3 text-center text-xl font-black lg:text-3xl">
           Setting
         </span>
         <div className="flex space-x-8 py-3 lg:p-8">
@@ -149,11 +149,11 @@ const DnDGame = () => {
         <div className="flex">
           <Button
             onClick={() => handleStart()}
-            className={`flex transition-all delay-75 px-6 lg:px-8 mt-4 text-lg lg:text-3xl rounded-lg mx-auto bg-gray-200 ${
+            className={`mx-auto mt-4 flex rounded-lg bg-gray-200 px-6 text-lg transition-all delay-75 lg:px-8 lg:text-3xl ${
               isStartDisabled ? "text-gray-400" : "text-gray-600"
             } ${
               !isStartDisabled && "hover:bg-primary"
-            } focus:ring-2 focus:ring-primary ring-offset-4 focus:outline-none ${
+            } focus:ring-primary ring-offset-4 focus:outline-none focus:ring-2 ${
               isStartDisabled && "cursor-not-allowed"
             }`}
             disabled={isStartDisabled}
@@ -174,13 +174,13 @@ const DnDGame = () => {
       <div
         className={
           (game ? "flex" : "hidden") +
-          " flex-col space-y-8 px-4 py-8 rounded-md select-none mt-4"
+          " mt-4 select-none flex-col space-y-8 rounded-md px-4 py-8"
         }
       >
         <div className="flex lg:mx-6">
           <Button
             onClick={() => handleBack()}
-            className="transtion duration-150 space-x-2 mr-auto md:mr-2 bg-gray-200 hover:bg-primary hover:text-white px-5 py-2 lg:px-7 lg:py-3 rounded-lg text-base flex focus:outline-none focus:ring-2 focus:ring-primary ring-offset-2"
+            className="transtion hover:bg-primary focus:ring-primary mr-auto flex space-x-2 rounded-lg bg-gray-200 px-5 py-2 text-base ring-offset-2 duration-150 hover:text-white focus:outline-none focus:ring-2 md:mr-2 lg:px-7 lg:py-3"
           >
             <div className="my-auto">
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -195,11 +195,11 @@ const DnDGame = () => {
           </Button>
           <Button
             onClick={() => handleReset()}
-            className="flex transtion duration-150 text-base bg-gray-200 px-5 py-2 lg:px-7 lg:py-3 space-x-2 active:ring-2 focus:outline-none active:ring-primary ring-offset-2 bg-opacity-80 hover:bg-opacity-70 rounded-lg"
+            className="transtion active:ring-primary flex space-x-2 rounded-lg bg-gray-200 bg-opacity-80 px-5 py-2 text-base ring-offset-2 duration-150 hover:bg-opacity-70 focus:outline-none active:ring-2 lg:px-7 lg:py-3"
           >
             <span className="my-auto">Reset</span>
           </Button>
-          <div className="flex space-x-2 bg-green-200 px-5 py-2 lg:px-7 lg:py-3 rounded-lg  lg:text-lg ml-auto">
+          <div className="ml-auto flex space-x-2 rounded-lg bg-green-200 px-5 py-2 lg:px-7  lg:py-3 lg:text-lg">
             <div className="my-auto">
               <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="7.25" stroke="currentColor"></circle>

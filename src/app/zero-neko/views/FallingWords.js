@@ -11,7 +11,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue
+  SelectValue,
 } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -110,7 +110,7 @@ const FallingWords = () => {
               difficulty.id === selectedDifficulty
                 ? "bg-primary"
                 : "bg-gray-200"
-            } p-2 px-4 bg-opacity-80 hover:bg-opacity-70 rounded-lg cursor-pointer`}
+            } cursor-pointer rounded-lg bg-opacity-80 p-2 px-4 hover:bg-opacity-70`}
             onClick={() => handleDifficultyChange(difficulty.id)}
           >
             {difficulty.name}
@@ -128,9 +128,8 @@ const FallingWords = () => {
       </div>
 
       <div className="flex-col space-y-2 ">
-      {!!game && typeof document !== "undefined" && (
-        <div className="" style={{ overflow: "hidden" }}>
-          
+        {!!game && typeof document !== "undefined" && (
+          <div className="" style={{ overflow: "hidden" }}>
             <Stage
               width={game.width}
               height={game.height}
@@ -178,16 +177,16 @@ const FallingWords = () => {
                 }}
               />
             </Stage>
-          
-          <Input
-            placeholder="Type here, space to check"
-            className="w-full"
-            style={{ backgroundColor: inputColor }}
-            onChange={(e) => handleInput(e)}
-            value={currentText}
-          />
-        </div>
-      )}
+
+            <Input
+              placeholder="Type here, space to check"
+              className="w-full"
+              style={{ backgroundColor: inputColor }}
+              onChange={(e) => handleInput(e)}
+              value={currentText}
+            />
+          </div>
+        )}
       </div>
     </div>
   );

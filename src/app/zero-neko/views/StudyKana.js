@@ -68,7 +68,7 @@ const StudyKana = ({ type }) => {
   const handleChange = (e) => {
     setGame(true);
     setCorrectAnswer("");
-    const answer = e.target.value.toLowerCase()
+    const answer = e.target.value.toLowerCase();
     if (toRomaji(word) === answer) {
       getWord();
       setScore(score + word.split("").length * 20);
@@ -77,17 +77,17 @@ const StudyKana = ({ type }) => {
   };
 
   const handleKeyPress = (e) => {
-    if(e.key !== 'Enter'){
-      console.log('enter press here! ')
-      return
+    if (e.key !== "Enter") {
+      console.log("enter press here! ");
+      return;
     }
-    const answer = e.target.value.toLowerCase()
+    const answer = e.target.value.toLowerCase();
     if (toRomaji(word) !== answer) {
       setCorrectAnswer(correctAnswerRef.current);
     }
     getWord();
     e.target.value = "";
-  }
+  };
 
   const handleReset = () => {
     setGame(false);
@@ -102,12 +102,12 @@ const StudyKana = ({ type }) => {
   };
 
   return (
-    <div className="flex flex-col mx-4 lg:mx-96 py-4 lg:p-8 space-y-6 lg:space-y-8">
+    <div className="mx-4 flex flex-col space-y-6 py-4 lg:mx-96 lg:space-y-8 lg:p-8">
       <div className="flex justify-between">
-        <div className="flex flex-col text-center bg-yellow-100 px-3 py-2 lg:px-5 rounded-lg text-base">
+        <div className="flex flex-col rounded-lg bg-yellow-100 px-3 py-2 text-center text-base lg:px-5">
           <span className="my-auto">Score: {score}</span>
         </div>
-        <div className="flex space-x-2 bg-green-200 px-3 py-2 lg:px-5 rounded-lg text-base">
+        <div className="flex space-x-2 rounded-lg bg-green-200 px-3 py-2 text-base lg:px-5">
           <div className="my-auto">
             <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="7.25" stroke="currentColor"></circle>
@@ -117,12 +117,10 @@ const StudyKana = ({ type }) => {
           <span className="my-auto">{convertTime(time)}</span>
         </div>
       </div>
-      <div className="flex flex-col mx-auto text-center items-center space-y-2 lg:space-y-8">
-        <span className="text-4xl lg:text-6xl font-bold">
-          {word}
-        </span>
+      <div className="mx-auto flex flex-col items-center space-y-2 text-center lg:space-y-8">
+        <span className="text-4xl font-bold lg:text-6xl">{word}</span>
       </div>
-      <div className="flex flex-col lg:flex-row mx-auto space-y-6 lg:space-y-0 lg:space-x-2">
+      <div className="mx-auto flex flex-col space-y-6 lg:flex-row lg:space-x-2 lg:space-y-0">
         <Input
           onChange={handleChange}
           onKeyPress={handleKeyPress}
@@ -134,19 +132,17 @@ const StudyKana = ({ type }) => {
           id="inputWord"
           placeholder={result ? "Please Reset" : "Type the answer"}
         />
-        <Button
-          onClick={handlePass}
-        >
-          Pass
-        </Button>
+        <Button onClick={handlePass}>Pass</Button>
       </div>
-      {!!correctAnswer && <div className="flex items-center justify-center">
-        <Label className="flex text-red-400">Correct Answer is: {correctAnswer}</Label></div>}
-      <div className="flex mx-auto space-x-2">
-        <Button
-          className="bg-gray-200"
-          onClick={handleReset}
-        >
+      {!!correctAnswer && (
+        <div className="flex items-center justify-center">
+          <Label className="flex text-red-400">
+            Correct Answer is: {correctAnswer}
+          </Label>
+        </div>
+      )}
+      <div className="mx-auto flex space-x-2">
+        <Button className="bg-gray-200" onClick={handleReset}>
           Reset
         </Button>
       </div>

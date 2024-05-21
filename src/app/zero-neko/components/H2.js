@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
 
-const H2 = (props) =>{
-    return(
-        <h1 className="text-lg lg:text-2xl text-center border-b-2 border-gray-700 pb-4 mb-4">
-            <span className="font-black rounded-full block lg:inline mr-0 lg:mr-3">{props.span}</span>
-            {props.text}
-        </h1>
-    )
-}
+const H2 = (props) => {
+  return (
+    <h1 className="mb-4 border-b-2 border-gray-700 pb-4 text-center text-lg lg:text-2xl">
+      <span className="mr-0 block rounded-full font-black lg:mr-3 lg:inline">
+        {props.span}
+      </span>
+      {props.text}
+    </h1>
+  );
+};
 
 export default H2;

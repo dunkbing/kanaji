@@ -6,8 +6,8 @@ const CategoryFilterButton = (props) => {
       className={
         (props.checked === props.category
           ? "bg-gray-200 shadow-inner"
-          : "hover:bg-gray-100 hover:bg-opacity-90 shadow") +
-        " rounded-lg text-base p-2 cursor-pointer capitalize"
+          : "shadow hover:bg-gray-100 hover:bg-opacity-90") +
+        " cursor-pointer rounded-lg p-2 text-base capitalize"
       }
       htmlFor={props.category}
     >

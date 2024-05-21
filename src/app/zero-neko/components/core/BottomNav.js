@@ -1,10 +1,10 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { navLinks } from '../../data/navLinks';
-import BottomNavLink from './BottomNavLink';
-import SearchBox from '../SearchBox';
+import { navLinks } from "../../data/navLinks";
+import BottomNavLink from "./BottomNavLink";
+import SearchBox from "../SearchBox";
 
 const BottomNav = () => {
   const [searchShow, setSearchShow] = useState(false);
@@ -33,14 +33,14 @@ const BottomNav = () => {
   );
 
   return (
-    <nav className="fixed flex lg:hidden justify-center bottom-0 left-0 z-10 w-screen bg-white h-20">
+    <nav className="fixed bottom-0 left-0 z-10 flex h-20 w-screen justify-center bg-white lg:hidden">
       <div className="w-full">
         {/* <div className={(searchShow ? 'flex' : 'hidden') + ' mx-6 pt-6'}>
           <div className="w-full">
             <SearchBox />
           </div>
         </div> */}
-        <ul className={searchShow ? 'hidden' : 'flex h-full'}>
+        <ul className={searchShow ? "hidden" : "flex h-full"}>
           {navLinks.map((nav, idx) => {
             return (
               <BottomNavLink

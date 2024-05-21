@@ -52,7 +52,7 @@ export default function Faq() {
   return (
     <div>
       <section className="py-20 font-base lg:py-[100px]">
-        <h1 className="animate-bounce block px-5 text-center text-4xl font-bold md:text-3xl lg:mb-20 lg:text-4xl">
+        <h1 className="block animate-bounce px-5 text-center text-4xl font-bold md:text-3xl lg:mb-20 lg:text-4xl">
           Frequently asked questions
         </h1>
 

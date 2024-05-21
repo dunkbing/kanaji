@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Kana from '../zero-neko/views/Kana';
+import Kana from "../zero-neko/views/Kana";
 
 export const metadata: Metadata = {
   title: "Hiragana",

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Kanji from '../zero-neko/views/Kanji';
+import Kanji from "../zero-neko/views/Kanji";
 
 export const metadata: Metadata = {
   title: "Kanji",

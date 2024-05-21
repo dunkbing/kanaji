@@ -1,10 +1,10 @@
-import KanjiDetail from '@/app/zero-neko/views/KanjiDetail';
+import KanjiDetail from "@/app/zero-neko/views/KanjiDetail";
 
-export const runtime = 'edge';
+export const runtime = "edge";
 
 export const metadata = {
-  title: 'Kanji'
-}
+  title: "Kanji",
+};
 
 export default function KanjiPage({ params }) {
   const kanji = params.kanji;

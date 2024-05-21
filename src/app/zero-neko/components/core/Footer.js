@@ -13,30 +13,30 @@ const logoIcon = "/images/logo-icon.svg";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col bg-main pt-8 pb-4">
-      <div className="flex flex-row justify-center   mx-8 lg:mx-32">
-        <div className="flex flex-col mb-4 lg:mb-8">
+    <footer className="flex flex-col bg-main pb-4 pt-8">
+      <div className="mx-8 flex flex-row   justify-center lg:mx-32">
+        <div className="mb-4 flex flex-col lg:mb-8">
           <Image
             src="/images/logo.png"
             alt="logo-full"
             width={200}
             height={53}
           />
-          <p className="text-center text-base lg:text-medium lg:text-left w-60 lg:w-52 mx-auto">
+          <p className="lg:text-medium mx-auto w-60 text-center text-base lg:w-52 lg:text-left">
             Kanaji is website platform for everyone to learn Japanese.
           </p>
         </div>
-        <div className="grid grid-cols-3 lg:grid-cols-3 col-span-12 lg:col-span-9 space-x-8 space-y-0 mt-5 lg:mt-0 lg:ml-20 text-center lg:text-left">
+        <div className="col-span-12 mt-5 grid grid-cols-3 space-x-8 space-y-0 text-center lg:col-span-9 lg:ml-20 lg:mt-0 lg:grid-cols-3 lg:text-left">
           <FooterChild title={"Navigation"} data={navLinks} />
           <FooterChild targetBlank title={"Social"} data={socialMedia} />
           <FooterChild targetBlank title={"Developer"} data={me} />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row text-center lg:text-left text-sm space-y-4 lg:space-y-0 mb-32 mt-6 mx-8 lg:mb-0 lg:mx-44">
+      <div className="mx-8 mb-32 mt-6 flex flex-col space-y-4 text-center text-sm lg:mx-44 lg:mb-0 lg:flex-row lg:space-y-0 lg:text-left">
         <span className="">
           <span>Made with 🧡 by </span>
           <a
-            className="hover:text-primary border-dashed border-b-2 border-gray-900 hover:border-primary"
+            className="hover:text-primary hover:border-primary border-b-2 border-dashed border-gray-900"
             href="https://db99.dev"
             target="_blank"
             rel="noreferrer"
@@ -47,7 +47,7 @@ const Footer = () => {
         <span className="lg:ml-auto">
           <span>Powered by </span>
           <a
-            className="hover:text-primary border-dashed border-b-2 border-gray-900 hover:border-primary"
+            className="hover:text-primary hover:border-primary border-b-2 border-dashed border-gray-900"
             href="https://kanjiapi.dev/"
             target="_blank"
             rel="noreferrer"
@@ -56,7 +56,7 @@ const Footer = () => {
           </a>
           <span> and </span>
           <a
-            className="hover:text-primary border-dashed border-b-2 border-gray-900 hover:border-primary"
+            className="hover:text-primary hover:border-primary border-b-2 border-dashed border-gray-900"
             href="https://jisho.org/forum/54fefc1f6e73340b1f160000-is-there-any-kind-of-search-api"
             target="_blank"
             rel="noreferrer"

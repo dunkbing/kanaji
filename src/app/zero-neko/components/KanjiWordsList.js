@@ -1,24 +1,24 @@
-import React from 'react';
-import Link from 'next/link';
-import { isKanji, toRomaji } from 'wanakana';
+import React from "react";
+import Link from "next/link";
+import { isKanji, toRomaji } from "wanakana";
 
-import KanjiWordMeanings from './KanjiWordMeanings';
+import KanjiWordMeanings from "./KanjiWordMeanings";
 
 const KanjiWordsList = (props) => {
   return (
-    <div className="flex flex-col lg:flex-row border-b border-gray-400 py-4 space-y-4 lg:space-y-0">
-      <p className="text-2xl lg:text-4xl my-auto mr-auto font-semibold">
+    <div className="flex flex-col space-y-4 border-b border-gray-400 py-4 lg:flex-row lg:space-y-0">
+      <p className="my-auto mr-auto text-2xl font-semibold lg:text-4xl">
         <span className="flex flex-wrap gap-2">
-          {props.datas.variants[0].written.split('').map((kana, idx) => {
+          {props.datas.variants[0].written.split("").map((kana, idx) => {
             if (isKanji(kana)) {
               return (
                 <Link
                   key={idx}
-                  href={'/kanji/' + kana}
+                  href={"/kanji/" + kana}
                   className={
                     isKanji(kana)
-                      ? 'transition-all duration-150 border-dashed border-b-2 border-current hover:border-primary hover:text-3xl lg:hover:text-5xl hover:text-primary'
-                      : ''
+                      ? "hover:border-primary hover:text-primary border-b-2 border-dashed border-current transition-all duration-150 hover:text-3xl lg:hover:text-5xl"
+                      : ""
                   }
                 >
                   {kana}
@@ -29,17 +29,17 @@ const KanjiWordsList = (props) => {
           })}
         </span>
       </p>
-      <div className="lg:text-right w-36 lg:w-96">
+      <div className="w-36 lg:w-96 lg:text-right">
         <div className="mb-3">
-          <p className="text-xs lg:text-sm text-primary mb-2">
+          <p className="text-primary mb-2 text-xs lg:text-sm">
             {props.datas.variants[0].pronounced
               ? toRomaji(props.datas.variants[0].pronounced)
-              : ''}
+              : ""}
           </p>
-          <p className="text-base lg:text-2xl font-semibold">
+          <p className="text-base font-semibold lg:text-2xl">
             {props.datas.variants[0].pronounced
               ? props.datas.variants[0].pronounced
-              : ''}
+              : ""}
           </p>
         </div>
         <div className="flex flex-col">

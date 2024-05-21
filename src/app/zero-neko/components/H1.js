@@ -2,8 +2,8 @@ import React from "react";
 
 const H1 = (props) => {
   return (
-    <h1 className="animate-bounce font-bold flex flex-col lg:flex-row mb-8 lg:mt-8 lg:mb-8 text-center lg:text-left">
-      <span className="font-black text-5xl lg:text-7xl rounded-full mx-auto lg:ml-0 lg:mr-4 ">
+    <h1 className="mb-8 flex animate-bounce flex-col text-center font-bold lg:mb-8 lg:mt-8 lg:flex-row lg:text-left">
+      <span className="mx-auto rounded-full text-5xl font-black lg:ml-0 lg:mr-4 lg:text-7xl ">
         {props.span}
       </span>
       <span className="text-4xl">{props.text}</span>

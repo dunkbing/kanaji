@@ -1,13 +1,11 @@
-'use client';
+"use client";
 
-import React  from 'react';
+import React from "react";
 
-import Home from '@/app/zero-neko/views/Home';
+import Home from "@/app/zero-neko/views/Home";
 
 const Content = () => {
-  return (
-    <Home />
-  );
+  return <Home />;
 };
 
 export default Content;

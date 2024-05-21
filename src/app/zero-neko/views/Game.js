@@ -5,7 +5,7 @@ import H1 from "../components/H1";
 
 const Game = () => {
   const gameIcon = (
-    <div className="fill-current transform scale-150 mb-5">
+    <div className="mb-5 scale-150 transform fill-current">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -21,27 +21,27 @@ const Game = () => {
     <div className="flex flex-col text-center lg:mx-36">
       <H1 span={gameIcon} text={"Game"} />
       <div className="flex flex-col space-y-6">
-        <div className="flex flex-col space-y-4 mx-8">
+        <div className="mx-8 flex flex-col space-y-4">
           <Link
             href="game/typerace"
-            className="text-gray-600 bg-gray-200 hover:bg-gray-300 text-xl py-3 w-full rounded-lg cursor-pointer"
+            className="w-full cursor-pointer rounded-lg bg-gray-200 py-3 text-xl text-gray-600 hover:bg-gray-300"
           >
             <span>Type Racing</span>
           </Link>
           <Link
             href="game/pairing-kana"
-            className="text-gray-600 bg-gray-200 hover:bg-gray-300 text-xl py-3 w-full rounded-lg cursor-pointer"
+            className="w-full cursor-pointer rounded-lg bg-gray-200 py-3 text-xl text-gray-600 hover:bg-gray-300"
           >
             <span>Pairing Kana</span>
           </Link>
           <Link
             href="game/falling-words"
-            className="text-gray-600 bg-gray-200 hover:bg-gray-300 text-xl py-3 w-full rounded-lg cursor-pointer"
+            className="w-full cursor-pointer rounded-lg bg-gray-200 py-3 text-xl text-gray-600 hover:bg-gray-300"
           >
             <span>Falling Words</span>
           </Link>
         </div>
-        <span className="text-base max-w-prose  mx-auto">
+        <span className="mx-auto max-w-prose  text-base">
           More Games Coming Soon
         </span>
       </div>

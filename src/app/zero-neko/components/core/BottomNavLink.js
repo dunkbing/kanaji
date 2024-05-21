@@ -1,15 +1,15 @@
-import React from 'react';
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
 
 const BottomNavLink = (props) => {
   return (
-    <li className="flex flex-1 transition-all w-2/12 delay-150 text-center text-gray-400 focus:outline-none text-sm">
+    <li className="flex w-2/12 flex-1 text-center text-sm text-gray-400 transition-all delay-150 focus:outline-none">
       <Link
-        className="flex flex-col space-y-2 w-full h-full"
+        className="flex h-full w-full flex-col space-y-2"
         aria-label={props.title}
         href={props.path}
       >
-        <div className="flex flex-col my-auto space-y-1">
+        <div className="my-auto flex flex-col space-y-1">
           <span className="text-lg">{props.icon}</span>
           <span className="">{props.title}</span>
         </div>

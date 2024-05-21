@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
-import Game from '../zero-neko/views/Game';
+import { Metadata } from "next";
+import Game from "../zero-neko/views/Game";
 
 export const metadata: Metadata = {
   title: "Games",

@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react";
 
-const logoIcon = '/images/logo-icon.svg';
+const logoIcon = "/images/logo-icon.svg";
 
 const FallbackLoading = (props) => {
   return (
     <div
       className={
-        (!props.text ? 'animate-pulse' : '') +
-        ' flex flex-col w-full col-span-full h-' +
+        (!props.text ? "animate-pulse" : "") +
+        " h- col-span-full flex w-full flex-col" +
         props.height +
-        ' py-' +
+        " py-" +
         props.paddingY +
-        ' my-' +
+        " my-" +
         props.marginY
       }
     >
       <img
-        className={!props.text && !props.span ? 'm-auto' : 'm-auto mb-8'}
+        className={!props.text && !props.span ? "m-auto" : "m-auto mb-8"}
         src={logoIcon}
         alt="logo-loading"
         width="100"

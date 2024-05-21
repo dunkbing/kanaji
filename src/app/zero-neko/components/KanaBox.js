@@ -1,19 +1,19 @@
-import React from 'react';
+import React from "react";
 
 const KanaBox = (props) => {
   return (
     <li
       className={
-        'box-border transition-all delay-75 col-span-' +
+        "col-span- box-border transition-all delay-75" +
         props.span +
-        (props.data.start ? ' col-start-' + props.data.start : '') +
-        ' rounded-md bg-gray-50 p-2 lg:p-4 shadow-md hover:shadow-none'
+        (props.data.start ? " col-start-" + props.data.start : "") +
+        " rounded-md bg-gray-50 p-2 shadow-md hover:shadow-none lg:p-4"
       }
     >
-      <p className="text-xl lg:text-3xl font-black mb-1 lg:mb-2">
+      <p className="mb-1 text-xl font-black lg:mb-2 lg:text-3xl">
         {props.data.kana}
       </p>
-      <p className="font-semibold text-sm lg:text-base text-primary">
+      <p className="text-primary text-sm font-semibold lg:text-base">
         {props.data.romaji}
       </p>
     </li>

@@ -91,12 +91,12 @@ const Typerace = () => {
   };
 
   return (
-    <div className="flex flex-col mx-4 lg:mx-96 py-4 lg:p-8 space-y-6 lg:space-y-8">
+    <div className="mx-4 flex flex-col space-y-6 py-4 lg:mx-96 lg:space-y-8 lg:p-8">
       <div className="flex justify-between">
-        <div className="flex flex-col text-center bg-yellow-100 px-3 py-2 lg:px-5 rounded-lg text-base">
+        <div className="flex flex-col rounded-lg bg-yellow-100 px-3 py-2 text-center text-base lg:px-5">
           <span className="my-auto">Score: {score}</span>
         </div>
-        <div className="flex space-x-2 bg-green-200 px-3 py-2 lg:px-5 rounded-lg text-base">
+        <div className="flex space-x-2 rounded-lg bg-green-200 px-3 py-2 text-base lg:px-5">
           <div className="my-auto">
             <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="7.25" stroke="currentColor"></circle>
@@ -106,22 +106,18 @@ const Typerace = () => {
           <span className="my-auto">{convertTime(time)}</span>
         </div>
       </div>
-      <div className="flex flex-col mx-auto text-center items-center space-y-2 lg:space-y-8">
-        <span className="text-4xl lg:text-6xl font-bold">
+      <div className="mx-auto flex flex-col items-center space-y-2 text-center lg:space-y-8">
+        <span className="text-4xl font-bold lg:text-6xl">
           {useKanji ? expression : word}
         </span>
         <div className="flex items-center space-x-2">
-          <Label
-            htmlFor="useKanji"
-          >
-            Kanji
-          </Label>
+          <Label htmlFor="useKanji">Kanji</Label>
           <Switch id="useKanji" onCheckedChange={handleUseKanji} />
         </div>
         <span className="text-primary text-base capitalize">{meaning}</span>
       </div>
-      <div className="flex flex-col lg:flex-row mx-auto space-y-6 lg:space-y-0 lg:space-x-2">
-      <Input
+      <div className="mx-auto flex flex-col space-y-6 lg:flex-row lg:space-x-2 lg:space-y-0">
+        <Input
           onChange={(e) => handleChange(e)}
           ref={(node) => (input = node)}
           autoComplete="off"
@@ -131,17 +127,10 @@ const Typerace = () => {
           id="inputWord"
           placeholder={result ? "Please Reset" : "Type the answer"}
         />
-        <Button
-          onClick={handlePass}
-        >
-          Pass
-        </Button>
+        <Button onClick={handlePass}>Pass</Button>
       </div>
-      <div className="flex mx-auto space-x-2">
-        <Button
-          className="bg-gray-200"
-          onClick={handleReset}
-        >
+      <div className="mx-auto flex space-x-2">
+        <Button className="bg-gray-200" onClick={handleReset}>
           Reset
         </Button>
       </div>

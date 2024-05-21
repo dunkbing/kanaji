@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Toggle = () => {
   const button = (
@@ -15,11 +15,9 @@ const Toggle = () => {
   );
 
   return (
-    <label className="absolute top-0 right-4 cursor-pointer lg:relative transition-all delay-150 mr-0 rounded-full lg:p-1 my-5 bg-gray-100 hover:bg-gray-200">
+    <label className="absolute right-4 top-0 my-5 mr-0 cursor-pointer rounded-full bg-gray-100 transition-all delay-150 hover:bg-gray-200 lg:relative lg:p-1">
       <div
-        className={
-          'flex content-center p-3 text-gray-700 hover:bg-opacity-70'
-        }
+        className={"flex content-center p-3 text-gray-700 hover:bg-opacity-70"}
       >
         {button}
       </div>

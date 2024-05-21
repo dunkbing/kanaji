@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
       <body className={dmSans.className}>
         <BottomNav />
         <Header />
-        <main className="relative m-0 bg-bg pt-8 pb-16">{children}</main>
+        <main className="relative m-0 bg-bg pb-16 pt-8">{children}</main>
         <Footer />
       </body>
     </html>
