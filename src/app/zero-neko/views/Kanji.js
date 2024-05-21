@@ -15,13 +15,14 @@ const Kanji = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      axios.get("https://kanjiapi.dev/v1/kanji/" + filter).then((response) => {
-        if (response.data.length === 0) {
-          setCheckData(false);
-        }
-        setKanjiList(response.data);
-        window.scrollTo(0, 0);
-      });
+      const response = await axios.get(
+        "https://kanjiapi.dev/v1/kanji/" + filter
+      );
+      if (response.data.length === 0) {
+        setCheckData(false);
+      }
+      setKanjiList(response.data);
+      window.scrollTo(0, 0);
     };
     fetchData();
   }, [filter]);

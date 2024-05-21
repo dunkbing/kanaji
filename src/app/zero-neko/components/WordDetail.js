@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import WordTag from "./WordTag";
 import WordReading from "./WordReading";
@@ -9,6 +11,7 @@ const WordDetail = (props) => {
       setWordLength(props.data.japanese[0].word.length);
     }
   }, [props]);
+
   return (
     <div
       className={

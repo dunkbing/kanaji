@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { navLinks } from "../../data/navLinks";
 import NavLinks from "./NavLinks";
+import SearchBox from "../SearchBox";
 
 const Header = () => {
   return (
@@ -16,7 +17,10 @@ const Header = () => {
             height={53}
           />
         </a>
-        <div className="m-auto hidden h-1/2 justify-center px-8 lg:flex" />
+        <div className="m-auto hidden h-1/2 justify-center px-8 lg:flex">
+          <SearchBox />
+        </div>
+        {/* <div className="m-auto hidden h-1/2 justify-center px-8 lg:flex" /> */}
         <ul className="my-5 mr-10 hidden flex-row space-x-5 lg:flex lg:py-3">
           {navLinks.map((nav, idx) => {
             return <NavLinks key={idx} nav={nav} />;

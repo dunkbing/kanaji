@@ -35,11 +35,11 @@ const BottomNav = () => {
   return (
     <nav className="fixed bottom-0 left-0 z-10 flex h-20 w-screen justify-center bg-white lg:hidden">
       <div className="w-full">
-        {/* <div className={(searchShow ? 'flex' : 'hidden') + ' mx-6 pt-6'}>
+        <div className={(searchShow ? "flex" : "hidden") + " mx-6 pt-6"}>
           <div className="w-full">
             <SearchBox />
           </div>
-        </div> */}
+        </div>
         <ul className={searchShow ? "hidden" : "flex h-full"}>
           {navLinks.map((nav, idx) => {
             return (
@@ -53,13 +53,13 @@ const BottomNav = () => {
           })}
         </ul>
       </div>
-      {/* <button
+      <button
         aria-label="Search"
         onClick={handleSearchShow}
-        className="absolute -top-12 bg-gray-50 shadow-md focus:outline-none active:ring-2 active:ring-primary ring-offset-2 rounded-full p-4"
+        className="active:ring-primary absolute -top-12 rounded-full bg-gray-50 p-4 shadow-md ring-offset-2 focus:outline-none active:ring-2"
       >
         {searchShow ? iconClose : iconSearch}
-      </button> */}
+      </button>
     </nav>
   );
 };

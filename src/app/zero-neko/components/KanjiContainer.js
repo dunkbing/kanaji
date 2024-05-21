@@ -16,6 +16,7 @@ const KanjiContainer = (props) => {
       );
     }
   }
+
   return (
     <>
       {props.kanjiList.map((kana, index) => {
