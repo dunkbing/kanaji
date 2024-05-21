@@ -6,9 +6,13 @@ import { katakana } from "../data/katakana";
 import KanaContainer from "../components/KanaContainer";
 import H1 from "../components/H1";
 import FallbackLoading from "../components/FallbackLoading";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 const Kana = (props) => {
   const [kana, setKana] = useState([]);
+  const router = useRouter();
+
   useEffect(() => {
     if (props.title === "Hiragana") {
       setKana(hiragana);
@@ -20,7 +24,10 @@ const Kana = (props) => {
 
   return (
     <div className="text-center lg:mx-36">
-      <H1 span={props.symbol} text={props.title} />
+      <div className="flex flex-row items-center justify-between">
+        <H1 span={props.symbol} text={props.title} />
+        <Button onClick={() => router.push(`/${props.title.toLowerCase()}/study`)}>Study this set</Button>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 px-3 py-4 lg:p-6 mx-1 rounded-lg space-y-4 lg:space-y-0 border-2 border-black bg-white p-5 shadow-base mb-6">
         <Suspense fallback={<FallbackLoading height="96" />}>
           <KanaContainer kana={kana} />

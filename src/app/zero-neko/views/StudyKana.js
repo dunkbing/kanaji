@@ -1,18 +1,17 @@
 "use client";
 
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import { all } from "../data/words/all";
-import { isKana, toRomaji } from "wanakana";
+import { hiragana } from "../data/hiragana";
+import { katakana } from "../data/katakana";
+import { toRomaji, isKana } from "wanakana";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
 import { Input } from "@/components/ui/input";
 
-const Typerace = () => {
-  const [expression, setExpression] = useState("");
-  const [useKanji, setUseKanji] = useState(false);
+const StudyKana = ({ type }) => {
   const [word, setWord] = useState("");
-  const [meaning, setMeaning] = useState("");
+  const [correctAnswer, setCorrectAnswer] = useState("");
+  const correctAnswerRef = useRef("");
   const [time, setTime] = useState(60);
   const [game, setGame] = useState(false);
   const [result, setResult] = useState(false);
@@ -21,15 +20,15 @@ const Typerace = () => {
   let input = useRef(null);
 
   const getWord = useCallback(() => {
-    const tempWord = all[Math.floor(Math.random() * all.length)]; //
-    if (!isKana(tempWord.reading)) {
+    const kana = type == "hiragana" ? hiragana : katakana;
+    const tempWord = kana[Math.floor(Math.random() * kana.length)]; //
+    if (!isKana(tempWord.kana)) {
       getWord();
     } else {
-      setMeaning(tempWord.meaning);
-      setWord(tempWord.reading);
-      setExpression(tempWord.expression);
+      setWord(tempWord.kana);
+      correctAnswerRef.current = tempWord.romaji;
     }
-  }, []);
+  }, [type]);
 
   useEffect(() => {
     const get = () => {
@@ -68,12 +67,27 @@ const Typerace = () => {
 
   const handleChange = (e) => {
     setGame(true);
-    if (toRomaji(word) === e.target.value.toLowerCase()) {
+    setCorrectAnswer("");
+    const answer = e.target.value.toLowerCase()
+    if (toRomaji(word) === answer) {
       getWord();
       setScore(score + word.split("").length * 20);
       e.target.value = "";
     }
   };
+
+  const handleKeyPress = (e) => {
+    if(e.key !== 'Enter'){
+      console.log('enter press here! ')
+      return
+    }
+    const answer = e.target.value.toLowerCase()
+    if (toRomaji(word) !== answer) {
+      setCorrectAnswer(correctAnswerRef.current);
+    }
+    getWord();
+    e.target.value = "";
+  }
 
   const handleReset = () => {
     setGame(false);
@@ -85,9 +99,6 @@ const Typerace = () => {
   const handlePass = () => {
     getWord();
     input.value = "";
-  };
-  const handleUseKanji = (use) => {
-    setUseKanji(use);
   };
 
   return (
@@ -108,21 +119,13 @@ const Typerace = () => {
       </div>
       <div className="flex flex-col mx-auto text-center items-center space-y-2 lg:space-y-8">
         <span className="text-4xl lg:text-6xl font-bold">
-          {useKanji ? expression : word}
+          {word}
         </span>
-        <div className="flex items-center space-x-2">
-          <Label
-            htmlFor="useKanji"
-          >
-            Kanji
-          </Label>
-          <Switch id="useKanji" onCheckedChange={handleUseKanji} />
-        </div>
-        <span className="text-primary text-base capitalize">{meaning}</span>
       </div>
       <div className="flex flex-col lg:flex-row mx-auto space-y-6 lg:space-y-0 lg:space-x-2">
-      <Input
-          onChange={(e) => handleChange(e)}
+        <Input
+          onChange={handleChange}
+          onKeyPress={handleKeyPress}
           ref={(node) => (input = node)}
           autoComplete="off"
           disabled={result === true ? true : false}
@@ -137,6 +140,8 @@ const Typerace = () => {
           Pass
         </Button>
       </div>
+      {!!correctAnswer && <div className="flex items-center justify-center">
+        <Label className="flex text-red-400">Correct Answer is: {correctAnswer}</Label></div>}
       <div className="flex mx-auto space-x-2">
         <Button
           className="bg-gray-200"
@@ -152,4 +157,4 @@ const Typerace = () => {
   );
 };
 
-export default Typerace;
+export default StudyKana;
