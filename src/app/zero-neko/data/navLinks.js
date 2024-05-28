@@ -38,6 +38,11 @@ export const navLinks = [
     title: "Hiragana",
   },
   {
+    path: "/verbs",
+    icon: "verbs",
+    title: "Verbs",
+  },
+  {
     path: "/katakana",
     icon: "ア",
     title: "Katakana",
