@@ -3,6 +3,7 @@ const translations = {
     intro: "Introduction",
     hiragana: "Hiragana",
     katakana: "Katakana",
+    kana: "Kana",
     study: "Study",
     extra: "Extra",
     selectColumns: "Select columns to study",
@@ -35,11 +36,15 @@ const translations = {
     metadataStudyDescription:
       "Practice Hiragana and Katakana with our interactive study mode. Test your knowledge and improve your Japanese writing skills.",
     metadataOgImageAlt: "Kanaji - Japanese Kana Learning App",
+    metadataKanaTitle: "Learn Japanese Kana - Hiragana & Katakana",
+    metadataKanaDescription:
+      "Master Japanese kana with interactive lessons for both hiragana and katakana characters. Perfect for beginners and intermediate learners.",
   },
   vi: {
     intro: "Giới thiệu",
     hiragana: "Hiragana",
     katakana: "Katakana",
+    kana: "Kana",
     study: "Học tập",
     extra: "Thêm",
     selectColumns: "Chọn cột để học",
@@ -72,6 +77,9 @@ const translations = {
     metadataStudyDescription:
       "Luyện tập Hiragana và Katakana với chế độ học tương tác của chúng tôi. Kiểm tra kiến thức và cải thiện kỹ năng viết tiếng Nhật của bạn.",
     metadataOgImageAlt: "Kanaji - Ứng dụng Học Kana Tiếng Nhật",
+    metadataKanaTitle: "Học Kana Tiếng Nhật - Hiragana & Katakana",
+    metadataKanaDescription:
+      "Thành thạo kana tiếng Nhật với các bài học tương tác cho cả hiragana và katakana. Hoàn hảo cho người mới bắt đầu và học viên trung cấp.",
   },
 } as Record<string, Record<string, string>>;
 

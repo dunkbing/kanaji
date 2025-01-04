@@ -7,10 +7,8 @@ import translations from "@/translations";
 
 const tabs = [
   { name: "intro", href: "/" },
-  { name: "hiragana", href: "/hiragana" },
-  { name: "katakana", href: "/katakana" },
+  { name: "kana", href: "/kana" },
   { name: "study", href: "/study" },
-  { name: "extra", href: "/extra" },
 ];
 
 export function NavTabs({ lang }: { lang: string }) {

@@ -43,24 +43,17 @@ export default async function Home({
             <p>
               It&apos;s easy to use. Click{" "}
               <Link
-                href="/hiragana"
+                href={`/${lang}/kana`}
                 className="text-primary hover:underline font-medium"
               >
-                HIRAGANA
-              </Link>{" "}
-              and/or{" "}
-              <Link
-                href="/katakana"
-                className="text-primary hover:underline font-medium"
-              >
-                KATAKANA
+                KANA
               </Link>{" "}
               and choose which characters you&apos;d like to study.
             </p>
             <p>
               Then click{" "}
               <Button variant="default" size="sm" asChild>
-                <Link href="/study">STUDY</Link>
+                <Link href={`/${lang}/study`}>STUDY</Link>
               </Button>{" "}
               and type each character&apos;s rōmaji equivalent (e.g.
               &apos;a&apos;).
