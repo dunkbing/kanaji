@@ -1,11 +1,13 @@
 import { NavTabs } from "@/components/nav-tabs";
 import { StudyMode } from "@/components/study-mode";
 
-export default function StudyPage({
-  params: { lang },
+export default async function StudyPage({
+  params,
 }: {
-  params: { lang: string };
+  params: Promise<{ lang: string }>
 }) {
+  const { lang } = await params;
+
   return (
     <div>
       <NavTabs lang={lang} />

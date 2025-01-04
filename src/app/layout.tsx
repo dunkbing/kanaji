@@ -8,17 +8,18 @@ export async function generateStaticParams() {
   return [{ lang: 'en' }, { lang: 'vi' }]
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params
 }: {
   children: React.ReactNode
-  params: { lang: string }
+  params: Promise<{ lang: string }>
 }) {
+  const { lang } = await params;
   return (
-    <html lang={params.lang}>
+    <html lang={lang}>
       <body className={inter.className}>
-        <NavTabs lang={params.lang} />
+        <NavTabs lang={lang} />
         {children}
       </body>
     </html>

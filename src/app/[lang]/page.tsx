@@ -3,7 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { NavTabs } from "@/components/nav-tabs"
 import Link from "next/link"
 
-export default function Home({ params: { lang } }: { params: { lang: string } }) {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}) {
+  const { lang } = await params;
+
   return (
     <div>
       <NavTabs lang={lang} />

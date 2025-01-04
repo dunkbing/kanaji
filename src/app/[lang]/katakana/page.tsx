@@ -2,7 +2,13 @@ import { NavTabs } from "@/components/nav-tabs"
 import { KanaGrid } from "@/components/kana-grid"
 import { katakanaData } from "@/data/kana-data"
 
-export default function KatakanaPage({ params: { lang } }: { params: { lang: string } }) {
+export default async function KatakanaPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}) {
+  const { lang } = await params;
+
   return (
     <div>
       <NavTabs lang={lang} />

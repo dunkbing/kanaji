@@ -8,6 +8,7 @@ export default async function HiraganaPage({
   params: Promise<{ lang: string }>
 }) {
   const { lang } = await params;
+
   return (
     <div>
       <NavTabs lang={lang} />
