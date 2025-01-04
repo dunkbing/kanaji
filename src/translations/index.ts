@@ -70,7 +70,7 @@ const translations = {
     extraContent: "Đây là trang bổ sung cho nội dung hoặc tính năng bổ sung.",
     learnHiraganaKatakana: "Học Hiragana & Katakana",
     introDescription:
-      "Nhấp vào HIRAGANA hoặc KATAKANA để chọn các ký tự bạn muốn học. Sau đó nhấp vào HỌC để luyện tập gõ phiên âm rōmaji tương ứng của từng ký tự.",
+      "Nhấp vào `Kana` để chọn các ký tự bạn muốn học. Sau đó nhấp vào HỌC để luyện tập gõ phiên âm rōmaji tương ứng của từng ký tự.",
     metadataHomeTitle: "Kanaji - Học Hiragana và Katakana Tiếng Nhật",
     metadataHomeDescription:
       "Thành thạo kana tiếng Nhật với Kanaji. Bài học tương tác cho các ký tự hiragana và katakana. Hoàn hảo cho người mới bắt đầu và học viên trung cấp.",
@@ -93,7 +93,7 @@ const translations = {
     switchModeInstruction:
       "Chuyển đổi giữa ký tự đơn và ký tự ghép bằng nút bên dưới",
     startStudyInstruction:
-      "Nhấn 'Bắt đầu học' để luyện viết các ký tự đã chọn bằng romaji",
+      "Nhấn 'Bắt đầu học' để luyện tập các ký tự đã chọn bằng romaji",
     noCharactersSelected: "Chưa chọn ký tự nào để học",
   },
 } as Record<string, Record<string, string>>;
