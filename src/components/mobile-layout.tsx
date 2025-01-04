@@ -40,11 +40,11 @@ const TabContent = ({ className, tabs, pathname }: TabContentProps) => {
             key={tab.href}
             href={`/${lang}${tab.href}`}
             className={cn(
-              'flex items-center gap-2',
-              'md:px-4 md:py-2 md:hover:bg-accent md:rounded-md',
+              'flex flex-col items-center gap-1 p-2 rounded-lg transition-colors',
+              'md:px-4 md:py-2 md:flex-row md:gap-2',
               isActive
-                ? 'text-primary'
-                : 'text-muted-foreground hover:text-primary'
+                ? 'text-primary-foreground bg-primary'
+                : 'text-muted-foreground hover:text-primary hover:bg-primary/10'
             )}
           >
             <Icon className="h-5 w-5" />
@@ -70,15 +70,16 @@ const MobileLayout = ({ children }: MobileLayoutProps) => {
   const langLabel = lang === 'en' ? 'Tiếng Việt' : 'English';
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background japanese-pattern">
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex h-14 border-b">
+      <nav className="hidden md:flex h-16 border-b bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-card/50">
         <div className="container max-w-screen-lg mx-auto px-4 flex items-center justify-between">
           <TabContent className="justify-start gap-4" tabs={tabs} pathname={pathname} />
           <Button
             variant="outline"
             size="sm"
             onClick={() => setLang(alternativeLang)}
+            className="font-japanese"
           >
             {langLabel}
           </Button>
@@ -86,20 +87,18 @@ const MobileLayout = ({ children }: MobileLayoutProps) => {
       </nav>
 
       <main className="flex-1 overflow-y-auto h-[calc(100vh-4rem)] md:h-auto md:overflow-visible">
-        <div className="container max-w-screen-lg mx-auto py-6">
-          {children}
-        </div>
+        {children}
       </main>
 
       {/* Mobile Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-card border-t md:hidden z-50 h-16">
+      <nav className="fixed bottom-0 left-0 right-0 bg-card/50 backdrop-blur supports-[backdrop-filter]:bg-card/50 border-t md:hidden z-50 h-16">
         <div className="grid grid-cols-5 items-center h-full px-4">
           <TabContent className="col-span-4" tabs={tabs} pathname={pathname} />
           <Button
             variant="outline"
             size="sm"
             onClick={() => setLang(alternativeLang)}
-            className="col-span-1"
+            className="col-span-1 font-japanese"
           >
             {langLabel}
           </Button>

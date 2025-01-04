@@ -39,6 +39,13 @@ const translations = {
     metadataKanaTitle: "Learn Japanese Kana - Hiragana & Katakana",
     metadataKanaDescription:
       "Master Japanese kana with interactive lessons for both hiragana and katakana characters. Perfect for beginners and intermediate learners.",
+    howToStudy: "How to study",
+    checkboxInstruction:
+      "Select characters by clicking checkboxes above each column",
+    switchModeInstruction:
+      "Switch between single and compound characters using buttons below",
+    startStudyInstruction:
+      "Click 'Start Study' to practice writing selected characters in romaji",
   },
   vi: {
     intro: "Giới thiệu",
@@ -80,6 +87,14 @@ const translations = {
     metadataKanaTitle: "Học Kana Tiếng Nhật - Hiragana & Katakana",
     metadataKanaDescription:
       "Thành thạo kana tiếng Nhật với các bài học tương tác cho cả hiragana và katakana. Hoàn hảo cho người mới bắt đầu và học viên trung cấp.",
+    howToStudy: "Hướng dẫn học",
+    checkboxInstruction:
+      "Chọn ký tự bằng cách nhấn vào ô vuông phía trên mỗi cột",
+    switchModeInstruction:
+      "Chuyển đổi giữa ký tự đơn và ký tự ghép bằng nút bên dưới",
+    startStudyInstruction:
+      "Nhấn 'Bắt đầu học' để luyện viết các ký tự đã chọn bằng romaji",
+    noCharactersSelected: "Chưa chọn ký tự nào để học",
   },
 } as Record<string, Record<string, string>>;
 
