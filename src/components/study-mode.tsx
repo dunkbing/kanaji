@@ -1,64 +1,64 @@
-'use client'
+"use client";
 
-import { useState, useEffect, useCallback, useMemo } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Input } from '@/components/ui/input'
-import { hiraganaData, katakanaData } from '@/data/kana-data'
-import translations from '@/translations'
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { hiraganaData, katakanaData } from "@/data/kana-data";
+import translations from "@/translations";
 
 export function StudyMode({ lang }: { lang: string }) {
-  const [characters, setCharacters] = useState<string[]>([])
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [input, setInput] = useState('')
-  const [score, setScore] = useState(0)
-  const [showAnswer, setShowAnswer] = useState(false)
-  const t = translations[lang as 'en' | 'vi']
+  const [characters, setCharacters] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [input, setInput] = useState("");
+  const [score, setScore] = useState(0);
+  const [showAnswer, setShowAnswer] = useState(false);
+  const t = translations[lang as "en" | "vi"];
 
   const characterMap = useMemo(() => {
-    const map = new Map<string, string>()
+    const map = new Map<string, string>();
     const allData = [
       ...hiraganaData.single,
       ...hiraganaData.compound,
       ...katakanaData.single,
-      ...katakanaData.compound
-    ]
-    allData.forEach(column => {
-      column.characters.forEach(char => {
-        map.set(char.kana, char.romaji)
-      })
-    })
-    return map
-  }, [])
+      ...katakanaData.compound,
+    ];
+    for (const column of allData) {
+      column.characters.forEach((char) => {
+        map.set(char.kana, char.romaji);
+      });
+    }
+    return map;
+  }, []);
 
   useEffect(() => {
-    const savedChars = sessionStorage.getItem('studyChars')
+    const savedChars = sessionStorage.getItem("studyChars");
     if (savedChars) {
-      const chars = JSON.parse(savedChars)
-      setCharacters(chars)
+      const chars = JSON.parse(savedChars);
+      setCharacters(chars);
     }
-  }, [])
+  }, []);
 
   const getCurrentRomaji = useCallback(() => {
-    const currentChar = characters[currentIndex]
-    return characterMap.get(currentChar) || ''
-  }, [characters, currentIndex, characterMap])
+    const currentChar = characters[currentIndex];
+    return characterMap.get(currentChar) || "";
+  }, [characters, currentIndex, characterMap]);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.toLowerCase()
-    setInput(value)
+    const value = e.target.value.toLowerCase();
+    setInput(value);
 
     if (value === getCurrentRomaji()) {
-      setScore(s => s + 1)
-      setInput('')
-      setCurrentIndex(i => (i + 1) % characters.length)
-      setShowAnswer(false)
+      setScore((s) => s + 1);
+      setInput("");
+      setCurrentIndex((i) => (i + 1) % characters.length);
+      setShowAnswer(false);
     }
-  }
+  };
 
   const handleShowAnswer = () => {
-    setShowAnswer(true)
-  }
+    setShowAnswer(true);
+  };
 
   if (!t) return null;
 
@@ -66,10 +66,12 @@ export function StudyMode({ lang }: { lang: string }) {
     return (
       <Card>
         <CardContent className="py-6">
-          <p className="text-center">Please select some characters to study first.</p>
+          <p className="text-center">
+            Please select some characters to study first.
+          </p>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   return (
@@ -104,11 +106,11 @@ export function StudyMode({ lang }: { lang: string }) {
               onClick={handleShowAnswer}
               className="w-full"
             >
-              {showAnswer ? getCurrentRomaji() : 'Show Answer'}
+              {showAnswer ? getCurrentRomaji() : "Show Answer"}
             </Button>
           </div>
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,12 +1,23 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { NavTabs } from "@/components/nav-tabs"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { NavTabs } from "@/components/nav-tabs";
+import Link from "next/link";
+import { generatePageMetadata } from "@/lib/metadata";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return generatePageMetadata(lang, "Home");
+}
 
 export default async function Home({
   params,
 }: {
-  params: Promise<{ lang: string }>
+  params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
 
@@ -22,18 +33,26 @@ export default async function Home({
               </div>
               <div>
                 <h1 className="text-2xl font-bold">Kanaji</h1>
-                <p className="text-sm text-muted-foreground">Learn Hiragana & Katakana</p>
+                <p className="text-sm text-muted-foreground">
+                  Learn Hiragana & Katakana
+                </p>
               </div>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p>
               It&apos;s easy to use. Click{" "}
-              <Link href="/hiragana" className="text-primary hover:underline font-medium">
+              <Link
+                href="/hiragana"
+                className="text-primary hover:underline font-medium"
+              >
                 HIRAGANA
               </Link>{" "}
               and/or{" "}
-              <Link href="/katakana" className="text-primary hover:underline font-medium">
+              <Link
+                href="/katakana"
+                className="text-primary hover:underline font-medium"
+              >
                 KATAKANA
               </Link>{" "}
               and choose which characters you&apos;d like to study.
@@ -43,12 +62,13 @@ export default async function Home({
               <Button variant="default" size="sm" asChild>
                 <Link href="/study">STUDY</Link>
               </Button>{" "}
-              and type each character&apos;s rōmaji equivalent (e.g. &apos;a&apos;).
+              and type each character&apos;s rōmaji equivalent (e.g.
+              &apos;a&apos;).
             </p>
             <p className="font-medium">That&apos;s it!</p>
           </CardContent>
         </Card>
       </div>
     </div>
-  )
+  );
 }
