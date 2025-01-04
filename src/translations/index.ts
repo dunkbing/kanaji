@@ -1,0 +1,46 @@
+const translations = {
+  en: {
+    intro: "Introduction",
+    hiragana: "Hiragana",
+    katakana: "Katakana",
+    study: "Study",
+    extra: "Extra",
+    selectColumns: "Select columns to study",
+    uncheckAll: "Uncheck All",
+    startStudy: "Start Study",
+    score: "Score",
+    showAnswer: "Show Answer",
+    enterRomaji: "Enter romaji",
+    correct: "Correct!",
+    incorrect: "Incorrect. Try again.",
+    completed: "Study completed!",
+    switchToCompound: "Switch to Compound",
+    switchToSingle: "Switch to Single",
+    appDescription:
+      "Welcome to Kanaji, a simple web app for learning Japanese hiragana and katakana.",
+    extraContent: "This is an extra page for additional content or features.",
+  },
+  vi: {
+    intro: "Giới thiệu",
+    hiragana: "Hiragana",
+    katakana: "Katakana",
+    study: "Học tập",
+    extra: "Thêm",
+    selectColumns: "Chọn cột để học",
+    uncheckAll: "Bỏ chọn tất cả",
+    startStudy: "Bắt đầu học",
+    score: "Điểm số",
+    showAnswer: "Hiện đáp án",
+    enterRomaji: "Nhập romaji",
+    correct: "Chính xác!",
+    incorrect: "Không chính xác. Thử lại.",
+    completed: "Hoàn thành học tập!",
+    switchToCompound: "Chuyển sang kí tự ghép",
+    switchToSingle: "Chuyển sang kí tự đơn",
+    appDescription:
+      "Chào mừng đến với Kanaji, một ứng dụng web đơn giản để học hiragana và katakana tiếng Nhật.",
+    extraContent: "Đây là trang bổ sung cho nội dung hoặc tính năng bổ sung.",
+  },
+} as Record<string, Record<string, string>>;
+
+export default translations;

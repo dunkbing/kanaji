@@ -3,10 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { NavTabs } from "@/components/nav-tabs"
 import Link from "next/link"
 
-export default function Home() {
+export default function Home({ params: { lang } }: { params: { lang: string } }) {
   return (
     <div>
-      <NavTabs />
+      <NavTabs lang={lang} />
       <div className="container max-w-screen-lg mx-auto py-6">
         <Card className="max-w-2xl mx-auto">
           <CardHeader>

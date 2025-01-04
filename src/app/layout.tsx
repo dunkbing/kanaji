@@ -1,25 +1,25 @@
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import { NavTabs } from '@/components/nav-tabs'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Kanaji - Learn Japanese Characters',
-  description: 'Learn Hiragana and Katakana with an interactive study tool',
+export async function generateStaticParams() {
+  return [{ lang: 'en' }, { lang: 'vi' }]
 }
 
 export default function RootLayout({
   children,
+  params
 }: {
   children: React.ReactNode
+  params: { lang: string }
 }) {
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <body className={inter.className}>
-        <main className="min-h-screen bg-background">
-          {children}
-        </main>
+        <NavTabs lang={params.lang} />
+        {children}
       </body>
     </html>
   )

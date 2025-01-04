@@ -1,78 +1,87 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Checkbox } from '@/components/ui/checkbox'
-import { useRouter } from 'next/navigation'
-import { KanaType } from '@/types/kana'
-import { KanaSet } from '@/data/kana-data'
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useRouter } from "next/navigation";
+import { KanaType } from "@/types/kana";
+import { KanaSet } from "@/data/kana-data";
+import translations from "@/translations";
 
 interface KanaGridProps {
-  type: KanaType
-  data: KanaSet
+  type: KanaType;
+  data: KanaSet;
+  lang: string;
 }
 
-export function KanaGrid({ type, data }: KanaGridProps) {
-  const router = useRouter()
-  const [isCompound, setIsCompound] = useState(false)
-  const [selectedColumns, setSelectedColumns] = useState<Set<number>>(new Set())
+export function KanaGrid({ type, data, lang }: KanaGridProps) {
+  const router = useRouter();
+  const [isCompound, setIsCompound] = useState(false);
+  const [selectedColumns, setSelectedColumns] = useState<Set<number>>(
+    new Set(),
+  );
+  const t = translations[lang as "en" | "vi"];
 
   // Load saved selection from localStorage
   useEffect(() => {
-    const saved = localStorage.getItem(`${type}-selected-columns`)
+    const saved = localStorage.getItem(`${type}-selected-columns`);
     if (saved) {
-      setSelectedColumns(new Set(JSON.parse(saved)))
+      setSelectedColumns(new Set(JSON.parse(saved)));
     }
-  }, [type])
+  }, [type]);
 
   // Save selection to localStorage
   useEffect(() => {
     localStorage.setItem(
       `${type}-selected-columns`,
-      JSON.stringify(Array.from(selectedColumns))
-    )
-  }, [selectedColumns, type])
+      JSON.stringify(Array.from(selectedColumns)),
+    );
+  }, [selectedColumns, type]);
 
-  const currentColumns = isCompound ? data.compound : data.single
+  const currentColumns = isCompound ? data.compound : data.single;
 
   const handleColumnSelect = (columnIndex: number) => {
-    const newSelected = new Set(selectedColumns)
+    const newSelected = new Set(selectedColumns);
     if (newSelected.has(columnIndex)) {
-      newSelected.delete(columnIndex)
+      newSelected.delete(columnIndex);
     } else {
-      newSelected.add(columnIndex)
+      newSelected.add(columnIndex);
     }
-    setSelectedColumns(newSelected)
-  }
+    setSelectedColumns(newSelected);
+  };
 
   const handleSelectAll = () => {
     if (selectedColumns.size === currentColumns.length) {
-      setSelectedColumns(new Set())
+      setSelectedColumns(new Set());
     } else {
-      setSelectedColumns(new Set(Array.from({ length: currentColumns.length }, (_, i) => i)))
+      setSelectedColumns(
+        new Set(Array.from({ length: currentColumns.length }, (_, i) => i)),
+      );
     }
-  }
+  };
 
   const handleStudy = () => {
     if (selectedColumns.size > 0) {
-      const selectedChars = Array.from(selectedColumns).flatMap(
-        index => currentColumns[index].characters.map(char => char.kana)
-      )
-      sessionStorage.setItem('studyChars', JSON.stringify(selectedChars))
-      router.push('/study')
+      const selectedChars = Array.from(selectedColumns).flatMap((index) =>
+        currentColumns[index].characters.map((char) => char.kana),
+      );
+      sessionStorage.setItem("studyChars", JSON.stringify(selectedChars));
+      router.push(`/${lang}/study`);
     }
-  }
+  };
 
   const handlePrevious = () => {
-    setIsCompound(false)
-    setSelectedColumns(new Set())
-  }
+    setIsCompound(false);
+    setSelectedColumns(new Set());
+  };
 
   const handleNext = () => {
-    setIsCompound(true)
-    setSelectedColumns(new Set())
-  }
+    setIsCompound(true);
+    setSelectedColumns(new Set());
+  };
+
+  if (!t) return null;
 
   return (
     <Card>
@@ -81,13 +90,13 @@ export function KanaGrid({ type, data }: KanaGridProps) {
           <div className="flex items-center gap-2">
             <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-2xl text-primary-foreground">
-                {type === 'hiragana' ? 'あ' : 'ア'}
+                {type === "hiragana" ? "あ" : "ア"}
               </span>
             </div>
             <div>
               <h1 className="text-2xl font-bold capitalize">{type}</h1>
               <p className="text-sm text-muted-foreground">
-                {isCompound ? 'Compound' : 'Single'} Characters
+                {isCompound ? "Compound" : "Single"} Characters
               </p>
             </div>
           </div>
@@ -129,7 +138,9 @@ export function KanaGrid({ type, data }: KanaGridProps) {
                       onClick={() => handleColumnSelect(columnIndex)}
                     >
                       <div className="text-2xl">{kana}</div>
-                      <div className="text-xs text-muted-foreground">{romaji}</div>
+                      <div className="text-xs text-muted-foreground">
+                        {romaji}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -138,7 +149,10 @@ export function KanaGrid({ type, data }: KanaGridProps) {
           </div>
           <div className="flex justify-between">
             <div className="space-x-2">
-              <Button variant="outline" onClick={() => setSelectedColumns(new Set())}>
+              <Button
+                variant="outline"
+                onClick={() => setSelectedColumns(new Set())}
+              >
                 UNCHECK ALL
               </Button>
               <Button variant="outline" onClick={handleSelectAll}>
@@ -152,5 +166,5 @@ export function KanaGrid({ type, data }: KanaGridProps) {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -1,38 +1,50 @@
-'use client'
+"use client";
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { cn } from '@/lib/utils'
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import translations from "@/translations";
 
 const tabs = [
-  { name: 'INTRO', href: '/' },
-  { name: 'HIRAGANA', href: '/hiragana' },
-  { name: 'KATAKANA', href: '/katakana' },
-  { name: 'STUDY', href: '/study' },
-  { name: 'EXTRA', href: '/extra' },
-]
+  { name: "intro", href: "/" },
+  { name: "hiragana", href: "/hiragana" },
+  { name: "katakana", href: "/katakana" },
+  { name: "study", href: "/study" },
+  { name: "extra", href: "/extra" },
+];
 
-export function NavTabs() {
-  const pathname = usePathname()
+export function NavTabs({ lang }: { lang: string }) {
+  const pathname = usePathname();
+  const t = translations[lang as "en" | "vi"];
+
+  if (!t) return null;
 
   return (
     <nav className="border-b">
-      <div className="flex h-14 max-w-screen-lg mx-auto">
-        {tabs.map((tab) => (
-          <Link
-            key={tab.href}
-            href={tab.href}
-            className={cn(
-              "flex items-center px-4 font-medium border-b-2 text-sm transition-colors hover:text-primary",
-              pathname === tab.href
-                ? "border-primary text-primary"
-                : "border-transparent text-muted-foreground"
-            )}
-          >
-            {tab.name}
-          </Link>
-        ))}
+      <div className="flex h-14 max-w-screen-lg mx-auto items-center justify-between px-4">
+        <div className="flex">
+          {tabs.map((tab) => (
+            <Link
+              key={tab.href}
+              href={`/${lang}${tab.href}`}
+              className={cn(
+                "flex items-center px-4 font-medium border-b-2 text-sm transition-colors hover:text-primary",
+                pathname === `/${lang}${tab.href}`
+                  ? "border-primary text-primary"
+                  : "border-transparent text-muted-foreground",
+              )}
+            >
+              {t[tab.name]}
+            </Link>
+          ))}
+        </div>
+        <Link
+          href={`/${lang === "en" ? "vi" : "en"}${pathname.substring(3)}`}
+          className="px-4 py-2 text-sm font-medium text-primary-foreground bg-primary rounded-md hover:bg-primary/90"
+        >
+          {lang === "en" ? "Tiếng Việt" : "English"}
+        </Link>
       </div>
     </nav>
-  )
+  );
 }

@@ -5,13 +5,15 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
 import { hiraganaData, katakanaData } from '@/data/kana-data'
+import translations from '@/translations'
 
-export function StudyMode() {
+export function StudyMode({ lang }: { lang: string }) {
   const [characters, setCharacters] = useState<string[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [input, setInput] = useState('')
   const [score, setScore] = useState(0)
   const [showAnswer, setShowAnswer] = useState(false)
+  const t = translations[lang as 'en' | 'vi']
 
   const characterMap = useMemo(() => {
     const map = new Map<string, string>()
@@ -57,6 +59,8 @@ export function StudyMode() {
   const handleShowAnswer = () => {
     setShowAnswer(true)
   }
+
+  if (!t) return null;
 
   if (characters.length === 0) {
     return (
