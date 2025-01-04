@@ -14,26 +14,30 @@ export async function generateMetadata({
   return generatePageMetadata(lang, "Kana");
 }
 
-export default async function KanaPage({ params }: { params: Promise<{ lang: string }> }) {
+export default async function KanaPage({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}) {
   const { lang } = await params;
   const t = translations[lang];
 
   return (
-    <div className="container max-w-screen-lg mx-auto py-6 space-y-6">
-          <Card className="bg-card/50 backdrop-blur">
-            <CardHeader>
-              <CardTitle className="text-lg">{t.howToStudy}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <ol className="list-decimal list-inside space-y-2">
-                <li>{t.checkboxInstruction}</li>
-                <li>{t.switchModeInstruction}</li>
-                <li>{t.startStudyInstruction}</li>
-              </ol>
-            </CardContent>
-          </Card>
-          <KanaGrid type="hiragana" data={hiraganaData} />
-          <KanaGrid type="katakana" data={katakanaData} />
-        </div>
+    <div className="container max-w-screen-sm mx-auto py-6 space-y-6">
+      <Card className="bg-card/50 backdrop-blur">
+        <CardHeader>
+          <CardTitle className="text-lg">{t.howToStudy}</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <ol className="list-decimal list-inside space-y-2">
+            <li>{t.checkboxInstruction}</li>
+            <li>{t.switchModeInstruction}</li>
+            <li>{t.startStudyInstruction}</li>
+          </ol>
+        </CardContent>
+      </Card>
+      <KanaGrid type="hiragana" data={hiraganaData} />
+      <KanaGrid type="katakana" data={katakanaData} />
+    </div>
   );
 }

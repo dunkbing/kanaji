@@ -90,11 +90,18 @@ export function KanaGrid({ type, data }: KanaGridProps) {
 
   return (
     <Card className="w-full">
-      <CardHeader>
+      <CardHeader className="flex flex-row justify-between items-center">
         <CardTitle>{t[type]}</CardTitle>
+        <Button
+          onClick={handleStudy}
+          disabled={selectedColumns.length === 0}
+          className="w-auto"
+        >
+          {t.startStudy}
+        </Button>
       </CardHeader>
       <CardContent>
-        <div className="grid grid-cols-5 gap-4 mb-4">
+        <div className="grid grid-cols-5 gap-2 md:gap-4 mb-4">
           {currentColumns.map((column, columnIndex) => (
             <div key={column.name} className="flex flex-col items-center">
               <Checkbox
@@ -122,29 +129,16 @@ export function KanaGrid({ type, data }: KanaGridProps) {
             </div>
           ))}
         </div>
-        <div className="flex flex-col sm:flex-row gap-2 sm:justify-between mt-4">
-          <div className="flex gap-2 w-full sm:w-auto">
-            <Button
-              variant="outline"
-              onClick={handleUncheckAll}
-              className="flex-1 sm:flex-none"
-            >
-              {t.uncheckAll}
-            </Button>
-            <Button
-              variant="outline"
-              onClick={toggleCompound}
-              className="flex-1 sm:flex-none"
-            >
-              {showCompound ? t.switchToSingle : t.switchToCompound}
-            </Button>
-          </div>
+        <div className="flex flex-col gap-2">
           <Button
-            onClick={handleStudy}
-            disabled={selectedColumns.length === 0}
-            className="w-full sm:w-auto"
+            variant="outline"
+            onClick={handleUncheckAll}
+            className="w-full"
           >
-            {t.startStudy}
+            {t.uncheckAll}
+          </Button>
+          <Button variant="outline" onClick={toggleCompound} className="w-full">
+            {showCompound ? t.switchToSingle : t.switchToCompound}
           </Button>
         </div>
       </CardContent>
