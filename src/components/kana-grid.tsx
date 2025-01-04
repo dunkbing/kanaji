@@ -23,14 +23,14 @@ export function KanaGrid({ type, data }: KanaGridProps) {
   const t = translations[lang as "en" | "vi"];
 
   useEffect(() => {
-    const storedColumns = sessionStorage.getItem(`selected${type}Columns`);
+    const storedColumns = localStorage.getItem(`selected${type}Columns`);
     if (storedColumns) {
       setSelectedColumns(JSON.parse(storedColumns));
     }
   }, [type]);
 
   useEffect(() => {
-    sessionStorage.setItem(
+    localStorage.setItem(
       `selected${type}Columns`,
       JSON.stringify(selectedColumns),
     );

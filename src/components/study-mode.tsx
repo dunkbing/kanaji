@@ -36,13 +36,22 @@ export function StudyMode() {
     return map;
   }, []);
 
+  const shuffleArray = useCallback((array: string[]) => {
+    const newArray = [...array];
+    for (let i = newArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+    }
+    return newArray;
+  }, []);
+
   useEffect(() => {
-    const savedChars = sessionStorage.getItem("studyChars");
+    const savedChars = localStorage.getItem("studyChars");
     if (savedChars) {
       const chars = JSON.parse(savedChars);
-      setCharacters(chars);
+      setCharacters(shuffleArray(chars));
     }
-  }, []);
+  }, [shuffleArray]);
 
   const getCurrentRomaji = useCallback(() => {
     const currentChar = characters[currentIndex];
@@ -55,7 +64,16 @@ export function StudyMode() {
 
     if (value === getCurrentRomaji()) {
       setScore((prevScore) => prevScore + 1);
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % characters.length);
+
+      // Check if we've completed a round
+      if ((currentIndex + 1) >= characters.length) {
+        // Shuffle for next round
+        setCharacters(shuffleArray(characters));
+        setCurrentIndex(0);
+      } else {
+        setCurrentIndex((prevIndex) => prevIndex + 1);
+      }
+
       setInput("");
       setShowAnswer(false);
     } else if (value.length === getCurrentRomaji().length) {
