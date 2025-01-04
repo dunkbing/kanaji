@@ -22,44 +22,67 @@ export function KanaGrid({ type, data }: KanaGridProps) {
   const [showCompound, setShowCompound] = useState(false);
   const t = translations[lang as "en" | "vi"];
 
+  // Load selected columns and compound state from localStorage
   useEffect(() => {
     const storedColumns = localStorage.getItem(`selected${type}Columns`);
+    const storedShowCompound = localStorage.getItem(`show${type}Compound`);
+
     if (storedColumns) {
-      setSelectedColumns(JSON.parse(storedColumns));
+      try {
+        const parsed = JSON.parse(storedColumns);
+        if (Array.isArray(parsed)) {
+          setSelectedColumns(parsed);
+        }
+      } catch (e) {
+        console.error("Error parsing stored columns:", e);
+      }
+    }
+
+    if (storedShowCompound) {
+      try {
+        setShowCompound(JSON.parse(storedShowCompound));
+      } catch (e) {
+        console.error("Error parsing stored compound state:", e);
+      }
     }
   }, [type]);
 
-  useEffect(() => {
-    localStorage.setItem(
-      `selected${type}Columns`,
-      JSON.stringify(selectedColumns),
-    );
-  }, [selectedColumns, type]);
-
   const handleColumnToggle = (columnIndex: number) => {
-    setSelectedColumns((prev) =>
-      prev.includes(columnIndex)
+    setSelectedColumns((prev) => {
+      const newSelected = prev.includes(columnIndex)
         ? prev.filter((col) => col !== columnIndex)
-        : [...prev, columnIndex],
-    );
+        : [...prev, columnIndex];
+      localStorage.setItem(
+        `selected${type}Columns`,
+        JSON.stringify(newSelected),
+      );
+      saveSelectedChars(newSelected);
+      return newSelected;
+    });
   };
 
   const handleUncheckAll = () => {
     setSelectedColumns([]);
+    localStorage.setItem(`selected${type}Columns`, JSON.stringify([]));
   };
 
-  const handleStudy = () => {
+  const saveSelectedChars = (selectedColumns: number[]) => {
     const selectedChars = selectedColumns.flatMap((colIndex) =>
       data[showCompound ? "compound" : "single"][colIndex].characters.map(
         (char) => char.kana,
       ),
     );
-    sessionStorage.setItem("studyChars", JSON.stringify(selectedChars));
+    localStorage.setItem("studyChars", JSON.stringify(selectedChars));
+  };
+
+  const handleStudy = () => {
+    saveSelectedChars(selectedColumns);
     router.push(`/${lang}/study`);
   };
 
   const toggleCompound = () => {
     setShowCompound(!showCompound);
+    localStorage.setItem(`show${type}Compound`, JSON.stringify(showCompound));
     setSelectedColumns([]);
   };
 
