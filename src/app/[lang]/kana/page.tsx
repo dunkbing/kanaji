@@ -1,4 +1,3 @@
-import { NavTabs } from "@/components/nav-tabs";
 import { KanaGrid } from "@/components/kana-grid";
 import { hiraganaData, katakanaData } from "@/data/kana-data";
 import { generatePageMetadata } from "@/lib/metadata";
@@ -22,7 +21,6 @@ export default async function KanaPage({
 
   return (
     <div>
-      <NavTabs lang={lang} />
       <div className="container max-w-screen-lg mx-auto py-6 space-y-6">
         <KanaGrid lang={lang} type="hiragana" data={hiraganaData} />
         <KanaGrid lang={lang} type="katakana" data={katakanaData} />

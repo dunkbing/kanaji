@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { hiraganaData, katakanaData } from "@/data/kana-data";
 import translations from "@/translations";
+import { cn } from "@/lib/utils";
 
 export function StudyMode({ lang }: { lang: string }) {
   const [characters, setCharacters] = useState<string[]>([]);
@@ -13,6 +14,8 @@ export function StudyMode({ lang }: { lang: string }) {
   const [input, setInput] = useState("");
   const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [shake, setShake] = useState(false);
+
   const t = translations[lang as "en" | "vi"];
 
   const characterMap = useMemo(() => {
@@ -53,6 +56,9 @@ export function StudyMode({ lang }: { lang: string }) {
       setInput("");
       setCurrentIndex((i) => (i + 1) % characters.length);
       setShowAnswer(false);
+    } else if (value.length >= getCurrentRomaji().length) {
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
     }
   };
 
@@ -75,23 +81,31 @@ export function StudyMode({ lang }: { lang: string }) {
   }
 
   return (
-    <Card>
+    <Card className="mx-4 mt-4">
       <CardHeader>
-        <CardTitle className="text-center">
+        <CardTitle className="text-center flex flex-col gap-2">
           Study Mode
-          <p className="text-sm font-normal text-muted-foreground mt-1">
+          <p className="text-sm font-normal text-muted-foreground">
             {score}/{characters.length} Characters
           </p>
         </CardTitle>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-8">
         <div className="text-center">
-          <div className="text-8xl mb-4">{characters[currentIndex]}</div>
+          <div
+            className={cn(
+              "text-8xl mb-6 transition-transform",
+              shake && "animate-shake",
+            )}
+          >
+            {characters[currentIndex]}
+          </div>
           <div className="text-sm text-muted-foreground">
             Type the rōmaji equivalent
           </div>
         </div>
-        <div className="max-w-xs mx-auto space-y-4">
+
+        <div className="space-y-4">
           <Input
             type="text"
             value={input}
@@ -100,15 +114,13 @@ export function StudyMode({ lang }: { lang: string }) {
             className="text-center text-lg"
             autoComplete="off"
           />
-          <div className="flex justify-center">
-            <Button
-              variant="outline"
-              onClick={handleShowAnswer}
-              className="w-full"
-            >
-              {showAnswer ? getCurrentRomaji() : "Show Answer"}
-            </Button>
-          </div>
+          <Button
+            variant="outline"
+            onClick={handleShowAnswer}
+            className="w-full"
+          >
+            {showAnswer ? getCurrentRomaji() : "Show Answer"}
+          </Button>
         </div>
       </CardContent>
     </Card>

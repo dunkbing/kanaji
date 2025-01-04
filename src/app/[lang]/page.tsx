@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { NavTabs } from "@/components/nav-tabs";
 import Link from "next/link";
 import { generatePageMetadata } from "@/lib/metadata";
 import { Metadata } from "next";
@@ -23,7 +22,6 @@ export default async function Home({
 
   return (
     <div>
-      <NavTabs lang={lang} />
       <div className="container max-w-screen-lg mx-auto py-6">
         <Card className="max-w-2xl mx-auto">
           <CardHeader>

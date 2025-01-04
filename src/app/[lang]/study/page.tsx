@@ -1,4 +1,3 @@
-import { NavTabs } from "@/components/nav-tabs";
 import { StudyMode } from "@/components/study-mode";
 import { generatePageMetadata } from "@/lib/metadata";
 import { Metadata } from "next";
@@ -21,7 +20,6 @@ export default async function StudyPage({
 
   return (
     <div>
-      <NavTabs lang={lang} />
       <div className="container max-w-screen-lg mx-auto py-6">
         <StudyMode lang={lang} />
       </div>
