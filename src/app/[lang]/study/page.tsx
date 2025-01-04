@@ -11,17 +11,12 @@ export async function generateMetadata({
   return generatePageMetadata(lang, "Study");
 }
 
-export default async function StudyPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
-  const { lang } = await params;
+export default async function StudyPage() {
 
   return (
     <div>
       <div className="container max-w-screen-lg mx-auto py-6">
-        <StudyMode lang={lang} />
+        <StudyMode />
       </div>
     </div>
   );

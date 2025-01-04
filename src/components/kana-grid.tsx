@@ -8,161 +8,107 @@ import { useRouter } from "next/navigation";
 import { KanaType } from "@/types/kana";
 import { KanaSet } from "@/data/kana-data";
 import translations from "@/translations";
+import { useLanguage } from "@/contexts/language-context";
 
 interface KanaGridProps {
   type: KanaType;
   data: KanaSet;
-  lang: string;
 }
 
-export function KanaGrid({ type, data, lang }: KanaGridProps) {
+export function KanaGrid({ type, data }: KanaGridProps) {
+  const { lang } = useLanguage();
   const router = useRouter();
-  const [isCompound, setIsCompound] = useState(false);
-  const [selectedColumns, setSelectedColumns] = useState<Set<number>>(
-    new Set(),
-  );
+  const [selectedColumns, setSelectedColumns] = useState<number[]>([]);
+  const [showCompound, setShowCompound] = useState(false);
   const t = translations[lang as "en" | "vi"];
 
-  // Load saved selection from localStorage
   useEffect(() => {
-    const saved = localStorage.getItem(`${type}-selected-columns`);
-    if (saved) {
-      setSelectedColumns(new Set(JSON.parse(saved)));
+    const storedColumns = sessionStorage.getItem(`selected${type}Columns`);
+    if (storedColumns) {
+      setSelectedColumns(JSON.parse(storedColumns));
     }
   }, [type]);
 
-  // Save selection to localStorage
   useEffect(() => {
-    localStorage.setItem(
-      `${type}-selected-columns`,
-      JSON.stringify(Array.from(selectedColumns)),
+    sessionStorage.setItem(
+      `selected${type}Columns`,
+      JSON.stringify(selectedColumns),
     );
   }, [selectedColumns, type]);
 
-  const currentColumns = isCompound ? data.compound : data.single;
-
-  const handleColumnSelect = (columnIndex: number) => {
-    const newSelected = new Set(selectedColumns);
-    if (newSelected.has(columnIndex)) {
-      newSelected.delete(columnIndex);
-    } else {
-      newSelected.add(columnIndex);
-    }
-    setSelectedColumns(newSelected);
+  const handleColumnToggle = (columnIndex: number) => {
+    setSelectedColumns((prev) =>
+      prev.includes(columnIndex)
+        ? prev.filter((col) => col !== columnIndex)
+        : [...prev, columnIndex],
+    );
   };
 
-  const handleSelectAll = () => {
-    if (selectedColumns.size === currentColumns.length) {
-      setSelectedColumns(new Set());
-    } else {
-      setSelectedColumns(
-        new Set(Array.from({ length: currentColumns.length }, (_, i) => i)),
-      );
-    }
+  const handleUncheckAll = () => {
+    setSelectedColumns([]);
   };
 
   const handleStudy = () => {
-    if (selectedColumns.size > 0) {
-      const selectedChars = Array.from(selectedColumns).flatMap((index) =>
-        currentColumns[index].characters.map((char) => char.kana),
-      );
-      sessionStorage.setItem("studyChars", JSON.stringify(selectedChars));
-      router.push(`/${lang}/study`);
-    }
+    const selectedChars = selectedColumns.flatMap((colIndex) =>
+      data[showCompound ? "compound" : "single"][colIndex].characters.map(
+        (char) => char.kana,
+      ),
+    );
+    sessionStorage.setItem("studyChars", JSON.stringify(selectedChars));
+    router.push(`/${lang}/study`);
   };
 
-  const handlePrevious = () => {
-    setIsCompound(false);
-    setSelectedColumns(new Set());
+  const toggleCompound = () => {
+    setShowCompound(!showCompound);
+    setSelectedColumns([]);
   };
 
-  const handleNext = () => {
-    setIsCompound(true);
-    setSelectedColumns(new Set());
-  };
-
-  if (!t) return null;
+  const currentColumns = data[showCompound ? "compound" : "single"];
 
   return (
-    <Card>
+    <Card className="w-full">
       <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-2xl text-primary-foreground">
-                {type === "hiragana" ? "あ" : "ア"}
-              </span>
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold capitalize">{type}</h1>
-              <p className="text-sm text-muted-foreground">
-                {isCompound ? "Compound" : "Single"} Characters
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-2">
-            <Button
-              variant="outline"
-              onClick={handlePrevious}
-              disabled={!isCompound}
-            >
-              Previous
-            </Button>
-            <Button
-              variant="outline"
-              onClick={handleNext}
-              disabled={isCompound}
-            >
-              Next
-            </Button>
-          </div>
-        </CardTitle>
+        <CardTitle>{t[type]}</CardTitle>
       </CardHeader>
       <CardContent>
-        <div className="space-y-6">
-          <div className="overflow-x-auto">
-            <div className="inline-flex gap-4 min-w-full pb-4">
-              {currentColumns.map((column, columnIndex) => (
-                <div key={columnIndex} className="space-y-4">
-                  <div className="flex justify-center">
-                    <Checkbox
-                      id={`col-${columnIndex}`}
-                      checked={selectedColumns.has(columnIndex)}
-                      onCheckedChange={() => handleColumnSelect(columnIndex)}
-                    />
-                  </div>
-                  {column.characters.map(({ kana, romaji }) => (
-                    <div
-                      key={kana}
-                      className="text-center space-y-1 cursor-pointer"
-                      onClick={() => handleColumnSelect(columnIndex)}
-                    >
-                      <div className="text-2xl">{kana}</div>
-                      <div className="text-xs text-muted-foreground">
-                        {romaji}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="flex justify-between">
-            <div className="space-x-2">
-              <Button
-                variant="outline"
-                onClick={() => setSelectedColumns(new Set())}
+        <div className="grid grid-cols-5 gap-4 mb-4">
+          {currentColumns.map((column, columnIndex) => (
+            <div key={column.name} className="flex flex-col items-center">
+              <Checkbox
+                id={`${type}-${column.name}`}
+                checked={selectedColumns.includes(columnIndex)}
+                onCheckedChange={() => handleColumnToggle(columnIndex)}
+                className="mb-2"
+              />
+              <label
+                htmlFor={`${type}-${column.name}`}
+                className="text-sm font-medium mb-2 text-center"
               >
-                UNCHECK ALL
-              </Button>
-              <Button variant="outline" onClick={handleSelectAll}>
-                SELECT ALL
-              </Button>
+                {column.name}
+              </label>
+              <div className="grid gap-2">
+                {column.characters.map((char) => (
+                  <div key={char.kana} className="text-center">
+                    <div className="text-2xl">{char.kana}</div>
+                    <div className="text-xs text-muted-foreground">
+                      {char.romaji}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
-            <Button onClick={handleStudy} disabled={selectedColumns.size === 0}>
-              STUDY
-            </Button>
-          </div>
+          ))}
+        </div>
+        <div className="flex justify-between mt-4">
+          <Button variant="outline" onClick={handleUncheckAll}>
+            {t.uncheckAll}
+          </Button>
+          <Button variant="outline" onClick={toggleCompound}>
+            {showCompound ? t.switchToSingle : t.switchToCompound}
+          </Button>
+          <Button onClick={handleStudy} disabled={selectedColumns.length === 0}>
+            {t.startStudy}
+          </Button>
         </div>
       </CardContent>
     </Card>

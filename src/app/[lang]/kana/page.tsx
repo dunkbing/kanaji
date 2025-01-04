@@ -12,18 +12,12 @@ export async function generateMetadata({
   return generatePageMetadata(lang, "Kana");
 }
 
-export default async function KanaPage({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
-  const { lang } = await params;
-
+export default function KanaPage() {
   return (
     <div>
       <div className="container max-w-screen-lg mx-auto py-6 space-y-6">
-        <KanaGrid lang={lang} type="hiragana" data={hiraganaData} />
-        <KanaGrid lang={lang} type="katakana" data={katakanaData} />
+        <KanaGrid type="hiragana" data={hiraganaData} />
+        <KanaGrid type="katakana" data={katakanaData} />
       </div>
     </div>
   );

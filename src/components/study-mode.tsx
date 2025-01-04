@@ -7,8 +7,10 @@ import { Input } from "@/components/ui/input";
 import { hiraganaData, katakanaData } from "@/data/kana-data";
 import translations from "@/translations";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/contexts/language-context";
 
-export function StudyMode({ lang }: { lang: string }) {
+export function StudyMode() {
+  const { lang } = useLanguage();
   const [characters, setCharacters] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [input, setInput] = useState("");
@@ -52,11 +54,11 @@ export function StudyMode({ lang }: { lang: string }) {
     setInput(value);
 
     if (value === getCurrentRomaji()) {
-      setScore((s) => s + 1);
+      setScore((prevScore) => prevScore + 1);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % characters.length);
       setInput("");
-      setCurrentIndex((i) => (i + 1) % characters.length);
       setShowAnswer(false);
-    } else if (value.length >= getCurrentRomaji().length) {
+    } else if (value.length === getCurrentRomaji().length) {
       setShake(true);
       setTimeout(() => setShake(false), 500);
     }
@@ -66,62 +68,45 @@ export function StudyMode({ lang }: { lang: string }) {
     setShowAnswer(true);
   };
 
-  if (!t) return null;
-
-  if (characters.length === 0) {
-    return (
-      <Card>
-        <CardContent className="py-6">
-          <p className="text-center">
-            Please select some characters to study first.
-          </p>
-        </CardContent>
-      </Card>
-    );
-  }
-
   return (
-    <Card className="mx-4 mt-4">
+    <Card className="w-full max-w-md mx-auto">
       <CardHeader>
-        <CardTitle className="text-center flex flex-col gap-2">
-          Study Mode
-          <p className="text-sm font-normal text-muted-foreground">
-            {score}/{characters.length} Characters
-          </p>
-        </CardTitle>
+        <CardTitle>{t.study}</CardTitle>
       </CardHeader>
-      <CardContent className="space-y-8">
-        <div className="text-center">
-          <div
-            className={cn(
-              "text-8xl mb-6 transition-transform",
-              shake && "animate-shake",
+      <CardContent>
+        {characters.length > 0 ? (
+          <>
+            <div className="text-center mb-4">
+              <span className="text-6xl font-bold">
+                {characters[currentIndex]}
+              </span>
+            </div>
+            <div className="mb-4">
+              <Input
+                type="text"
+                placeholder={t.enterRomaji}
+                value={input}
+                onChange={handleInputChange}
+                className={cn(shake && "animate-shake")}
+              />
+            </div>
+            <div className="flex justify-between items-center mb-4">
+              <Button variant="outline" onClick={handleShowAnswer}>
+                {t.showAnswer}
+              </Button>
+              <div>
+                {t.score}: {score}/{characters.length}
+              </div>
+            </div>
+            {showAnswer && (
+              <div className="text-center">
+                <span className="font-bold">{getCurrentRomaji()}</span>
+              </div>
             )}
-          >
-            {characters[currentIndex]}
-          </div>
-          <div className="text-sm text-muted-foreground">
-            Type the rōmaji equivalent
-          </div>
-        </div>
-
-        <div className="space-y-4">
-          <Input
-            type="text"
-            value={input}
-            onChange={handleInputChange}
-            placeholder="Type here..."
-            className="text-center text-lg"
-            autoComplete="off"
-          />
-          <Button
-            variant="outline"
-            onClick={handleShowAnswer}
-            className="w-full"
-          >
-            {showAnswer ? getCurrentRomaji() : "Show Answer"}
-          </Button>
-        </div>
+          </>
+        ) : (
+          <div className="text-center">{t.noCharactersSelected}</div>
+        )}
       </CardContent>
     </Card>
   );

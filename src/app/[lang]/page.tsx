@@ -1,24 +1,14 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { generatePageMetadata } from "@/lib/metadata";
-import { Metadata } from "next";
+import { useLanguage } from "@/contexts/language-context";
+import translations from "@/translations";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
-  return generatePageMetadata(lang, "Home");
-}
-
-export default async function Home({
-  params,
-}: {
-  params: Promise<{ lang: string }>;
-}) {
-  const { lang } = await params;
+export default function Home() {
+  const { lang } = useLanguage();
+  const t = translations[lang as "en" | "vi"];
 
   return (
     <div>
@@ -32,31 +22,23 @@ export default async function Home({
               <div>
                 <h1 className="text-2xl font-bold">Kanaji</h1>
                 <p className="text-sm text-muted-foreground">
-                  Learn Hiragana & Katakana
+                  {t.learnHiraganaKatakana}
                 </p>
               </div>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p>
-              It&apos;s easy to use. Click{" "}
-              <Link
-                href={`/${lang}/kana`}
-                className="text-primary hover:underline font-medium"
-              >
-                KANA
-              </Link>{" "}
-              and choose which characters you&apos;d like to study.
+              {t.introDescription}
             </p>
             <p>
-              Then click{" "}
+              {t.introDescription2}{" "}
               <Button variant="default" size="sm" asChild>
                 <Link href={`/${lang}/study`}>STUDY</Link>
               </Button>{" "}
-              and type each character&apos;s rōmaji equivalent (e.g.
-              &apos;a&apos;).
+              {t.introDescription3}
             </p>
-            <p className="font-medium">That&apos;s it!</p>
+            <p className="font-medium">{t.thatsIt}</p>
           </CardContent>
         </Card>
       </div>
