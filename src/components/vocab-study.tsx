@@ -36,9 +36,9 @@ export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
 
     const normalizedInput = input.toLowerCase().trim();
     return (
-      normalizedInput === currentWord.romaji.toLowerCase() || // Match romaji
-      normalizedInput === currentWord.kana || // Match hiragana/katakana
-      (!!currentWord.kanji && normalizedInput === currentWord.kanji) // Match kanji if exists
+      normalizedInput === currentWord.romaji.toLowerCase() ||
+      normalizedInput === currentWord.kana ||
+      (!!currentWord.kanji && normalizedInput === currentWord.kanji)
     );
   };
 

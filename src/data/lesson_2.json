@@ -1,0 +1,350 @@
+{
+  "id": "lesson_2",
+  "number": 2,
+  "title": {
+    "en": "Introducing Oneself and Others",
+    "vi": "Giới thiệu bản thân và người khác"
+  },
+  "words": [
+    {
+      "kanji": "これ",
+      "kana": "これ",
+      "romaji": "kore",
+      "meaning": {
+        "en": "this (thing here)",
+        "vi": "cái này"
+      },
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "kanji": "それ",
+      "kana": "それ",
+      "romaji": "sore",
+      "meaning": {
+        "en": "that (thing near you)",
+        "vi": "cái đó"
+      },
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "kanji": "あれ",
+      "kana": "あれ",
+      "romaji": "are",
+      "meaning": {
+        "en": "that (thing over there)",
+        "vi": "cái kia"
+      },
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "kanji": "この",
+      "kana": "この",
+      "romaji": "kono",
+      "meaning": {
+        "en": "this (specific thing here)",
+        "vi": "cái này"
+      },
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "kanji": "その",
+      "kana": "その",
+      "romaji": "sono",
+      "meaning": {
+        "en": "that (specific thing near you)",
+        "vi": "cái đó"
+      },
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "kanji": "あの",
+      "kana": "あの",
+      "romaji": "ano",
+      "meaning": {
+        "en": "that (specific thing over there)",
+        "vi": "cái kia"
+      },
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "kanji": "本",
+      "kana": "ほん",
+      "romaji": "hon",
+      "meaning": {
+        "en": "book",
+        "vi": "sách"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "雑誌",
+      "kana": "ざっし",
+      "romaji": "zasshi",
+      "meaning": {
+        "en": "magazine",
+        "vi": "tạp chí"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "新聞",
+      "kana": "しんぶん",
+      "romaji": "shinbun",
+      "meaning": {
+        "en": "newspaper",
+        "vi": "báo"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "ノート",
+      "kana": "ノート",
+      "romaji": "nooto",
+      "meaning": {
+        "en": "notebook",
+        "vi": "vở"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "手帳",
+      "kana": "てちょう",
+      "romaji": "techou",
+      "meaning": {
+        "en": "planner, notebook",
+        "vi": "sổ tay"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "名刺",
+      "kana": "めいし",
+      "romaji": "meishi",
+      "meaning": {
+        "en": "business card",
+        "vi": "danh thiếp"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "カード",
+      "kana": "カード",
+      "romaji": "kaado",
+      "meaning": {
+        "en": "card",
+        "vi": "thẻ"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "鉛筆",
+      "kana": "えんぴつ",
+      "romaji": "enpitsu",
+      "meaning": {
+        "en": "pencil",
+        "vi": "bút chì"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "ボールペン",
+      "kana": "ボールペン",
+      "romaji": "boorupen",
+      "meaning": {
+        "en": "ballpoint pen",
+        "vi": "bút bi"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "シャープペンシル",
+      "kana": "シャープペンシル",
+      "romaji": "shaapupenshiru",
+      "meaning": {
+        "en": "mechanical pencil",
+        "vi": "bút chì kim"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "鍵",
+      "kana": "かぎ",
+      "romaji": "kagi",
+      "meaning": {
+        "en": "key",
+        "vi": "chìa khóa"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "時計",
+      "kana": "とけい",
+      "romaji": "tokei",
+      "meaning": {
+        "en": "watch, clock",
+        "vi": "đồng hồ"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "傘",
+      "kana": "かさ",
+      "romaji": "kasa",
+      "meaning": {
+        "en": "umbrella",
+        "vi": "ô, dù"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "かばん",
+      "kana": "かばん",
+      "romaji": "kaban",
+      "meaning": {
+        "en": "bag, briefcase",
+        "vi": "cặp, túi"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "テレビ",
+      "kana": "テレビ",
+      "romaji": "terebi",
+      "meaning": {
+        "en": "TV",
+        "vi": "tivi"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "ラジオ",
+      "kana": "ラジオ",
+      "romaji": "rajio",
+      "meaning": {
+        "en": "radio",
+        "vi": "radio"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "カメラ",
+      "kana": "カメラ",
+      "romaji": "kamera",
+      "meaning": {
+        "en": "camera",
+        "vi": "máy ảnh"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "コンピューター",
+      "kana": "コンピューター",
+      "romaji": "konpyuutaa",
+      "meaning": {
+        "en": "computer",
+        "vi": "máy tính"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "自動車",
+      "kana": "じどうしゃ",
+      "romaji": "jidousha",
+      "meaning": {
+        "en": "car",
+        "vi": "xe hơi"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "机",
+      "kana": "つくえ",
+      "romaji": "tsukue",
+      "meaning": {
+        "en": "desk",
+        "vi": "bàn"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "椅子",
+      "kana": "いす",
+      "romaji": "isu",
+      "meaning": {
+        "en": "chair",
+        "vi": "ghế"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "チョコレート",
+      "kana": "チョコレート",
+      "romaji": "chokoreeto",
+      "meaning": {
+        "en": "chocolate",
+        "vi": "sô cô la"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "コーヒー",
+      "kana": "コーヒー",
+      "romaji": "koohii",
+      "meaning": {
+        "en": "coffee",
+        "vi": "cà phê"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "英語",
+      "kana": "えいご",
+      "romaji": "eigo",
+      "meaning": {
+        "en": "English (language)",
+        "vi": "tiếng Anh"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "日本語",
+      "kana": "にほんご",
+      "romaji": "nihongo",
+      "meaning": {
+        "en": "Japanese (language)",
+        "vi": "tiếng Nhật"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "～語",
+      "kana": "～ご",
+      "romaji": "~go",
+      "meaning": {
+        "en": "~ language",
+        "vi": "ngôn ngữ ~"
+      },
+      "partOfSpeech": "suffix"
+    },
+    {
+      "kanji": "何",
+      "kana": "なん",
+      "romaji": "nan",
+      "meaning": {
+        "en": "what",
+        "vi": "cái gì"
+      },
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "kanji": "そう",
+      "kana": "そう",
+      "romaji": "sou",
+      "meaning": {
+        "en": "yes, that's right",
+        "vi": "đúng vậy"
+      },
+      "partOfSpeech": "adverb"
+    }
+  ]
+}

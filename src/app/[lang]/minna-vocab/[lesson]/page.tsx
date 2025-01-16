@@ -1,10 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { vocabLessons } from "@/data/vocab-data";
 import translations from "@/translations";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
+import { type VocabLesson } from "@/types/vocab";
 
 export default async function MinnaVocabLessonPage({
   params,
@@ -14,7 +14,7 @@ export default async function MinnaVocabLessonPage({
   const { lang, lesson } = await params;
   const t = translations[lang as "en" | "vi"];
 
-  const lessonData = vocabLessons.find((l) => l.id === lesson);
+  const lessonData: VocabLesson = await import(`@/data/${lesson}.json`);
   if (!lessonData) {
     notFound();
   }

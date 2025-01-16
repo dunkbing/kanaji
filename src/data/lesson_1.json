@@ -1,0 +1,170 @@
+{
+  "id": "lesson_1",
+  "number": 1,
+  "title": {
+    "en": "Greetings and Basic Expressions",
+    "vi": "Chào hỏi và các biểu hiện cơ bản"
+  },
+  "words": [
+    {
+      "kanji": "私",
+      "kana": "わたし",
+      "romaji": "watashi",
+      "meaning": {
+        "en": "I, me",
+        "vi": "tôi"
+      },
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "kanji": "学生",
+      "kana": "がくせい",
+      "romaji": "gakusei",
+      "meaning": {
+        "en": "student",
+        "vi": "học sinh, sinh viên"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "先生",
+      "kana": "せんせい",
+      "romaji": "sensei",
+      "meaning": {
+        "en": "teacher",
+        "vi": "giáo viên"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "会社員",
+      "kana": "かいしゃいん",
+      "romaji": "kaishain",
+      "meaning": {
+        "en": "office worker",
+        "vi": "nhân viên công ty"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "医者",
+      "kana": "いしゃ",
+      "romaji": "isha",
+      "meaning": {
+        "en": "doctor",
+        "vi": "bác sĩ"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "はい",
+      "kana": "はい",
+      "romaji": "hai",
+      "meaning": {
+        "en": "yes",
+        "vi": "vâng, đúng"
+      },
+      "partOfSpeech": "interjection"
+    },
+    {
+      "kanji": "いいえ",
+      "kana": "いいえ",
+      "romaji": "iie",
+      "meaning": {
+        "en": "no",
+        "vi": "không"
+      },
+      "partOfSpeech": "interjection"
+    },
+    {
+      "kanji": "アメリカ",
+      "kana": "アメリカ",
+      "romaji": "amerika",
+      "meaning": {
+        "en": "America",
+        "vi": "nước Mỹ"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "イギリス",
+      "kana": "イギリス",
+      "romaji": "igirisu",
+      "meaning": {
+        "en": "United Kingdom",
+        "vi": "nước Anh"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "中国",
+      "kana": "ちゅうごく",
+      "romaji": "chuugoku",
+      "meaning": {
+        "en": "China",
+        "vi": "Trung Quốc"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "日本",
+      "kana": "にほん",
+      "romaji": "nihon",
+      "meaning": {
+        "en": "Japan",
+        "vi": "Nhật Bản"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "韓国",
+      "kana": "かんこく",
+      "romaji": "kankoku",
+      "meaning": {
+        "en": "South Korea",
+        "vi": "Hàn Quốc"
+      },
+      "partOfSpeech": "noun"
+    },
+    {
+      "kanji": "こんにちは",
+      "kana": "こんにちは",
+      "romaji": "konnichiwa",
+      "meaning": {
+        "en": "hello, good afternoon",
+        "vi": "xin chào"
+      },
+      "partOfSpeech": "phrase"
+    },
+    {
+      "kanji": "ありがとう",
+      "kana": "ありがとう",
+      "romaji": "arigatou",
+      "meaning": {
+        "en": "thank you",
+        "vi": "cảm ơn"
+      },
+      "partOfSpeech": "phrase"
+    },
+    {
+      "kanji": "すみません",
+      "kana": "すみません",
+      "romaji": "sumimasen",
+      "meaning": {
+        "en": "excuse me, sorry",
+        "vi": "xin lỗi"
+      },
+      "partOfSpeech": "phrase"
+    },
+    {
+      "kanji": "お願いします",
+      "kana": "おねがいします",
+      "romaji": "onegaishimasu",
+      "meaning": {
+        "en": "please",
+        "vi": "xin vui lòng"
+      },
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

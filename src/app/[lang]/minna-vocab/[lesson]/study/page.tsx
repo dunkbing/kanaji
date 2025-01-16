@@ -1,7 +1,5 @@
-// src/app/[lang]/minna-vocab/[lesson]/study/page.tsx
 import { VocabStudy } from "@/components/vocab-study";
-import { vocabLessons } from "@/data/vocab-data";
-import { notFound } from "next/navigation";
+import { type VocabLesson } from "@/types/vocab";
 
 interface PageParams {
   params: Promise<{
@@ -13,10 +11,14 @@ interface PageParams {
 export default async function MinnaVocabStudyPage({ params }: PageParams) {
   const { lang, lesson } = await params;
 
-  const lessonData = vocabLessons.find((l) => l.id === lesson);
-  if (!lessonData) {
-    notFound();
-  }
+  const lessonModule = await import(`@/data/${lesson}.json`);
+
+  const lessonData: VocabLesson = {
+    id: lessonModule.id,
+    number: lessonModule.number,
+    title: lessonModule.title,
+    words: lessonModule.words,
+  };
 
   return (
     <div className="container max-w-screen-sm mx-auto py-6">

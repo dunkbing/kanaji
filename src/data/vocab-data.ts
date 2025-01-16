@@ -3,7 +3,7 @@ import { VocabLesson } from '@/types/vocab';
 
 export const vocabLessons: VocabLesson[] = [
   {
-    id: "lesson-1",
+    id: "lesson_1",
     number: 1,
     title: {
       en: "Basic Greetings and Self-Introduction",
@@ -43,7 +43,7 @@ export const vocabLessons: VocabLesson[] = [
     ]
   },
   {
-    id: "lesson-2",
+    id: "lesson_2",
     number: 2,
     title: {
       en: "This and That",

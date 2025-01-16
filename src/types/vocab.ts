@@ -11,7 +11,7 @@ export interface VocabWord {
 }
 
 export interface VocabLesson {
-  id: string;         // lesson-1, lesson-2, etc.
+  id: string;         // lesson_1, lesson_2, etc.
   number: number;     // 1, 2, etc.
   title: {
     en: string;       // English title
