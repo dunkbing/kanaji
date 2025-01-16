@@ -46,6 +46,19 @@ const translations = {
       "Switch between single and compound characters using buttons below",
     startStudyInstruction:
       "Click 'Start Study' to practice writing selected characters in romaji",
+
+    minnaVocab: "Minna Vocab",
+    minnaVocabTitle: "Minna no Nihongo Vocabulary",
+    minnaVocabDescription:
+      "Learn vocabulary from the Minna no Nihongo textbook. Select a lesson to view details or start studying.",
+    lesson: "Lesson",
+    words: "words",
+    viewDetails: "View",
+    switchToMeaning: "Switch to Meaning",
+    switchToRomaji: "Switch to Romaji",
+    enterMeaning: "Enter the meaning",
+    typeAnyForm: "Type in romaji, hiragana, or kanji",
+    enterJapanese: "Enter the Japanese word...",
   },
   vi: {
     intro: "Giới thiệu",
@@ -95,6 +108,19 @@ const translations = {
     startStudyInstruction:
       "Nhấn 'Bắt đầu học' để luyện tập các ký tự đã chọn bằng romaji",
     noCharactersSelected: "Chưa chọn ký tự nào để học",
+
+    minnaVocab: "Từ vựng Minna",
+    minnaVocabTitle: "Từ vựng Minna no Nihongo",
+    minnaVocabDescription:
+      "Học từ vựng từ sách giáo khoa Minna no Nihongo. Chọn một bài học để xem chi tiết hoặc bắt đầu học.",
+    lesson: "Bài",
+    words: "từ",
+    viewDetails: "Xem",
+    switchToMeaning: "Chuyển sang Nghĩa",
+    switchToRomaji: "Chuyển sang Romaji",
+    enterMeaning: "Nhập nghĩa của từ",
+    typeAnyForm: "Nhập bằng romaji, hiragana, hoặc kanji",
+    enterJapanese: "Nhập từ tiếng Nhật...",
   },
 } as Record<string, Record<string, string>>;
 

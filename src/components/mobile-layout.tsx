@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Home, Book, GraduationCap } from "lucide-react";
+import { Home, Book, GraduationCap, BookOpen } from "lucide-react";
 import { Button } from "./ui/button";
 import { useLanguage } from "@/contexts/language-context";
 import translations from "@/translations";
@@ -65,6 +65,7 @@ const MobileLayout = ({ children }: MobileLayoutProps) => {
     { name: "intro", href: "/", icon: Home },
     { name: "kana", href: "/kana", icon: Book },
     { name: "study", href: "/study", icon: GraduationCap },
+    { name: "minnaVocab", href: "/minna-vocab", icon: BookOpen },
   ];
 
   const alternativeLang = lang === "en" ? "vi" : "en";
