@@ -1,14 +1,16 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { type Locale } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 import Link from "next/link";
-import { useLanguage } from "@/contexts/language-context";
-import translations from "@/translations";
 
-export default function Home() {
-  const { lang } = useLanguage();
-  const t = translations[lang as "en" | "vi"];
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations("home");
 
   return (
     <div>
@@ -22,23 +24,18 @@ export default function Home() {
               <div>
                 <h1 className="text-2xl font-bold">Kanaji</h1>
                 <p className="text-sm text-muted-foreground">
-                  {t.learnHiraganaKatakana}
+                  {t("learnHiraganaKatakana")}
                 </p>
               </div>
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
+            <p>{t("introDescription")}</p>
             <p>
-              {t.introDescription}
-            </p>
-            <p>
-              {t.introDescription2}{" "}
               <Button variant="default" size="sm" asChild>
-                <Link href={`/${lang}/study`}>STUDY</Link>
+                <Link href={`/${locale}/study`}>STUDY</Link>
               </Button>{" "}
-              {t.introDescription3}
             </p>
-            <p className="font-medium">{t.thatsIt}</p>
           </CardContent>
         </Card>
       </div>

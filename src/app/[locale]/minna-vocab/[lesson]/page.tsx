@@ -1,18 +1,21 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import translations from "@/translations";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { notFound } from "next/navigation";
 import { type VocabLesson } from "@/types/vocab";
+import { getTranslations } from "next-intl/server";
+import { Locale } from "@/i18n/routing";
 
 export default async function MinnaVocabLessonPage({
   params,
 }: {
-  params: Promise<{ lang: string; lesson: string }>;
+  params: Promise<{ locale: Locale; lesson: string }>;
 }) {
-  const { lang, lesson } = await params;
-  const t = translations[lang as "en" | "vi"];
+  const { locale, lesson } = await params;
+  const t = await getTranslations({
+    locale, namespace: "minna-vocab"
+  });
 
   const lessonData: VocabLesson = await import(`@/data/${lesson}.json`);
   if (!lessonData) {
@@ -31,15 +34,15 @@ export default async function MinnaVocabLessonPage({
                 asChild
                 className="h-8 w-8"
               >
-                <Link href={`/${lang}/minna-vocab`}>
+                <Link href={`/${locale}/minna-vocab`}>
                   <ArrowLeft className="h-4 w-4" />
                 </Link>
               </Button>
-              {t.lesson} {lessonData.number}: {lessonData.title[lang as "en" | "vi"]}
+              {t("lesson")} {lessonData.number}: {lessonData.title[locale]}
             </CardTitle>
             <Button asChild>
-              <Link href={`/${lang}/minna-vocab/${lesson}/study`}>
-                {t.study}
+              <Link href={`/${locale}/minna-vocab/${lesson}/study`}>
+                {t("startStudy")}
               </Link>
             </Button>
           </div>
@@ -61,7 +64,7 @@ export default async function MinnaVocabLessonPage({
                     </span>
                   </div>
                   <div className="text-sm">
-                    {word.meaning[lang as "en" | "vi"]}
+                    {word.meaning[locale]}
                   </div>
                   <div className="text-xs text-muted-foreground">
                     {word.partOfSpeech}

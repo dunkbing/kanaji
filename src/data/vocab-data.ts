@@ -7,7 +7,7 @@ export const vocabLessons: VocabLesson[] = [
     number: 1,
     title: {
       en: "Basic Greetings and Self-Introduction",
-      vi: "Chào hỏi và Tự giới thiệu"
+      vi: "Chào hỏi, Tự giới thiệu"
     },
     words: [
       {

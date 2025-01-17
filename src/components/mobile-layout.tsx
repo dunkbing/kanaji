@@ -2,13 +2,12 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Home, Book, GraduationCap, BookOpen } from "lucide-react";
+import { Home, Book, BookOpen } from 'lucide-react';
 import { Button } from "./ui/button";
-import { useLanguage } from "@/contexts/language-context";
-import translations from "@/translations";
 import Footer from "./footer";
+import { useTranslations } from "next-intl";
 
 type Tab = {
   name: string;
@@ -27,19 +26,19 @@ interface MobileLayoutProps {
 }
 
 const TabContent = ({ className, tabs, pathname }: TabContentProps) => {
-  const { lang } = useLanguage();
-  const t = translations[lang as "en" | "vi"];
+  const { locale } = useParams<{ locale: string }>();
+  const t = useTranslations("tab");
 
   return (
     <div className={cn("flex justify-around w-full", className)}>
       {tabs.map((tab) => {
         const Icon = tab.icon;
-        const isActive = pathname === `/${lang}${tab.href}`;
+        const isActive = pathname === `/${locale}${tab.href}`;
 
         return (
           <Link
             key={tab.href}
-            href={`/${lang}${tab.href}`}
+            href={`/${locale}${tab.href}`}
             className={cn(
               "flex flex-col items-center gap-1 p-2 rounded-lg transition-colors",
               "md:px-4 md:py-2 md:flex-row md:gap-2",
@@ -49,7 +48,7 @@ const TabContent = ({ className, tabs, pathname }: TabContentProps) => {
             )}
           >
             <Icon className="h-5 w-5" />
-            <span className="text-xs md:text-sm capitalize">{t[tab.name]}</span>
+            <span className="text-xs md:text-sm capitalize">{t(tab.name)}</span>
           </Link>
         );
       })}
@@ -59,17 +58,22 @@ const TabContent = ({ className, tabs, pathname }: TabContentProps) => {
 
 const MobileLayout = ({ children }: MobileLayoutProps) => {
   const pathname = usePathname();
-  const { lang, setLang } = useLanguage();
+  const { locale } = useParams<{ locale: string }>();
+  const router = useRouter();
 
   const tabs: Tab[] = [
     { name: "intro", href: "/", icon: Home },
     { name: "kana", href: "/kana", icon: Book },
-    { name: "study", href: "/study", icon: GraduationCap },
     { name: "minnaVocab", href: "/minna-vocab", icon: BookOpen },
   ];
 
-  const alternativeLang = lang === "en" ? "vi" : "en";
-  const langLabel = lang === "en" ? "Tiếng Việt" : "English";
+  const langLabel = locale === "en" ? "Tiếng Việt" : "English";
+
+  const switchLocale = () => {
+    const newLocale = locale === "en" ? "vi" : "en";
+    const newPathname = pathname.replace(`/${locale}`, `/${newLocale}`);
+    router.push(newPathname);
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-background japanese-pattern">
@@ -84,7 +88,7 @@ const MobileLayout = ({ children }: MobileLayoutProps) => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => setLang(alternativeLang)}
+            onClick={switchLocale}
             className="font-japanese"
           >
             {langLabel}
@@ -105,7 +109,7 @@ const MobileLayout = ({ children }: MobileLayoutProps) => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => setLang(alternativeLang)}
+            onClick={switchLocale}
             className="col-span-1 font-japanese"
           >
             {langLabel}

@@ -5,12 +5,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { hiraganaData, katakanaData } from "@/data/kana-data";
-import translations from "@/translations";
 import { cn } from "@/lib/utils";
-import { useLanguage } from "@/contexts/language-context";
+import { useTranslations } from "next-intl";
 
-export function StudyMode() {
-  const { lang } = useLanguage();
+export function KanaStudyMode() {
   const [characters, setCharacters] = useState<string[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [input, setInput] = useState("");
@@ -18,7 +16,7 @@ export function StudyMode() {
   const [showAnswer, setShowAnswer] = useState(false);
   const [shake, setShake] = useState(false);
 
-  const t = translations[lang as "en" | "vi"];
+  const t = useTranslations("kana.study");
 
   const characterMap = useMemo(() => {
     const map = new Map<string, string>();
@@ -89,7 +87,7 @@ export function StudyMode() {
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
-        <CardTitle>{t.study}</CardTitle>
+        <CardTitle>{t("study")}</CardTitle>
       </CardHeader>
       <CardContent>
         {characters.length > 0 ? (
@@ -102,7 +100,7 @@ export function StudyMode() {
             <div className="mb-4">
               <Input
                 type="text"
-                placeholder={t.enterRomaji}
+                placeholder={t("enterRomaji")}
                 value={input}
                 onChange={handleInputChange}
                 className={cn(shake && "animate-shake")}
@@ -110,10 +108,10 @@ export function StudyMode() {
             </div>
             <div className="flex justify-between items-center mb-4">
               <Button variant="outline" onClick={handleShowAnswer}>
-                {t.showAnswer}
+                {t("showAnswer")}
               </Button>
               <div>
-                {t.score}: {score}/{characters.length}
+                {t("score")}: {score}/{characters.length}
               </div>
             </div>
             {showAnswer && (
@@ -123,7 +121,7 @@ export function StudyMode() {
             )}
           </>
         ) : (
-          <div className="text-center">{t.noCharactersSelected}</div>
+          <div className="text-center">{t("noCharactersSelected")}</div>
         )}
       </CardContent>
     </Card>

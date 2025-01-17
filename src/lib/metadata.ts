@@ -1,28 +1,28 @@
 import { Metadata } from 'next'
-import translations from '@/translations'
+import { getTranslations } from 'next-intl/server';
 
-export function generatePageMetadata(lang: string, pageName: string): Metadata {
-  const t = translations[lang as keyof typeof translations]
+export async function generatePageMetadata(locale: string, pageName: string): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: pageName});
 
   return {
-    title: `${t[`metadata${pageName}Title` as keyof typeof t]} | Kanaji`,
-    description: t[`metadata${pageName}Description` as keyof typeof t],
+    title: t('title'),
+    description: t('description'),
     openGraph: {
-      title: t[`metadata${pageName}Title` as keyof typeof t],
-      description: t[`metadata${pageName}Description` as keyof typeof t],
+      title: t('title'),
+      description: t('description'),
       images: [
         {
           url: '/og-image.png',
           width: 1200,
           height: 630,
-          alt: t.metadataOgImageAlt,
+          alt: t('ogImageAlt'),
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t[`metadata${pageName}Title` as keyof typeof t],
-      description: t[`metadata${pageName}Description` as keyof typeof t],
+      title: t('title'),
+      description: t('description'),
       images: ['/og-image.png'],
     },
   }

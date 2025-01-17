@@ -1,0 +1,53 @@
+{
+  "home": {
+    "title": "Kanaji - Học Tiếng Nhật Hiragana và Katakana",
+    "description": "Thành thạo kana tiếng Nhật với Kanaji. Bài học tương tác cho các ký tự hiragana và katakana. Hoàn hảo cho người mới bắt đầu và học viên trung cấp.",
+    "ogImageAlt": "Kanaji - Học Kana, từ vựng Tiếng Nhật",
+    "introDescription": "Nhấp vào `Kana` để chọn các ký tự bạn muốn học. Sau đó nhấp vào HỌC để luyện tập gõ phiên âm rōmaji tương ứng của từng ký tự.",
+    "learnHiraganaKatakana": "Học Hiragana & Katakana"
+  },
+  "kana": {
+    "title": "Học Tiếng Nhật Kana - Hiragana & Katakana",
+    "description": "Thành thạo kana tiếng Nhật với các bài học tương tác cho cả hiragana và katakana. Hoàn hảo cho người mới bắt đầu và học viên trung cấp.",
+    "ogImageAlt": "Kanaji - Học Kana, từ vựng Tiếng Nhật",
+
+    "howToStudy": "Hướng dẫn học",
+    "checkboxInstruction": "Chọn ký tự bằng cách nhấn vào ô vuông phía trên mỗi cột",
+    "switchModeInstruction": "Chuyển đổi giữa ký tự đơn và ký tự ghép bằng nút bên dưới",
+    "startStudyInstruction": "Nhấn 'Bắt đầu học' để luyện tập các ký tự đã chọn bằng romaji",
+
+    "startStudy": "Học",
+    "uncheckAll": "Bỏ chọn tất cả",
+    "switchToCompound": "Chuyển sang kí tự ghép",
+    "switchToSingle": "Chuyển sang kí tự đơn",
+
+    "study": {
+      "title": "Học Tiếng Nhật Kana",
+      "description": "Luyện tập Hiragana và Katakana với chế độ học tương tác của chúng tôi. Kiểm tra kiến thức và cải thiện kỹ năng viết tiếng Nhật của bạn.",
+      "ogImageAlt": "Kanaji - Học Tiếng Nhật Kana",
+      "study": "Học",
+      "enterRomaji": "Nhập romaji",
+      "showAnswer": "Hiện đáp án",
+      "score": "Điểm số"
+    }
+  },
+  "minna-vocab": {
+    "title": "Từ vựng Minna no Nihongo",
+    "description": "Học từ vựng từ sách giáo khoa Minna no Nihongo. Chọn một bài học để xem chi tiết hoặc bắt đầu học.",
+    "lesson": "Bài",
+    "words": "từ",
+    "viewDetails": "Xem",
+    "startStudy": "Học",
+    "score": "Điểm số",
+    "study": {
+      "typeAnyForm": "Nhập bằng romaji, hiragana, hoặc kanji",
+      "enterJapanese": "Nhập từ tiếng Nhật...",
+      "showAnswer": "Hiện đáp án"
+    }
+  },
+  "tab": {
+    "intro": "Giới thiệu",
+    "kana": "Kana",
+    "minnaVocab": "Từ vựng Minna"
+  }
+}

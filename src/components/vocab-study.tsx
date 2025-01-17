@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import translations from "@/translations";
 import { cn } from "@/lib/utils";
 import { ArrowLeft, Book } from "lucide-react";
 import Link from "next/link";
 import { VocabWord, VocabLesson } from "@/types/vocab";
+import { useTranslations } from "next-intl";
 
 interface VocabStudyProps {
   lessonData: VocabLesson;
@@ -16,7 +16,8 @@ interface VocabStudyProps {
 }
 
 export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
-  const t = translations[lang as "en" | "vi"];
+  const t = useTranslations("minna-vocab");
+  const t2 = useTranslations("minna-vocab.study");
   const [words, setWords] = useState<VocabWord[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [input, setInput] = useState("");
@@ -81,12 +82,12 @@ export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
           <div className="flex items-center gap-2">
             <Book className="h-5 w-5" />
             <span>
-              {t.lesson} {lessonData.number}
+              {t("lesson")} {lessonData.number}
             </span>
           </div>
         </CardTitle>
         <div className="text-sm text-muted-foreground">
-          {t.score}: {score}/{words.length}
+          {t("score")}: {score}/{words.length}
         </div>
       </CardHeader>
 
@@ -95,13 +96,13 @@ export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
           <div className="text-xl font-medium">
             {currentWord.meaning[lang as "en" | "vi"]}
           </div>
-          <div className="text-sm text-muted-foreground">{t.typeAnyForm}</div>
+          <div className="text-sm text-muted-foreground">{t2("typeAnyForm")}</div>
         </div>
 
         <div className="space-y-4">
           <Input
             type="text"
-            placeholder={t.enterJapanese}
+            placeholder={t2("enterJapanese")}
             value={input}
             onChange={handleInputChange}
             className={cn(shake && "animate-shake", "font-japanese")}
@@ -111,7 +112,7 @@ export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
 
           <div className="flex justify-between items-center">
             <Button variant="outline" onClick={handleShowAnswer}>
-              {t.showAnswer}
+              {t2("showAnswer")}
             </Button>
           </div>
 

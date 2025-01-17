@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
-import { useRouter } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { KanaType } from "@/types/kana";
 import { KanaSet } from "@/data/kana-data";
-import translations from "@/translations";
-import { useLanguage } from "@/contexts/language-context";
+import { useTranslations } from "next-intl";
 
 interface KanaGridProps {
   type: KanaType;
@@ -16,11 +15,11 @@ interface KanaGridProps {
 }
 
 export function KanaGrid({ type, data }: KanaGridProps) {
-  const { lang } = useLanguage();
+  const { locale } = useParams<{ locale: string }>();
   const router = useRouter();
   const [selectedColumns, setSelectedColumns] = useState<number[]>([]);
   const [showCompound, setShowCompound] = useState(false);
-  const t = translations[lang as "en" | "vi"];
+  const t = useTranslations("kana");
 
   // Load selected columns and compound state from localStorage
   useEffect(() => {
@@ -77,7 +76,7 @@ export function KanaGrid({ type, data }: KanaGridProps) {
 
   const handleStudy = () => {
     saveSelectedChars(selectedColumns);
-    router.push(`/${lang}/study`);
+    router.push(`/${locale}/kana/study`);
   };
 
   const toggleCompound = () => {
@@ -91,13 +90,13 @@ export function KanaGrid({ type, data }: KanaGridProps) {
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row justify-between items-center">
-        <CardTitle>{t[type]}</CardTitle>
+        <CardTitle className="capitalize">{type}</CardTitle>
         <Button
           onClick={handleStudy}
           disabled={selectedColumns.length === 0}
           className="w-auto"
         >
-          {t.startStudy}
+          {t("startStudy")}
         </Button>
       </CardHeader>
       <CardContent>
@@ -135,10 +134,10 @@ export function KanaGrid({ type, data }: KanaGridProps) {
             onClick={handleUncheckAll}
             className="w-full"
           >
-            {t.uncheckAll}
+            {t("uncheckAll")}
           </Button>
           <Button variant="outline" onClick={toggleCompound} className="w-full">
-            {showCompound ? t.switchToSingle : t.switchToCompound}
+            {showCompound ? t("switchToSingle") : t("switchToCompound")}
           </Button>
         </div>
       </CardContent>
