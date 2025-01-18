@@ -1,0 +1,604 @@
+{
+  "id": "lesson_5",
+  "number": 5,
+  "title": {
+    "en": "Time and Transportation",
+    "vi": "Thời gian và Phương tiện giao thông"
+  },
+  "words": [
+    {
+      "kanji": "―番線",
+      "kana": "ばんせん",
+      "romaji": "bansen",
+      "meaning": {
+        "en": "platform number –",
+        "vi": "sân ga số –"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚉"
+    },
+    {
+      "kanji": "行きます",
+      "kana": "いきます",
+      "romaji": "ikimasu",
+      "meaning": {
+        "en": "to go",
+        "vi": "đi"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "🚶‍♂️"
+    },
+    {
+      "kanji": "来ます",
+      "kana": "きます",
+      "romaji": "kimasu",
+      "meaning": {
+        "en": "to come",
+        "vi": "đến"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "👋"
+    },
+    {
+      "kanji": "帰ります",
+      "kana": "かえります",
+      "romaji": "kaerimasu",
+      "meaning": {
+        "en": "to return",
+        "vi": "về"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "🏠"
+    },
+    {
+      "kanji": "学校",
+      "kana": "がっこう",
+      "romaji": "gakkou",
+      "meaning": {
+        "en": "school",
+        "vi": "trường học"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏫"
+    },
+    {
+      "kanji": "",
+      "kana": "スーパー",
+      "romaji": "suupaa",
+      "meaning": {
+        "en": "supermarket",
+        "vi": "siêu thị"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🛒"
+    },
+    {
+      "kanji": "駅",
+      "kana": "えき",
+      "romaji": "eki",
+      "meaning": {
+        "en": "station",
+        "vi": "ga, nhà ga"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚉"
+    },
+    {
+      "kanji": "飛行機",
+      "kana": "ひこうき",
+      "romaji": "hikouki",
+      "meaning": {
+        "en": "airplane",
+        "vi": "máy bay"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "✈️"
+    },
+    {
+      "kanji": "船",
+      "kana": "ふね",
+      "romaji": "fune",
+      "meaning": {
+        "en": "ship",
+        "vi": "thuyền, tàu thủy"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚢"
+    },
+    {
+      "kanji": "電車",
+      "kana": "でんしゃ",
+      "romaji": "densha",
+      "meaning": {
+        "en": "train",
+        "vi": "tàu điện"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚃"
+    },
+    {
+      "kanji": "地下鉄",
+      "kana": "ちかてつ",
+      "romaji": "chikatetsu",
+      "meaning": {
+        "en": "subway",
+        "vi": "tàu điện ngầm"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚇"
+    },
+    {
+      "kanji": "新幹線",
+      "kana": "しんかんせん",
+      "romaji": "shinkansen",
+      "meaning": {
+        "en": "Shinkansen (bullet train)",
+        "vi": "tàu Shinkansen (tàu điện siêu tốc của Nhật)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚄"
+    },
+    {
+      "kanji": "",
+      "kana": "バス",
+      "romaji": "basu",
+      "meaning": {
+        "en": "bus",
+        "vi": "xe Buýt"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚌"
+    },
+    {
+      "kanji": "",
+      "kana": "タクシー",
+      "romaji": "takushii",
+      "meaning": {
+        "en": "taxi",
+        "vi": "tắc-xi"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚕"
+    },
+    {
+      "kanji": "自転車",
+      "kana": "じてんしゃ",
+      "romaji": "jitensha",
+      "meaning": {
+        "en": "bicycle",
+        "vi": "xe đạp"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚲"
+    },
+    {
+      "kanji": "歩いて",
+      "kana": "あるいて",
+      "romaji": "aruite",
+      "meaning": {
+        "en": "on foot",
+        "vi": "đi bộ"
+      },
+      "partOfSpeech": "adverb",
+      "emoji": "🚶‍♀️"
+    },
+    {
+      "kanji": "人",
+      "kana": "ひと",
+      "romaji": "hito",
+      "meaning": {
+        "en": "person",
+        "vi": "người"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👤"
+    },
+    {
+      "kanji": "友達",
+      "kana": "ともだち",
+      "romaji": "tomodachi",
+      "meaning": {
+        "en": "friend",
+        "vi": "bạn, bạn bè"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👫"
+    },
+    {
+      "kanji": "彼",
+      "kana": "かれ",
+      "romaji": "kare",
+      "meaning": {
+        "en": "he, boyfriend",
+        "vi": "anh ấy, bạn trai"
+      },
+      "partOfSpeech": "pronoun",
+      "emoji": "👨"
+    },
+    {
+      "kanji": "彼女",
+      "kana": "かのじょ",
+      "romaji": "kanojo",
+      "meaning": {
+        "en": "she, girlfriend",
+        "vi": "chị ấy, bạn gái"
+      },
+      "partOfSpeech": "pronoun",
+      "emoji": "👩"
+    },
+    {
+      "kanji": "家族",
+      "kana": "かぞく",
+      "romaji": "kazoku",
+      "meaning": {
+        "en": "family",
+        "vi": "gia đình"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👨‍👩‍👧‍👦"
+    },
+    {
+      "kanji": "先週",
+      "kana": "せんしゅう",
+      "romaji": "senshuu",
+      "meaning": {
+        "en": "last week",
+        "vi": "tuần trước"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "今週",
+      "kana": "こんしゅう",
+      "romaji": "konshuu",
+      "meaning": {
+        "en": "this week",
+        "vi": "tuần này"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "来週",
+      "kana": "らいしゅう",
+      "romaji": "raishuu",
+      "meaning": {
+        "en": "next week",
+        "vi": "tuần sau"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "先月",
+      "kana": "せんげつ",
+      "romaji": "sengetsu",
+      "meaning": {
+        "en": "last month",
+        "vi": "tháng trước"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "今月",
+      "kana": "こんげつ",
+      "romaji": "kongetsu",
+      "meaning": {
+        "en": "this month",
+        "vi": "tháng này"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "来月",
+      "kana": "らいげつ",
+      "romaji": "raigetsu",
+      "meaning": {
+        "en": "next month",
+        "vi": "tháng sau"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "去年",
+      "kana": "きょねん",
+      "romaji": "kyonen",
+      "meaning": {
+        "en": "last year",
+        "vi": "năm ngoái"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "",
+      "kana": "ことし",
+      "romaji": "kotoshi",
+      "meaning": {
+        "en": "this year",
+        "vi": "năm nay"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "来年",
+      "kana": "らいねん",
+      "romaji": "rainen",
+      "meaning": {
+        "en": "next year",
+        "vi": "năm sau"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "―月",
+      "kana": "―がつ",
+      "romaji": "gatsu",
+      "meaning": {
+        "en": "month –",
+        "vi": "tháng –"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "何月",
+      "kana": "なんがつ",
+      "romaji": "nangatsu",
+      "meaning": {
+        "en": "which month",
+        "vi": "tháng mấy"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "１日",
+      "kana": "ついたち",
+      "romaji": "tsuitachi",
+      "meaning": {
+        "en": "1st day of the month",
+        "vi": "ngày mồng 1"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "２日",
+      "kana": "ふつか",
+      "romaji": "futsuka",
+      "meaning": {
+        "en": "2nd day of the month, 2 days",
+        "vi": "ngày mồng 2, 2 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "３日",
+      "kana": "みっか",
+      "romaji": "mikka",
+      "meaning": {
+        "en": "3rd day of the month, 3 days",
+        "vi": "ngày mồng 3, 3 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "４日",
+      "kana": "よっか",
+      "romaji": "yokka",
+      "meaning": {
+        "en": "4th day of the month, 4 days",
+        "vi": "ngày mồng 4, 4 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "５日",
+      "kana": "いつか",
+      "romaji": "itsuka",
+      "meaning": {
+        "en": "5th day of the month, 5 days",
+        "vi": "ngày mồng 5, 5 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "６日",
+      "kana": "むいか",
+      "romaji": "muika",
+      "meaning": {
+        "en": "6th day of the month, 6 days",
+        "vi": "ngày mồng 6, 6 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "７日",
+      "kana": "なのか",
+      "romaji": "nanoka",
+      "meaning": {
+        "en": "7th day of the month, 7 days",
+        "vi": "ngày mồng 7, 7 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "８日",
+      "kana": "ようか",
+      "romaji": "youka",
+      "meaning": {
+        "en": "8th day of the month, 8 days",
+        "vi": "ngày mồng 8, 8 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "９日",
+      "kana": "ここのか",
+      "romaji": "kokonoka",
+      "meaning": {
+        "en": "9th day of the month, 9 days",
+        "vi": "ngày mồng 9, 9 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "１０日",
+      "kana": "とおか",
+      "romaji": "tooka",
+      "meaning": {
+        "en": "10th day of the month, 10 days",
+        "vi": "ngày mồng 10, 10 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "１４日",
+      "kana": "じゅうよっか",
+      "romaji": "juuyokka",
+      "meaning": {
+        "en": "14th day of the month, 14 days",
+        "vi": "ngày 14, 14 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "２０日",
+      "kana": "はつか",
+      "romaji": "hatsuka",
+      "meaning": {
+        "en": "20th day of the month, 20 days",
+        "vi": "ngày 20, 20 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "２４日",
+      "kana": "にじゅうよっか",
+      "romaji": "nijuuyokka",
+      "meaning": {
+        "en": "24th day of the month, 24 days",
+        "vi": "ngày 24, 24 ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "―日",
+      "kana": "―にち",
+      "romaji": "nichi",
+      "meaning": {
+        "en": "day –, – days",
+        "vi": "ngày -, – ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "何日",
+      "kana": "なんにち",
+      "romaji": "nannichi",
+      "meaning": {
+        "en": "which day, how many days",
+        "vi": "ngày mấy, ngày bao nhiêu, mấy ngày, bao nhiêu ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "",
+      "kana": "いつ",
+      "romaji": "itsu",
+      "meaning": {
+        "en": "when",
+        "vi": "bao giờ, khi nào"
+      },
+      "partOfSpeech": "adverb",
+      "emoji": ""
+    },
+    {
+      "kanji": "誕生日",
+      "kana": "たんじょうび",
+      "romaji": "tanjoubi",
+      "meaning": {
+        "en": "birthday",
+        "vi": "sinh nhật"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🎂"
+    },
+    {
+      "kanji": "普通",
+      "kana": "ふつう",
+      "romaji": "futsuu",
+      "meaning": {
+        "en": "regular train (stops at all stations)",
+        "vi": "tàu thường (dừng cả ở các ga lẻ)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚃"
+    },
+    {
+      "kanji": "急行",
+      "kana": "きゅうこう",
+      "romaji": "kyuukou",
+      "meaning": {
+        "en": "express train",
+        "vi": "tàu tốc hành"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚄"
+    },
+    {
+      "kanji": "特急",
+      "kana": "とっきゅう",
+      "romaji": "tokkyuu",
+      "meaning": {
+        "en": "limited express train",
+        "vi": "tàu tốc hành đặc biệt"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚅"
+    },
+    {
+      "kanji": "次の",
+      "kana": "つぎの",
+      "romaji": "tsugi no",
+      "meaning": {
+        "en": "next",
+        "vi": "tiếp theo"
+      },
+      "partOfSpeech": "adjective",
+      "emoji": "➡️"
+    },
+    {
+      "kanji": "",
+      "kana": "どういたしまして",
+      "romaji": "douitashimashite",
+      "meaning": {
+        "en": "you're welcome",
+        "vi": "không có chi"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "🙏"
+    }
+  ]
+}

@@ -1,0 +1,505 @@
+{
+  "id": "lesson_3",
+  "number": 3,
+  "title": {
+    "en": "This and That",
+    "vi": "Đây và Đó"
+  },
+  "words": [
+    {
+      "kanji": "",
+      "kana": "ここ",
+      "romaji": "koko",
+      "meaning": {
+        "en": "here, this place",
+        "vi": "chỗ này, đây"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📍"
+    },
+    {
+      "kanji": "",
+      "kana": "そこ",
+      "romaji": "soko",
+      "meaning": {
+        "en": "there, that place",
+        "vi": "chỗ đó, đó"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📍"
+    },
+    {
+      "kanji": "",
+      "kana": "あそこ",
+      "romaji": "asoko",
+      "meaning": {
+        "en": "over there, that place",
+        "vi": "chỗ kia, kia"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📍"
+    },
+    {
+      "kanji": "",
+      "kana": "どこ",
+      "romaji": "doko",
+      "meaning": {
+        "en": "where, which place",
+        "vi": "chỗ nào, đâu"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "❓"
+    },
+    {
+      "kanji": "",
+      "kana": "こちら",
+      "romaji": "kochira",
+      "meaning": {
+        "en": "this way, here (polite)",
+        "vi": "phía này, đằng này, chỗ này, đây (cách nói lịch sự của ここ)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👈"
+    },
+    {
+      "kanji": "",
+      "kana": "そちら",
+      "romaji": "sochira",
+      "meaning": {
+        "en": "that way, there (polite)",
+        "vi": "phía đó, đằng đó, chỗ đó, đó (cách nói lịch sự của そこ)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👉"
+    },
+    {
+      "kanji": "",
+      "kana": "あちら",
+      "romaji": "achira",
+      "meaning": {
+        "en": "that way, over there (polite)",
+        "vi": "phía kia, đằng kia, chỗ kia, kia (cách nói lịch sự của あそこ)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👉"
+    },
+    {
+      "kanji": "",
+      "kana": "どちら",
+      "romaji": "dochira",
+      "meaning": {
+        "en": "which way, where (polite)",
+        "vi": "phía nào, đằng nào, chỗ nào, đâu (cách nói lịch sự của どこ)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "❓"
+    },
+    {
+      "kanji": "教室",
+      "kana": "きょうしつ",
+      "romaji": "kyoushitsu",
+      "meaning": {
+        "en": "classroom",
+        "vi": "lớp học, phòng học"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏫"
+    },
+    {
+      "kanji": "食堂",
+      "kana": "しょくどう",
+      "romaji": "shokudou",
+      "meaning": {
+        "en": "cafeteria, dining hall",
+        "vi": "nhà ăn"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🍽️"
+    },
+    {
+      "kanji": "事務所",
+      "kana": "じむしょ",
+      "romaji": "jimusho",
+      "meaning": {
+        "en": "office",
+        "vi": "văn phòng"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏢"
+    },
+    {
+      "kanji": "会議室",
+      "kana": "かいぎしつ",
+      "romaji": "kaigishitsu",
+      "meaning": {
+        "en": "meeting room",
+        "vi": "phòng họp"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📊"
+    },
+    {
+      "kanji": "受付",
+      "kana": "うけつけ",
+      "romaji": "uketsuke",
+      "meaning": {
+        "en": "reception desk",
+        "vi": "bộ phận tiếp tân, phòng thường trực, lễ tân"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "💁"
+    },
+    {
+      "kanji": "",
+      "kana": "ロビー",
+      "romaji": "robii",
+      "meaning": {
+        "en": "lobby",
+        "vi": "hành lang, đại sảnh"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏨"
+    },
+    {
+      "kanji": "部屋",
+      "kana": "へや",
+      "romaji": "heya",
+      "meaning": {
+        "en": "room",
+        "vi": "căn phòng"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏠"
+    },
+    {
+      "kanji": "お手洗い",
+      "kana": "おてあらい",
+      "romaji": "otearai",
+      "meaning": {
+        "en": "restroom, toilet",
+        "vi": "nhà vệ sinh, phòng vệ sinh, toa-lét"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚽"
+    },
+    {
+      "kanji": "階段",
+      "kana": "かいだん",
+      "romaji": "kaidan",
+      "meaning": {
+        "en": "stairs",
+        "vi": "cầu thang"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🪜"
+    },
+    {
+      "kanji": "",
+      "kana": "エレベーター",
+      "romaji": "erebeetaa",
+      "meaning": {
+        "en": "elevator",
+        "vi": "thang máy"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🛗"
+    },
+    {
+      "kanji": "",
+      "kana": "エスカレーター",
+      "romaji": "esukareetaa",
+      "meaning": {
+        "en": "escalator",
+        "vi": "thang cuốn"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🛗"
+    },
+    {
+      "kanji": "お国",
+      "kana": "おくに",
+      "romaji": "okuni",
+      "meaning": {
+        "en": "country",
+        "vi": "đất nước"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌍"
+    },
+    {
+      "kanji": "会社",
+      "kana": "かいしゃ",
+      "romaji": "kaisha",
+      "meaning": {
+        "en": "company",
+        "vi": "công ty"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏢"
+    },
+    {
+      "kanji": "",
+      "kana": "うち",
+      "romaji": "uchi",
+      "meaning": {
+        "en": "home, house",
+        "vi": "nhà"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏠"
+    },
+    {
+      "kanji": "電話",
+      "kana": "でんわ",
+      "romaji": "denwa",
+      "meaning": {
+        "en": "telephone",
+        "vi": "máy điện thoại, điện thoại"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📞"
+    },
+    {
+      "kanji": "靴",
+      "kana": "くつ",
+      "romaji": "kutsu",
+      "meaning": {
+        "en": "shoes",
+        "vi": "giày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👞"
+    },
+    {
+      "kanji": "",
+      "kana": "ネクタイ",
+      "romaji": "nekutai",
+      "meaning": {
+        "en": "necktie",
+        "vi": "cà vạt"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👔"
+    },
+    {
+      "kanji": "",
+      "kana": "ワイン",
+      "romaji": "wain",
+      "meaning": {
+        "en": "wine",
+        "vi": "rượu vang"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🍷"
+    },
+    {
+      "kanji": "",
+      "kana": "たばこ",
+      "romaji": "tabako",
+      "meaning": {
+        "en": "tobacco, cigarette",
+        "vi": "thuốc lá"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚬"
+    },
+    {
+      "kanji": "売り場",
+      "kana": "うりば",
+      "romaji": "uriba",
+      "meaning": {
+        "en": "sales floor, counter",
+        "vi": "quầy bán (trong một cửa hàng bách hóa)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🛍️"
+    },
+    {
+      "kanji": "地下",
+      "kana": "ちか",
+      "romaji": "chika",
+      "meaning": {
+        "en": "basement, underground",
+        "vi": "tầng hầm, dưới mặt đất"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "⬇️"
+    },
+    {
+      "kanji": "階",
+      "kana": "かい",
+      "romaji": "kai",
+      "meaning": {
+        "en": "floor, level",
+        "vi": "tầng thứ –"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏢"
+    },
+    {
+      "kanji": "何階",
+      "kana": "なんがい",
+      "romaji": "nangai",
+      "meaning": {
+        "en": "which floor",
+        "vi": "tầng mấy"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "❓"
+    },
+    {
+      "kanji": "円",
+      "kana": "えん",
+      "romaji": "en",
+      "meaning": {
+        "en": "yen (Japanese currency)",
+        "vi": "yên"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "💴"
+    },
+    {
+      "kanji": "",
+      "kana": "いくら",
+      "romaji": "ikura",
+      "meaning": {
+        "en": "how much",
+        "vi": "bao nhiêu tiền"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "💰"
+    },
+    {
+      "kanji": "百",
+      "kana": "ひゃく",
+      "romaji": "hyaku",
+      "meaning": {
+        "en": "hundred",
+        "vi": "trăm"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "💯"
+    },
+    {
+      "kanji": "千",
+      "kana": "せん",
+      "romaji": "sen",
+      "meaning": {
+        "en": "thousand",
+        "vi": "nghìn"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "1️⃣0️⃣0️⃣0️⃣"
+    },
+    {
+      "kanji": "万",
+      "kana": "まん",
+      "romaji": "man",
+      "meaning": {
+        "en": "ten thousand",
+        "vi": "mười nghìn, vạn"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "1️⃣0️⃣0️⃣0️⃣0️⃣"
+    },
+    {
+      "kanji": "",
+      "kana": "すみません",
+      "romaji": "sumimasen",
+      "meaning": {
+        "en": "excuse me, sorry",
+        "vi": "Xin lỗi"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "🙏"
+    },
+    {
+      "kanji": "",
+      "kana": "～でございます",
+      "romaji": "~de gozaimasu",
+      "meaning": {
+        "en": "polite form of 'desu'",
+        "vi": "(cách nói lịch sự của 「です」)"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": ""
+    },
+    {
+      "kanji": "",
+      "kana": "みせてください",
+      "romaji": "misete kudasai",
+      "meaning": {
+        "en": "please show me",
+        "vi": "cho tôi xem [~]"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "👀"
+    },
+    {
+      "kanji": "",
+      "kana": "じゃ",
+      "romaji": "ja",
+      "meaning": {
+        "en": "well then, so",
+        "vi": "Thế thì, vậy thì"
+      },
+      "partOfSpeech": "conjunction",
+      "emoji": ""
+    },
+    {
+      "kanji": "",
+      "kana": "～をください",
+      "romaji": "~o kudasai",
+      "meaning": {
+        "en": "please give me ~",
+        "vi": "cho tôi [~]"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "🙏"
+    },
+    {
+      "kanji": "新大阪",
+      "kana": "しんおおさか",
+      "romaji": "Shin-Osaka",
+      "meaning": {
+        "en": "Shin-Osaka (a train station in Osaka)",
+        "vi": "tên một nhà ga ở Osaka"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🚉"
+    },
+    {
+      "kanji": "",
+      "kana": "イタリア",
+      "romaji": "Itaria",
+      "meaning": {
+        "en": "Italy",
+        "vi": "Ý"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🇮🇹"
+    },
+    {
+      "kanji": "",
+      "kana": "スイス",
+      "romaji": "Suisu",
+      "meaning": {
+        "en": "Switzerland",
+        "vi": "Thụy Sĩ"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🇨🇭"
+    },
+    {
+      "kanji": "",
+      "kana": "ＭＴ/ヨーネン/アキックス",
+      "romaji": "MT/Yonen/Akikkusu",
+      "meaning": {
+        "en": "fictional company names",
+        "vi": "tên các công ty giả tưởng"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    }
+  ]
+}

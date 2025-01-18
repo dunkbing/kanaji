@@ -1,0 +1,505 @@
+{
+  "id": "lesson_4",
+  "number": 4,
+  "title": {
+    "en": "Lesson 4: Daily Activities and Time",
+    "vi": "Bài 4: Hoạt động hàng ngày và thời gian"
+  },
+  "words": [
+    {
+      "kanji": "",
+      "kana": "おきます",
+      "romaji": "okimasu",
+      "meaning": {
+        "en": "to wake up",
+        "vi": "thức dậy"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "⏰"
+    },
+    {
+      "kanji": "寝ます",
+      "kana": "ねます",
+      "romaji": "nemasu",
+      "meaning": {
+        "en": "to sleep",
+        "vi": "ngủ"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "😴"
+    },
+    {
+      "kanji": "働きます",
+      "kana": "はたらきます",
+      "romaji": "hatarakimasu",
+      "meaning": {
+        "en": "to work",
+        "vi": "làm việc"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "💼"
+    },
+    {
+      "kanji": "休みます",
+      "kana": "やすみます",
+      "romaji": "yasumimasu",
+      "meaning": {
+        "en": "to rest",
+        "vi": "nghỉ ngơi"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "🌴"
+    },
+    {
+      "kanji": "勉強します",
+      "kana": "べんきょうします",
+      "romaji": "benkyou shimasu",
+      "meaning": {
+        "en": "to study",
+        "vi": "học tập"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "📚"
+    },
+    {
+      "kanji": "終わります",
+      "kana": "おわります",
+      "romaji": "owarimasu",
+      "meaning": {
+        "en": "to finish",
+        "vi": "kết thúc"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "🏁"
+    },
+    {
+      "kanji": "",
+      "kana": "デパート",
+      "romaji": "depaato",
+      "meaning": {
+        "en": "department store",
+        "vi": "cửa hàng bách hóa"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏬"
+    },
+    {
+      "kanji": "銀行",
+      "kana": "ぎんこう",
+      "romaji": "ginkou",
+      "meaning": {
+        "en": "bank",
+        "vi": "ngân hàng"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏦"
+    },
+    {
+      "kanji": "郵便局",
+      "kana": "ゆうびんきょく",
+      "romaji": "yuubinkyoku",
+      "meaning": {
+        "en": "post office",
+        "vi": "bưu điện"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📮"
+    },
+    {
+      "kanji": "図書館",
+      "kana": "としょかん",
+      "romaji": "toshokan",
+      "meaning": {
+        "en": "library",
+        "vi": "thư viện"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📚"
+    },
+    {
+      "kanji": "美術館",
+      "kana": "びじゅつかん",
+      "romaji": "bijutsukan",
+      "meaning": {
+        "en": "art museum",
+        "vi": "viện bảo tàng"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🖼️"
+    },
+    {
+      "kanji": "電話番号",
+      "kana": "でんわばんごう",
+      "romaji": "denwa bangou",
+      "meaning": {
+        "en": "phone number",
+        "vi": "số điện thoại"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📞"
+    },
+    {
+      "kanji": "何番",
+      "kana": "なんばん",
+      "romaji": "nanban",
+      "meaning": {
+        "en": "what number",
+        "vi": "số mấy"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "今",
+      "kana": "いま",
+      "romaji": "ima",
+      "meaning": {
+        "en": "now",
+        "vi": "bây giờ"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "⏳"
+    },
+    {
+      "kanji": "～時",
+      "kana": "～じ",
+      "romaji": "~ji",
+      "meaning": {
+        "en": "~o'clock",
+        "vi": "~giờ"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🕒"
+    },
+    {
+      "kanji": "～分",
+      "kana": "～ふん / ～ぷん",
+      "romaji": "~fun / ~pun",
+      "meaning": {
+        "en": "~minutes",
+        "vi": "~phút"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "⏱️"
+    },
+    {
+      "kanji": "半",
+      "kana": "はん",
+      "romaji": "han",
+      "meaning": {
+        "en": "half",
+        "vi": "phân nửa"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "½"
+    },
+    {
+      "kanji": "何時",
+      "kana": "なんじ",
+      "romaji": "nanji",
+      "meaning": {
+        "en": "what time",
+        "vi": "mấy giờ"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🕒"
+    },
+    {
+      "kanji": "何分",
+      "kana": "なんぷん",
+      "romaji": "nanpun",
+      "meaning": {
+        "en": "how many minutes",
+        "vi": "mấy phút"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "⏱️"
+    },
+    {
+      "kanji": "午前",
+      "kana": "ごぜん",
+      "romaji": "gozen",
+      "meaning": {
+        "en": "morning (AM)",
+        "vi": "sáng (AM: trước 12 giờ)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌅"
+    },
+    {
+      "kanji": "午後",
+      "kana": "ごご",
+      "romaji": "gogo",
+      "meaning": {
+        "en": "afternoon (PM)",
+        "vi": "chiều (PM: sau 12 giờ)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌇"
+    },
+    {
+      "kanji": "朝",
+      "kana": "あさ",
+      "romaji": "asa",
+      "meaning": {
+        "en": "morning",
+        "vi": "sáng"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌅"
+    },
+    {
+      "kanji": "昼",
+      "kana": "ひる",
+      "romaji": "hiru",
+      "meaning": {
+        "en": "noon",
+        "vi": "trưa"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌞"
+    },
+    {
+      "kanji": "晩",
+      "kana": "ばん",
+      "romaji": "ban",
+      "meaning": {
+        "en": "evening",
+        "vi": "tối"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌃"
+    },
+    {
+      "kanji": "夜",
+      "kana": "よる",
+      "romaji": "yoru",
+      "meaning": {
+        "en": "night",
+        "vi": "tối"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌙"
+    },
+    {
+      "kanji": "",
+      "kana": "おととい",
+      "romaji": "ototoi",
+      "meaning": {
+        "en": "the day before yesterday",
+        "vi": "ngày hôm kia"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "",
+      "kana": "きのう",
+      "romaji": "kinou",
+      "meaning": {
+        "en": "yesterday",
+        "vi": "ngày hôm qua"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "今日",
+      "kana": "きょう",
+      "romaji": "kyou",
+      "meaning": {
+        "en": "today",
+        "vi": "hôm nay"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "明日",
+      "kana": "あした",
+      "romaji": "ashita",
+      "meaning": {
+        "en": "tomorrow",
+        "vi": "ngày mai"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "",
+      "kana": "あさって",
+      "romaji": "asatte",
+      "meaning": {
+        "en": "the day after tomorrow",
+        "vi": "ngày mốt"
+      },
+      "partOfSpeech": "noun",
+      "emoji": ""
+    },
+    {
+      "kanji": "今朝",
+      "kana": "けさ",
+      "romaji": "kesa",
+      "meaning": {
+        "en": "this morning",
+        "vi": "sáng nay"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌅"
+    },
+    {
+      "kanji": "",
+      "kana": "こんばん",
+      "romaji": "konban",
+      "meaning": {
+        "en": "tonight",
+        "vi": "tối nay"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌃"
+    },
+    {
+      "kanji": "",
+      "kana": "ゆうべ",
+      "romaji": "yuube",
+      "meaning": {
+        "en": "last night",
+        "vi": "tối hôm qua"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌙"
+    },
+    {
+      "kanji": "休み",
+      "kana": "やすみ",
+      "romaji": "yasumi",
+      "meaning": {
+        "en": "rest (noun)",
+        "vi": "nghỉ ngơi (danh từ)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌴"
+    },
+    {
+      "kanji": "昼休み",
+      "kana": "ひるやすみ",
+      "romaji": "hiruyasumi",
+      "meaning": {
+        "en": "lunch break",
+        "vi": "nghỉ trưa"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🍱"
+    },
+    {
+      "kanji": "毎朝",
+      "kana": "まいあさ",
+      "romaji": "maiasa",
+      "meaning": {
+        "en": "every morning",
+        "vi": "mỗi sáng"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌅"
+    },
+    {
+      "kanji": "毎晩",
+      "kana": "まいばん",
+      "romaji": "maiban",
+      "meaning": {
+        "en": "every night",
+        "vi": "mỗi tối"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌃"
+    },
+    {
+      "kanji": "毎日",
+      "kana": "まいにち",
+      "romaji": "mainichi",
+      "meaning": {
+        "en": "every day",
+        "vi": "mỗi ngày"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📅"
+    },
+    {
+      "kanji": "",
+      "kana": "ペキン",
+      "romaji": "Pekin",
+      "meaning": {
+        "en": "Beijing",
+        "vi": "Bắc Kinh"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🇨🇳"
+    },
+    {
+      "kanji": "",
+      "kana": "バンコク",
+      "romaji": "Bangkoku",
+      "meaning": {
+        "en": "Bangkok",
+        "vi": "Bangkok"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🇹🇭"
+    },
+    {
+      "kanji": "",
+      "kana": "ロンドン",
+      "romaji": "Rondon",
+      "meaning": {
+        "en": "London",
+        "vi": "Luân Đôn"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🇬🇧"
+    },
+    {
+      "kanji": "",
+      "kana": "ロサンゼルス",
+      "romaji": "Rosanzerusu",
+      "meaning": {
+        "en": "Los Angeles",
+        "vi": "Los Angeles"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🇺🇸"
+    },
+    {
+      "kanji": "大変ですね",
+      "kana": "たいへんですね",
+      "romaji": "taihen desu ne",
+      "meaning": {
+        "en": "It's tough, isn't it?",
+        "vi": "vất vả nhỉ"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "😓"
+    },
+    {
+      "kanji": "",
+      "kana": "ばんごうあんない",
+      "romaji": "bangou annai",
+      "meaning": {
+        "en": "directory assistance (phone number inquiry)",
+        "vi": "dịch vụ 116 (hỏi số điện thoại)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📞"
+    },
+    {
+      "kanji": "",
+      "kana": "おといあわせ",
+      "romaji": "otoiawase",
+      "meaning": {
+        "en": "the phone number you want to inquire about",
+        "vi": "(số điện thoại) bạn muốn biết / hỏi là"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "📞"
+    }
+  ]
+}

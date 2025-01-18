@@ -93,11 +93,14 @@ export function VocabStudy({ lessonData }: VocabStudyProps) {
       </CardHeader>
 
       <CardContent className="space-y-6">
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-3">
           <div className="text-xl font-medium">
             {currentWord.meaning[locale as "en" | "vi"]}
           </div>
-          <div className="text-sm text-muted-foreground">{t2("typeAnyForm")}</div>
+          <div className="text-xl">{currentWord.emoji}</div>
+          <div className="text-sm text-muted-foreground">
+            {t2("typeAnyForm")}
+          </div>
         </div>
 
         <div className="space-y-4">

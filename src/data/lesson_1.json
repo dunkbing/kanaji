@@ -2,8 +2,8 @@
   "id": "lesson_1",
   "number": 1,
   "title": {
-    "en": "Greetings and Basic Expressions",
-    "vi": "Chào hỏi và các biểu hiện cơ bản"
+    "en": "Introduction and Basic Greetings",
+    "vi": "Giới thiệu và Chào hỏi cơ bản"
   },
   "words": [
     {
@@ -12,109 +12,406 @@
       "romaji": "watashi",
       "meaning": {
         "en": "I, me",
-        "vi": "tôi"
+        "vi": "Tôi"
       },
-      "partOfSpeech": "pronoun"
+      "partOfSpeech": "pronoun",
+      "emoji": "👤"
     },
     {
-      "kanji": "学生",
-      "kana": "がくせい",
-      "romaji": "gakusei",
+      "kanji": "私たち",
+      "kana": "わたしたち",
+      "romaji": "watashitachi",
       "meaning": {
-        "en": "student",
-        "vi": "học sinh, sinh viên"
+        "en": "We, us",
+        "vi": "Chúng tôi"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "pronoun",
+      "emoji": "👥"
+    },
+    {
+      "kanji": "",
+      "kana": "あなた",
+      "romaji": "anata",
+      "meaning": {
+        "en": "You (singular)",
+        "vi": "Anh/chị, ông/bà, bạn (ngôi thứ 2 số ít)"
+      },
+      "partOfSpeech": "pronoun",
+      "emoji": "👤"
+    },
+    {
+      "kanji": "あの人",
+      "kana": "あのひと",
+      "romaji": "anohito",
+      "meaning": {
+        "en": "That person",
+        "vi": "Người kia"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🧑"
+    },
+    {
+      "kanji": "あの方",
+      "kana": "あのかた",
+      "romaji": "anokata",
+      "meaning": {
+        "en": "That person (polite)",
+        "vi": "Vị này (Lịch sự tương đương với あのひと)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🧑"
+    },
+    {
+      "kanji": "",
+      "kana": "みなさん",
+      "romaji": "minasan",
+      "meaning": {
+        "en": "Everyone, all of you",
+        "vi": "Các bạn, các anh, các chị, mọi người"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👥"
+    },
+    {
+      "kanji": "",
+      "kana": "～さん",
+      "romaji": "~san",
+      "meaning": {
+        "en": "Mr., Ms., Mrs. (polite suffix)",
+        "vi": "Anh ～, Chị ～, Ông ～, Bà ～ (cách gọi người khác 1 cách lịch sự)"
+      },
+      "partOfSpeech": "suffix",
+      "emoji": "👤"
+    },
+    {
+      "kanji": "",
+      "kana": "～ちゃん",
+      "romaji": "~chan",
+      "meaning": {
+        "en": "Little (used for girls or children)",
+        "vi": "Bé (dùng cho nữ) hoặc gọi thân mật cho trẻ con (cả nam lẫn nữ)"
+      },
+      "partOfSpeech": "suffix",
+      "emoji": "👧"
+    },
+    {
+      "kanji": "",
+      "kana": "～くん",
+      "romaji": "~kun",
+      "meaning": {
+        "en": "Little (used for boys or close friends)",
+        "vi": "Bé (dùng cho nam) hoặc gọi thân mật"
+      },
+      "partOfSpeech": "suffix",
+      "emoji": "👦"
+    },
+    {
+      "kanji": "～人",
+      "kana": "～じん",
+      "romaji": "~jin",
+      "meaning": {
+        "en": "Person from ~ (nationality)",
+        "vi": "Người nước ～"
+      },
+      "partOfSpeech": "suffix",
+      "emoji": "🌍"
     },
     {
       "kanji": "先生",
       "kana": "せんせい",
       "romaji": "sensei",
       "meaning": {
-        "en": "teacher",
-        "vi": "giáo viên"
+        "en": "Teacher",
+        "vi": "Giáo viên"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "noun",
+      "emoji": "👨‍🏫"
+    },
+    {
+      "kanji": "教師",
+      "kana": "きょうし",
+      "romaji": "kyoushi",
+      "meaning": {
+        "en": "Teacher (profession)",
+        "vi": "Giáo viên (dùng để nói đến nghề nghiệp)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👩‍🏫"
+    },
+    {
+      "kanji": "学生",
+      "kana": "がくせい",
+      "romaji": "gakusei",
+      "meaning": {
+        "en": "Student",
+        "vi": "Học sinh, sinh viên"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🎓"
     },
     {
       "kanji": "会社員",
       "kana": "かいしゃいん",
       "romaji": "kaishain",
       "meaning": {
-        "en": "office worker",
-        "vi": "nhân viên công ty"
+        "en": "Company employee",
+        "vi": "Nhân viên công ty"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "noun",
+      "emoji": "💼"
+    },
+    {
+      "kanji": "社員",
+      "kana": "～しゃいん",
+      "romaji": "~shain",
+      "meaning": {
+        "en": "Employee of ~ company",
+        "vi": "Nhân viên công ty ～"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "💼"
+    },
+    {
+      "kanji": "銀行員",
+      "kana": "ぎんこういん",
+      "romaji": "ginkouin",
+      "meaning": {
+        "en": "Bank employee",
+        "vi": "Nhân viên ngân hàng"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏦"
     },
     {
       "kanji": "医者",
       "kana": "いしゃ",
       "romaji": "isha",
       "meaning": {
-        "en": "doctor",
-        "vi": "bác sĩ"
+        "en": "Doctor",
+        "vi": "Bác sĩ"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "noun",
+      "emoji": "👨‍⚕️"
     },
     {
-      "kanji": "はい",
+      "kanji": "研究者",
+      "kana": "けんきゅうしゃ",
+      "romaji": "kenkyuusha",
+      "meaning": {
+        "en": "Researcher",
+        "vi": "Nhà nghiên cứu"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🔬"
+    },
+    {
+      "kanji": "",
+      "kana": "エンジニア",
+      "romaji": "enjinia",
+      "meaning": {
+        "en": "Engineer",
+        "vi": "Kỹ sư"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "👷"
+    },
+    {
+      "kanji": "大学",
+      "kana": "だいがく",
+      "romaji": "daigaku",
+      "meaning": {
+        "en": "University",
+        "vi": "Trường đại học"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏫"
+    },
+    {
+      "kanji": "病院",
+      "kana": "びょういん",
+      "romaji": "byouin",
+      "meaning": {
+        "en": "Hospital",
+        "vi": "Bệnh viện"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🏥"
+    },
+    {
+      "kanji": "電気",
+      "kana": "でんき",
+      "romaji": "denki",
+      "meaning": {
+        "en": "Electricity, electric light",
+        "vi": "Điện, đèn điện"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "💡"
+    },
+    {
+      "kanji": "誰",
+      "kana": "だれ（どなた）",
+      "romaji": "dare (donata)",
+      "meaning": {
+        "en": "Who (polite: donata)",
+        "vi": "Ai (ngài nào, vị nào)"
+      },
+      "partOfSpeech": "pronoun",
+      "emoji": "❓"
+    },
+    {
+      "kanji": "～歳",
+      "kana": "～さい",
+      "romaji": "~sai",
+      "meaning": {
+        "en": "Years old",
+        "vi": "Tuổi"
+      },
+      "partOfSpeech": "suffix",
+      "emoji": "🎂"
+    },
+    {
+      "kanji": "何歳",
+      "kana": "なんさい",
+      "romaji": "nansai",
+      "meaning": {
+        "en": "How old",
+        "vi": "Mấy tuổi"
+      },
+      "partOfSpeech": "question",
+      "emoji": "❓"
+    },
+    {
+      "kanji": "",
       "kana": "はい",
       "romaji": "hai",
       "meaning": {
-        "en": "yes",
-        "vi": "vâng, đúng"
+        "en": "Yes",
+        "vi": "Vâng"
       },
-      "partOfSpeech": "interjection"
+      "partOfSpeech": "interjection",
+      "emoji": "✅"
     },
     {
-      "kanji": "いいえ",
+      "kanji": "",
       "kana": "いいえ",
       "romaji": "iie",
       "meaning": {
-        "en": "no",
-        "vi": "không"
+        "en": "No",
+        "vi": "Không"
       },
-      "partOfSpeech": "interjection"
+      "partOfSpeech": "interjection",
+      "emoji": "❌"
     },
     {
-      "kanji": "アメリカ",
+      "kanji": "失礼ですが",
+      "kana": "しつれいですが",
+      "romaji": "shitsurei desu ga",
+      "meaning": {
+        "en": "Excuse me (when asking for something)",
+        "vi": "Xin lỗi (khi muốn nhờ ai việc gì đó)"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "🙏"
+    },
+    {
+      "kanji": "お名前は",
+      "kana": "おなまえは？",
+      "romaji": "onamae wa?",
+      "meaning": {
+        "en": "What is your name?",
+        "vi": "Bạn tên gì?"
+      },
+      "partOfSpeech": "question",
+      "emoji": "❓"
+    },
+    {
+      "kanji": "初めて",
+      "kana": "はじめまして。",
+      "romaji": "hajimemashite.",
+      "meaning": {
+        "en": "Nice to meet you (first meeting)",
+        "vi": "Chào lần đầu gặp nhau"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "👋"
+    },
+    {
+      "kanji": "どうぞよろしく「お願いします」。",
+      "kana": "どうぞよろしく[おねがいします]。",
+      "romaji": "douzo yoroshiku [onegaishimasu].",
+      "meaning": {
+        "en": "Nice to meet you (formal)",
+        "vi": "Rất hân hạnh được làm quen"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "🙏"
+    },
+    {
+      "kanji": "",
+      "kana": "こちらは～さんです。",
+      "romaji": "kochira wa ~san desu.",
+      "meaning": {
+        "en": "This is Mr./Ms. ~",
+        "vi": "Đây là ngài"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "👤"
+    },
+    {
+      "kanji": "～から来ました",
+      "kana": "～からきました。",
+      "romaji": "~kara kimashita.",
+      "meaning": {
+        "en": "I came from ~",
+        "vi": "Đến từ ～"
+      },
+      "partOfSpeech": "phrase",
+      "emoji": "🌍"
+    },
+    {
+      "kanji": "",
       "kana": "アメリカ",
       "romaji": "amerika",
       "meaning": {
         "en": "America",
-        "vi": "nước Mỹ"
+        "vi": "Mỹ"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "noun",
+      "emoji": "🇺🇸"
     },
     {
-      "kanji": "イギリス",
+      "kanji": "",
       "kana": "イギリス",
       "romaji": "igirisu",
       "meaning": {
         "en": "United Kingdom",
-        "vi": "nước Anh"
+        "vi": "Anh"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "noun",
+      "emoji": "🇬🇧"
     },
     {
-      "kanji": "中国",
-      "kana": "ちゅうごく",
-      "romaji": "chuugoku",
+      "kanji": "",
+      "kana": "インド",
+      "romaji": "indo",
       "meaning": {
-        "en": "China",
-        "vi": "Trung Quốc"
+        "en": "India",
+        "vi": "Ấn Độ"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "noun",
+      "emoji": "🇮🇳"
     },
     {
-      "kanji": "日本",
-      "kana": "にほん",
-      "romaji": "nihon",
+      "kanji": "",
+      "kana": "インドネシア",
+      "romaji": "indoneshia",
       "meaning": {
-        "en": "Japan",
-        "vi": "Nhật Bản"
+        "en": "Indonesia",
+        "vi": "Indonesia"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "noun",
+      "emoji": "🇮🇩"
     },
     {
       "kanji": "韓国",
@@ -124,47 +421,85 @@
         "en": "South Korea",
         "vi": "Hàn Quốc"
       },
-      "partOfSpeech": "noun"
+      "partOfSpeech": "noun",
+      "emoji": "🇰🇷"
     },
     {
-      "kanji": "こんにちは",
-      "kana": "こんにちは",
-      "romaji": "konnichiwa",
+      "kanji": "",
+      "kana": "タイ",
+      "romaji": "tai",
       "meaning": {
-        "en": "hello, good afternoon",
-        "vi": "xin chào"
+        "en": "Thailand",
+        "vi": "Thái Lan"
       },
-      "partOfSpeech": "phrase"
+      "partOfSpeech": "noun",
+      "emoji": "🇹🇭"
     },
     {
-      "kanji": "ありがとう",
-      "kana": "ありがとう",
-      "romaji": "arigatou",
+      "kanji": "中国",
+      "kana": "ちゅうごく",
+      "romaji": "chuugoku",
       "meaning": {
-        "en": "thank you",
-        "vi": "cảm ơn"
+        "en": "China",
+        "vi": "Trung Quốc"
       },
-      "partOfSpeech": "phrase"
+      "partOfSpeech": "noun",
+      "emoji": "🇨🇳"
     },
     {
-      "kanji": "すみません",
-      "kana": "すみません",
-      "romaji": "sumimasen",
+      "kanji": "",
+      "kana": "ドイツ",
+      "romaji": "doitsu",
       "meaning": {
-        "en": "excuse me, sorry",
-        "vi": "xin lỗi"
+        "en": "Germany",
+        "vi": "Đức"
       },
-      "partOfSpeech": "phrase"
+      "partOfSpeech": "noun",
+      "emoji": "🇩🇪"
     },
     {
-      "kanji": "お願いします",
-      "kana": "おねがいします",
-      "romaji": "onegaishimasu",
+      "kanji": "日本",
+      "kana": "にほん",
+      "romaji": "nihon",
       "meaning": {
-        "en": "please",
-        "vi": "xin vui lòng"
+        "en": "Japan",
+        "vi": "Nhật"
       },
-      "partOfSpeech": "phrase"
+      "partOfSpeech": "noun",
+      "emoji": "🇯🇵"
+    },
+    {
+      "kanji": "",
+      "kana": "フランス",
+      "romaji": "furansu",
+      "meaning": {
+        "en": "France",
+        "vi": "Pháp"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🇫🇷"
+    },
+    {
+      "kanji": "",
+      "kana": "ブラジル",
+      "romaji": "burajiru",
+      "meaning": {
+        "en": "Brazil",
+        "vi": "Brazil"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🇧🇷"
+    },
+    {
+      "kanji": "さくら大学",
+      "kana": "さくらだいがく",
+      "romaji": "sakura daigaku",
+      "meaning": {
+        "en": "Sakura University",
+        "vi": "Trường ĐH Sakura (Hoa Anh Đào)"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🎓"
     }
   ]
 }

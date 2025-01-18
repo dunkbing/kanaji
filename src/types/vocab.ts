@@ -8,6 +8,7 @@ export interface VocabWord {
     vi: string;       // Vietnamese meaning
   };
   partOfSpeech: string; // e.g., noun, verb, adjective
+  emoji: string;
 }
 
 export interface VocabLesson {
