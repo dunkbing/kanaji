@@ -28,7 +28,8 @@
       "study": "Study",
       "enterRomaji": "Enter romaji",
       "showAnswer": "Show Answer",
-      "score": "Score"
+      "score": "Score",
+      "noCharactersSelected": "No characters selected"
     }
   },
   "minna-vocab": {

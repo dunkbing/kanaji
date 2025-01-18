@@ -9,13 +9,13 @@ import { ArrowLeft, Book } from "lucide-react";
 import Link from "next/link";
 import { VocabWord, VocabLesson } from "@/types/vocab";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 interface VocabStudyProps {
   lessonData: VocabLesson;
-  lang: string;
 }
 
-export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
+export function VocabStudy({ lessonData }: VocabStudyProps) {
   const t = useTranslations("minna-vocab");
   const t2 = useTranslations("minna-vocab.study");
   const [words, setWords] = useState<VocabWord[]>([]);
@@ -24,6 +24,7 @@ export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
   const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [shake, setShake] = useState(false);
+  const { locale } = useParams<{ locale: string }>();
 
   useEffect(() => {
     const shuffled = [...lessonData.words].sort(() => Math.random() - 0.5);
@@ -75,7 +76,7 @@ export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
       <CardHeader className="flex-row justify-between items-center">
         <CardTitle className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild className="h-8 w-8">
-            <Link href={`/${lang}/minna-vocab/${lessonData.id}`}>
+            <Link href={`/${locale}/minna-vocab/${lessonData.id}`}>
               <ArrowLeft className="h-4 w-4" />
             </Link>
           </Button>
@@ -94,7 +95,7 @@ export function VocabStudy({ lessonData, lang }: VocabStudyProps) {
       <CardContent className="space-y-6">
         <div className="text-center space-y-4">
           <div className="text-xl font-medium">
-            {currentWord.meaning[lang as "en" | "vi"]}
+            {currentWord.meaning[locale as "en" | "vi"]}
           </div>
           <div className="text-sm text-muted-foreground">{t2("typeAnyForm")}</div>
         </div>

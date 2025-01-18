@@ -28,7 +28,8 @@
       "study": "Học",
       "enterRomaji": "Nhập romaji",
       "showAnswer": "Hiện đáp án",
-      "score": "Điểm số"
+      "score": "Điểm số",
+      "noCharactersSelected": "Chưa chọn ký tự nào để học"
     }
   },
   "minna-vocab": {
