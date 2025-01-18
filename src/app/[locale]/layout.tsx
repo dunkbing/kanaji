@@ -1,10 +1,12 @@
-import MobileLayout from "@/components/mobile-layout";
-import { routing } from "@/i18n/routing";
-import { generatePageMetadata } from "@/lib/metadata";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
+
+import MobileLayout from "@/components/mobile-layout";
+import { routing } from "@/i18n/routing";
+import { generatePageMetadata } from "@/lib/metadata";
 
 export async function generateMetadata({
   params,
@@ -41,6 +43,7 @@ export default async function LangLayout({
         <NextIntlClientProvider messages={messages}>
           <MobileLayout>{children}</MobileLayout>
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
