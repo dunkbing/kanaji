@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#fef6f9"/>
+
+  <!-- Japanese pattern -->
+  <defs>
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="#f5d0fe"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#dots)"/>
+
+  <!-- Main card -->
+  <rect x="300" y="165" width="600" height="300" rx="24" fill="white" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.1))"/>
+
+  <!-- Logo and text -->
+  <g transform="translate(350, 215)">
+    <!-- Logo square -->
+    <rect width="80" height="80" rx="16" fill="hsl(316, 72%, 86%)"/>
+    <text x="40" y="55" text-anchor="middle" font-size="48" font-family="'Noto Sans JP'" fill="hsl(322, 16%, 35%)">あ</text>
+
+    <!-- App name and description -->
+    <text x="100" y="45" font-size="48" font-weight="bold" fill="hsl(322, 16%, 35%)" dx="20">Kanaji</text>
+    <text x="100" y="75" font-size="24" fill="hsl(322, 25%, 45%)" dx="20">Learn Hiragana & Katakana</text>
+  </g>
+
+  <!-- Sample characters -->
+  <g transform="translate(350, 335)" fill="hsl(322, 16%, 35%)">
+    <g transform="translate(0, 0)">
+      <text font-family="'Noto Sans JP'" font-size="32">ひ</text>
+      <text y="30" font-size="16">hi</text>
+    </g>
+    <g transform="translate(80, 0)">
+      <text font-family="'Noto Sans JP'" font-size="32">ら</text>
+      <text y="30" font-size="16">ra</text>
+    </g>
+    <g transform="translate(160, 0)">
+      <text font-family="'Noto Sans JP'" font-size="32">が</text>
+      <text y="30" font-size="16">ga</text>
+    </g>
+    <g transform="translate(240, 0)">
+      <text font-family="'Noto Sans JP'" font-size="32">な</text>
+      <text y="30" font-size="16">na</text>
+    </g>
+  </g>
+</svg>
