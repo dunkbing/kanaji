@@ -1,0 +1,343 @@
+{
+  "id": "lesson_7",
+  "number": 7,
+  "title": { "en": "Actions and Tools", "vi": "Hoạt động và công cụ" },
+  "words": [
+    {
+      "kanji": "切る",
+      "kana": "きる",
+      "romaji": "kiru",
+      "meaning": { "en": "to cut", "vi": "cắt" },
+      "partOfSpeech": "verb",
+      "emoji": "✂️"
+    },
+    {
+      "kanji": "送る",
+      "kana": "おくる",
+      "romaji": "okuru",
+      "meaning": { "en": "to send", "vi": "gửi" },
+      "partOfSpeech": "verb",
+      "emoji": "📬"
+    },
+    {
+      "kanji": "",
+      "kana": "あげる",
+      "romaji": "ageru",
+      "meaning": { "en": "to give (to others)", "vi": "tặng" },
+      "partOfSpeech": "verb",
+      "emoji": "🎁"
+    },
+    {
+      "kanji": "",
+      "kana": "もらう",
+      "romaji": "morau",
+      "meaning": { "en": "to receive", "vi": "nhận" },
+      "partOfSpeech": "verb",
+      "emoji": "🤲"
+    },
+    {
+      "kanji": "貸す",
+      "kana": "かす",
+      "romaji": "kasu",
+      "meaning": { "en": "to lend", "vi": "cho mượn" },
+      "partOfSpeech": "verb",
+      "emoji": "💰"
+    },
+    {
+      "kanji": "借りる",
+      "kana": "かりる",
+      "romaji": "kariru",
+      "meaning": { "en": "to borrow", "vi": "mượn" },
+      "partOfSpeech": "verb",
+      "emoji": "🙋"
+    },
+    {
+      "kanji": "",
+      "kana": "かける",
+      "romaji": "kakeru",
+      "meaning": { "en": "to wear, to put on", "vi": "mang" },
+      "partOfSpeech": "verb",
+      "emoji": "👓"
+    },
+    {
+      "kanji": "手",
+      "kana": "て",
+      "romaji": "te",
+      "meaning": { "en": "hand", "vi": "tay" },
+      "partOfSpeech": "noun",
+      "emoji": "🤚"
+    },
+    {
+      "kanji": "",
+      "kana": "はし",
+      "romaji": "hashi",
+      "meaning": { "en": "bridge", "vi": "cầu" },
+      "partOfSpeech": "noun",
+      "emoji": "🌉"
+    },
+    {
+      "kanji": "",
+      "kana": "スプーン",
+      "romaji": "supūn",
+      "meaning": { "en": "spoon", "vi": "muỗng" },
+      "partOfSpeech": "noun",
+      "emoji": "🥄"
+    },
+    {
+      "kanji": "",
+      "kana": "ナイフ",
+      "romaji": "naifu",
+      "meaning": { "en": "knife", "vi": "con dao" },
+      "partOfSpeech": "noun",
+      "emoji": "🔪"
+    },
+    {
+      "kanji": "",
+      "kana": "フォーク",
+      "romaji": "fōku",
+      "meaning": { "en": "fork", "vi": "nĩa" },
+      "partOfSpeech": "noun",
+      "emoji": "🍴"
+    },
+    {
+      "kanji": "",
+      "kana": "はさみ",
+      "romaji": "hasami",
+      "meaning": { "en": "scissors", "vi": "cái kéo" },
+      "partOfSpeech": "noun",
+      "emoji": "✂️"
+    },
+    {
+      "kanji": "",
+      "kana": "ファクス",
+      "romaji": "fakusu",
+      "meaning": { "en": "fax machine", "vi": "máy fax" },
+      "partOfSpeech": "noun",
+      "emoji": "📠"
+    },
+    {
+      "kanji": "",
+      "kana": "ワープロ",
+      "romaji": "wāpuro",
+      "meaning": { "en": "word processor", "vi": "máy đánh chữ" },
+      "partOfSpeech": "noun",
+      "emoji": "⌨️"
+    },
+    {
+      "kanji": "",
+      "kana": "パソコン",
+      "romaji": "pasokon",
+      "meaning": { "en": "personal computer", "vi": "máy tính" },
+      "partOfSpeech": "noun",
+      "emoji": "💻"
+    },
+    {
+      "kanji": "",
+      "kana": "パンチ",
+      "romaji": "panchi",
+      "meaning": { "en": "hole puncher", "vi": "cái đục lỗ" },
+      "partOfSpeech": "noun",
+      "emoji": "🕳️"
+    },
+    {
+      "kanji": "",
+      "kana": "ホッチキス",
+      "romaji": "hotchikisu",
+      "meaning": { "en": "stapler", "vi": "cái dập ghim" },
+      "partOfSpeech": "noun",
+      "emoji": "📎"
+    },
+    {
+      "kanji": "",
+      "kana": "セロテープ",
+      "romaji": "serotēpu",
+      "meaning": { "en": "clear tape", "vi": "băng dính" },
+      "partOfSpeech": "noun",
+      "emoji": "📍"
+    },
+    {
+      "kanji": "",
+      "kana": "けしゴム",
+      "romaji": "keshigomu",
+      "meaning": { "en": "eraser", "vi": "cục tẩy" },
+      "partOfSpeech": "noun",
+      "emoji": "🧮"
+    },
+    {
+      "kanji": "",
+      "kana": "かみ",
+      "romaji": "kami",
+      "meaning": { "en": "hair", "vi": "tóc" },
+      "partOfSpeech": "noun",
+      "emoji": "💇"
+    },
+    {
+      "kanji": "花",
+      "kana": "はな",
+      "romaji": "hana",
+      "meaning": { "en": "flower", "vi": "hoa" },
+      "partOfSpeech": "noun",
+      "emoji": "🌸"
+    },
+    {
+      "kanji": "",
+      "kana": "シャツ",
+      "romaji": "shatsu",
+      "meaning": { "en": "shirt", "vi": "áo sơ mi" },
+      "partOfSpeech": "noun",
+      "emoji": "👔"
+    },
+    {
+      "kanji": "",
+      "kana": "プレゼント",
+      "romaji": "purezento",
+      "meaning": { "en": "present, gift", "vi": "quà tặng" },
+      "partOfSpeech": "noun",
+      "emoji": "🎁"
+    },
+    {
+      "kanji": "荷物",
+      "kana": "にもつ",
+      "romaji": "nimotsu",
+      "meaning": { "en": "baggage, luggage", "vi": "hàng hóa" },
+      "partOfSpeech": "noun",
+      "emoji": "🧳"
+    },
+    {
+      "kanji": "お金",
+      "kana": "おかね",
+      "romaji": "okane",
+      "meaning": { "en": "money", "vi": "tiền" },
+      "partOfSpeech": "noun",
+      "emoji": "💴"
+    },
+    {
+      "kanji": "",
+      "kana": "きっぷ",
+      "romaji": "kippu",
+      "meaning": { "en": "ticket", "vi": "vé (tàu, xe)" },
+      "partOfSpeech": "noun",
+      "emoji": "🎫"
+    },
+    {
+      "kanji": "",
+      "kana": "クリスマス",
+      "romaji": "kurisumasu",
+      "meaning": { "en": "Christmas", "vi": "Lễ Giáng sinh" },
+      "partOfSpeech": "noun",
+      "emoji": "🎄"
+    },
+    {
+      "kanji": "父",
+      "kana": "ちち",
+      "romaji": "chichi",
+      "meaning": { "en": "father (humble)", "vi": "cha mình" },
+      "partOfSpeech": "noun",
+      "emoji": "👨"
+    },
+    {
+      "kanji": "母",
+      "kana": "はは",
+      "romaji": "haha",
+      "meaning": { "en": "mother (humble)", "vi": "mẹ mình" },
+      "partOfSpeech": "noun",
+      "emoji": "👩"
+    },
+    {
+      "kanji": "",
+      "kana": "これから",
+      "romaji": "korekara",
+      "meaning": { "en": "from now on", "vi": "từ bây giờ" },
+      "partOfSpeech": "adverb",
+      "emoji": "⏰"
+    },
+    {
+      "kanji": "お父さん",
+      "kana": "おとうさん",
+      "romaji": "otōsan",
+      "meaning": { "en": "father (polite)", "vi": "cha (người khác)" },
+      "partOfSpeech": "noun",
+      "emoji": "👨"
+    },
+    {
+      "kanji": "お母さん",
+      "kana": "おかあさん",
+      "romaji": "okāsan",
+      "meaning": { "en": "mother (polite)", "vi": "mẹ (người khác)" },
+      "partOfSpeech": "noun",
+      "emoji": "👩"
+    },
+    {
+      "kanji": "",
+      "kana": "もう",
+      "romaji": "mō",
+      "meaning": { "en": "already", "vi": "đã rồi" },
+      "partOfSpeech": "adverb",
+      "emoji": "✅"
+    },
+    {
+      "kanji": "",
+      "kana": "まだ",
+      "romaji": "mada",
+      "meaning": { "en": "still, not yet", "vi": "vẫn còn, vẫn chưa" },
+      "partOfSpeech": "adverb",
+      "emoji": "⏳"
+    },
+    {
+      "kanji": "",
+      "kana": "ごめんなさい",
+      "romaji": "gomennasai",
+      "meaning": { "en": "I'm sorry", "vi": "xin lỗi" },
+      "partOfSpeech": "expression",
+      "emoji": "🙏"
+    },
+    {
+      "kanji": "",
+      "kana": "いらっしゃい",
+      "romaji": "irasshai",
+      "meaning": { "en": "welcome", "vi": "xin mời" },
+      "partOfSpeech": "expression",
+      "emoji": "👋"
+    },
+    {
+      "kanji": "",
+      "kana": "いってきます",
+      "romaji": "ittekimasu",
+      "meaning": { "en": "I'm leaving (will return)", "vi": "tôi đi đây" },
+      "partOfSpeech": "expression",
+      "emoji": "🚶"
+    },
+    {
+      "kanji": "",
+      "kana": "しつれします",
+      "romaji": "shitsureishimasu",
+      "meaning": { "en": "excuse me", "vi": "xin thất lễ" },
+      "partOfSpeech": "expression",
+      "emoji": "🙇"
+    },
+    {
+      "kanji": "旅行",
+      "kana": "りょこう",
+      "romaji": "ryokō",
+      "meaning": { "en": "travel, trip", "vi": "du lịch" },
+      "partOfSpeech": "noun",
+      "emoji": "✈️"
+    },
+    {
+      "kanji": "お土産",
+      "kana": "おみやげ",
+      "romaji": "omiyage",
+      "meaning": { "en": "souvenir", "vi": "quà lưu niệm" },
+      "partOfSpeech": "noun",
+      "emoji": "🎋"
+    },
+    {
+      "kanji": "",
+      "kana": "ヨーロッパ",
+      "romaji": "yōroppa",
+      "meaning": { "en": "Europe", "vi": "Châu Âu" },
+      "partOfSpeech": "noun",
+      "emoji": "🌍"
+    }
+  ]
+}

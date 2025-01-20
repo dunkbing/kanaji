@@ -1,0 +1,437 @@
+{
+  "id": "lesson_6",
+  "number": 6,
+  "title": { "en": "Food and Drinks", "vi": "Đồ ăn và đồ uống" },
+  "words": [
+    {
+      "kanji": "食べます",
+      "kana": "たべます",
+      "romaji": "tabemasu",
+      "meaning": { "en": "to eat", "vi": "ăn" },
+      "partOfSpeech": "verb",
+      "emoji": "🍴"
+    },
+    {
+      "kanji": "飲みます",
+      "kana": "のみます",
+      "romaji": "nomimasu",
+      "meaning": { "en": "to drink", "vi": "uống" },
+      "partOfSpeech": "verb",
+      "emoji": "🥤"
+    },
+    {
+      "kanji": "吸います",
+      "kana": "すいます",
+      "romaji": "suimasu",
+      "meaning": { "en": "to smoke (cigarette)", "vi": "hút [thuốc lá]" },
+      "partOfSpeech": "verb",
+      "emoji": "🚬"
+    },
+    {
+      "kanji": "見ます",
+      "kana": "みます",
+      "romaji": "mimasu",
+      "meaning": {
+        "en": "to see, to watch, to look at",
+        "vi": "xem, nhìn, trông"
+      },
+      "partOfSpeech": "verb",
+      "emoji": "👀"
+    },
+    {
+      "kanji": "聞きます",
+      "kana": "ききます",
+      "romaji": "kikimasu",
+      "meaning": { "en": "to listen, to hear", "vi": "nghe" },
+      "partOfSpeech": "verb",
+      "emoji": "👂"
+    },
+    {
+      "kanji": "読みます",
+      "kana": "よみます",
+      "romaji": "yomimasu",
+      "meaning": { "en": "to read", "vi": "đọc" },
+      "partOfSpeech": "verb",
+      "emoji": "📖"
+    },
+    {
+      "kanji": "書きます",
+      "kana": "かきます",
+      "romaji": "kakimasu",
+      "meaning": { "en": "to write, to draw", "vi": "viết, vẽ" },
+      "partOfSpeech": "verb",
+      "emoji": "✍️"
+    },
+    {
+      "kanji": "買います",
+      "kana": "かいます",
+      "romaji": "kaimasu",
+      "meaning": { "en": "to buy", "vi": "mua" },
+      "partOfSpeech": "verb",
+      "emoji": "🛍️"
+    },
+    {
+      "kanji": "撮ります",
+      "kana": "とります",
+      "romaji": "torimasu",
+      "meaning": { "en": "to take (photo)", "vi": "chụp [ảnh]" },
+      "partOfSpeech": "verb",
+      "emoji": "📸"
+    },
+    {
+      "kanji": "",
+      "kana": "します",
+      "romaji": "shimasu",
+      "meaning": { "en": "to do", "vi": "làm" },
+      "partOfSpeech": "verb",
+      "emoji": "🔧"
+    },
+    {
+      "kanji": "会います",
+      "kana": "あいます",
+      "romaji": "aimasu",
+      "meaning": { "en": "to meet (with friends)", "vi": "gặp [bạn]" },
+      "partOfSpeech": "verb",
+      "emoji": "🤝"
+    },
+    {
+      "kanji": "",
+      "kana": "ごはん",
+      "romaji": "gohan",
+      "meaning": { "en": "rice, meal", "vi": "cơm, bữa ăn" },
+      "partOfSpeech": "noun",
+      "emoji": "🍚"
+    },
+    {
+      "kanji": "朝ごはん",
+      "kana": "あさごはん",
+      "romaji": "asagohan",
+      "meaning": { "en": "breakfast", "vi": "cơm sáng" },
+      "partOfSpeech": "noun",
+      "emoji": "🌅"
+    },
+    {
+      "kanji": "昼ごはん",
+      "kana": "ひるごはん",
+      "romaji": "hirugohan",
+      "meaning": { "en": "lunch", "vi": "cơm trưa" },
+      "partOfSpeech": "noun",
+      "emoji": "🌞"
+    },
+    {
+      "kanji": "晩ごはん",
+      "kana": "ばんごはん",
+      "romaji": "bangohan",
+      "meaning": { "en": "dinner", "vi": "cơm tối" },
+      "partOfSpeech": "noun",
+      "emoji": "🌙"
+    },
+    {
+      "kanji": "",
+      "kana": "パン",
+      "romaji": "pan",
+      "meaning": { "en": "bread", "vi": "bánh mì" },
+      "partOfSpeech": "noun",
+      "emoji": "🍞"
+    },
+    {
+      "kanji": "卵",
+      "kana": "たまご",
+      "romaji": "tamago",
+      "meaning": { "en": "egg", "vi": "trứng" },
+      "partOfSpeech": "noun",
+      "emoji": "🥚"
+    },
+    {
+      "kanji": "肉",
+      "kana": "にく",
+      "romaji": "niku",
+      "meaning": { "en": "meat", "vi": "thịt" },
+      "partOfSpeech": "noun",
+      "emoji": "🍖"
+    },
+    {
+      "kanji": "魚",
+      "kana": "さかな",
+      "romaji": "sakana",
+      "meaning": { "en": "fish", "vi": "cá" },
+      "partOfSpeech": "noun",
+      "emoji": "🐟"
+    },
+    {
+      "kanji": "野菜",
+      "kana": "やさい",
+      "romaji": "yasai",
+      "meaning": { "en": "vegetables", "vi": "rau" },
+      "partOfSpeech": "noun",
+      "emoji": "🥬"
+    },
+    {
+      "kanji": "果物",
+      "kana": "くだもの",
+      "romaji": "kudamono",
+      "meaning": { "en": "fruit", "vi": "hoa quả, trái cây" },
+      "partOfSpeech": "noun",
+      "emoji": "🍎"
+    },
+    {
+      "kanji": "水",
+      "kana": "みず",
+      "romaji": "mizu",
+      "meaning": { "en": "water", "vi": "nước" },
+      "partOfSpeech": "noun",
+      "emoji": "💧"
+    },
+    {
+      "kanji": "お茶",
+      "kana": "おちゃ",
+      "romaji": "ocha",
+      "meaning": { "en": "tea (general)", "vi": "trà (nói chung)" },
+      "partOfSpeech": "noun",
+      "emoji": "🍵"
+    },
+    {
+      "kanji": "紅茶",
+      "kana": "こうちゃ",
+      "romaji": "koucha",
+      "meaning": { "en": "black tea", "vi": "trà đen" },
+      "partOfSpeech": "noun",
+      "emoji": "☕"
+    },
+    {
+      "kanji": "牛乳",
+      "kana": "ぎゅうにゅう",
+      "romaji": "gyuunyuu",
+      "meaning": { "en": "milk", "vi": "sữa bò" },
+      "partOfSpeech": "noun",
+      "emoji": "🥛"
+    },
+    {
+      "kanji": "",
+      "kana": "ジュース",
+      "romaji": "juusu",
+      "meaning": { "en": "juice", "vi": "nước hoa quả" },
+      "partOfSpeech": "noun",
+      "emoji": "🧃"
+    },
+    {
+      "kanji": "",
+      "kana": "ビール",
+      "romaji": "biiru",
+      "meaning": { "en": "beer", "vi": "bia" },
+      "partOfSpeech": "noun",
+      "emoji": "🍺"
+    },
+    {
+      "kanji": "お酒",
+      "kana": "おさけ",
+      "romaji": "osake",
+      "meaning": { "en": "alcohol, sake", "vi": "rượu, rượu sake" },
+      "partOfSpeech": "noun",
+      "emoji": "🍶"
+    },
+    {
+      "kanji": "",
+      "kana": "ビデオ",
+      "romaji": "bideo",
+      "meaning": { "en": "video", "vi": "video, băng video, đầu video" },
+      "partOfSpeech": "noun",
+      "emoji": "📼"
+    },
+    {
+      "kanji": "映画",
+      "kana": "えいが",
+      "romaji": "eiga",
+      "meaning": { "en": "movie, film", "vi": "phim, điện ảnh" },
+      "partOfSpeech": "noun",
+      "emoji": "🎬"
+    },
+    {
+      "kanji": "",
+      "kana": "ＣＤ",
+      "romaji": "shiidii",
+      "meaning": { "en": "CD", "vi": "đĩa CD" },
+      "partOfSpeech": "noun",
+      "emoji": "💿"
+    },
+    {
+      "kanji": "手紙",
+      "kana": "てがみ",
+      "romaji": "tegami",
+      "meaning": { "en": "letter", "vi": "thư" },
+      "partOfSpeech": "noun",
+      "emoji": "✉️"
+    },
+    {
+      "kanji": "",
+      "kana": "レポート",
+      "romaji": "repooto",
+      "meaning": { "en": "report", "vi": "báo cáo" },
+      "partOfSpeech": "noun",
+      "emoji": "📊"
+    },
+    {
+      "kanji": "写真",
+      "kana": "しゃしん",
+      "romaji": "shashin",
+      "meaning": { "en": "photograph", "vi": "ảnh" },
+      "partOfSpeech": "noun",
+      "emoji": "📷"
+    },
+    {
+      "kanji": "店",
+      "kana": "みせ",
+      "romaji": "mise",
+      "meaning": { "en": "shop, store", "vi": "cửa hàng, tiệm" },
+      "partOfSpeech": "noun",
+      "emoji": "🏪"
+    },
+    {
+      "kanji": "",
+      "kana": "レストラン",
+      "romaji": "resutoran",
+      "meaning": { "en": "restaurant", "vi": "nhà hàng" },
+      "partOfSpeech": "noun",
+      "emoji": "🍽️"
+    },
+    {
+      "kanji": "庭",
+      "kana": "にわ",
+      "romaji": "niwa",
+      "meaning": { "en": "garden", "vi": "vườn" },
+      "partOfSpeech": "noun",
+      "emoji": "🌳"
+    },
+    {
+      "kanji": "宿題",
+      "kana": "しゅくだい",
+      "romaji": "shukudai",
+      "meaning": { "en": "homework", "vi": "bài tập về nhà" },
+      "partOfSpeech": "noun",
+      "emoji": "📚"
+    },
+    {
+      "kanji": "",
+      "kana": "テニス",
+      "romaji": "tenisu",
+      "meaning": { "en": "tennis", "vi": "quần vợt" },
+      "partOfSpeech": "noun",
+      "emoji": "🎾"
+    },
+    {
+      "kanji": "",
+      "kana": "サッカー",
+      "romaji": "sakkaa",
+      "meaning": { "en": "soccer", "vi": "bóng đá" },
+      "partOfSpeech": "noun",
+      "emoji": "⚽"
+    },
+    {
+      "kanji": "お花見",
+      "kana": "おはなみ",
+      "romaji": "ohanami",
+      "meaning": {
+        "en": "cherry blossom viewing",
+        "vi": "việc ngắm hoa anh đào"
+      },
+      "partOfSpeech": "noun",
+      "emoji": "🌸"
+    },
+    {
+      "kanji": "何",
+      "kana": "なに",
+      "romaji": "nani",
+      "meaning": { "en": "what", "vi": "cái gì, gì" },
+      "partOfSpeech": "pronoun",
+      "emoji": "❓"
+    },
+    {
+      "kanji": "",
+      "kana": "いっしょに",
+      "romaji": "isshoni",
+      "meaning": { "en": "together", "vi": "cùng, cùng nhau" },
+      "partOfSpeech": "adverb",
+      "emoji": "👥"
+    },
+    {
+      "kanji": "",
+      "kana": "ちょっと",
+      "romaji": "chotto",
+      "meaning": { "en": "a little, a bit", "vi": "một chút" },
+      "partOfSpeech": "adverb",
+      "emoji": "🤏"
+    },
+    {
+      "kanji": "",
+      "kana": "いつも",
+      "romaji": "itsumo",
+      "meaning": { "en": "always", "vi": "luôn luôn, lúc nào cũng" },
+      "partOfSpeech": "adverb",
+      "emoji": "🔄"
+    },
+    {
+      "kanji": "時々",
+      "kana": "ときどき",
+      "romaji": "tokidoki",
+      "meaning": { "en": "sometimes", "vi": "thỉnh thoảng" },
+      "partOfSpeech": "adverb",
+      "emoji": "⏰"
+    },
+    {
+      "kanji": "",
+      "kana": "それから",
+      "romaji": "sorekara",
+      "meaning": { "en": "after that, then", "vi": "sau đó, tiếp theo" },
+      "partOfSpeech": "conjunction",
+      "emoji": "➡️"
+    },
+    {
+      "kanji": "",
+      "kana": "ええ",
+      "romaji": "ee",
+      "meaning": { "en": "yes (casual)", "vi": "vâng, được" },
+      "partOfSpeech": "interjection",
+      "emoji": "👍"
+    },
+    {
+      "kanji": "",
+      "kana": "いいですね",
+      "romaji": "iidesune",
+      "meaning": { "en": "that's good/nice", "vi": "Được đấy nhỉ/hay quá" },
+      "partOfSpeech": "phrase",
+      "emoji": "👌"
+    },
+    {
+      "kanji": "",
+      "kana": "わかりました",
+      "romaji": "wakarimashita",
+      "meaning": { "en": "I understand", "vi": "Tôi hiểu rồi/vâng ạ" },
+      "partOfSpeech": "phrase",
+      "emoji": "💡"
+    },
+    {
+      "kanji": "何ですか",
+      "kana": "なんですか",
+      "romaji": "nandesuka",
+      "meaning": { "en": "what is it?", "vi": "Có gì đấy ạ?/cái gì vậy?" },
+      "partOfSpeech": "phrase",
+      "emoji": "❓"
+    },
+    {
+      "kanji": "",
+      "kana": "じゃ、また",
+      "romaji": "ja, mata",
+      "meaning": { "en": "well then, see you", "vi": "Hẹn gặp lại" },
+      "partOfSpeech": "phrase",
+      "emoji": "👋"
+    },
+    {
+      "kanji": "",
+      "kana": "メキシコ",
+      "romaji": "mekishiko",
+      "meaning": { "en": "Mexico", "vi": "Mexico" },
+      "partOfSpeech": "noun",
+      "emoji": "🇲🇽"
+    }
+  ]
+}

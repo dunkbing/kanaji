@@ -19,7 +19,7 @@ export default async function MinnaVocabPage({
     namespace: pageName,
   });
   const vocabLessons = await Promise.all(
-    Array.from({ length: 5 }, (_, i) => i + 1).map(async (i) => {
+    Array.from({ length: 7 }, (_, i) => i + 1).map(async (i) => {
       const lesson: VocabLesson = (await import(`@/data/lesson_${i}.json`))
         .default;
       return lesson;
