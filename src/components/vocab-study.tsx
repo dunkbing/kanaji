@@ -1,7 +1,6 @@
-// src/components/vocab-study.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,6 +25,7 @@ export function VocabStudy({ lessonData }: VocabStudyProps) {
   const [showAnswer, setShowAnswer] = useState(false);
   const [shake, setShake] = useState(false);
   const { locale } = useParams<{ locale: string }>();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const savedSelected = localStorage.getItem(`selectedWords_${lessonData.id}`) || '[]';
@@ -39,21 +39,51 @@ export function VocabStudy({ lessonData }: VocabStudyProps) {
         setWords(shuffled);
       } else {
         const shuffled = [...lessonData.words].sort(() => Math.random() - 0.5);
-                setWords(shuffled);
+        setWords(shuffled);
       }
     }
   }, [lessonData]);
 
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      // Check if Space is pressed while holding Control
+      if (e.ctrlKey && e.code === 'Space') {
+        e.preventDefault(); // Prevent space from being typed
+        handleShowAnswer();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
+
   const currentWord = words[currentIndex];
+
+  const normalizeText = (text: string): string => {
+    return text
+      .toLowerCase()
+      .trim()
+      // Remove brackets, periods and other punctuation
+      .replace(/[[\]「」。、]/g, '')
+      // Replace macrons with double vowels
+      .replace(/ō/g, 'ou')
+      .replace(/ū/g, 'uu')
+      // Remove spaces
+      .replace(/\s+/g, '');
+  };
 
   const isCorrect = (input: string): boolean => {
     if (!currentWord || !input) return false;
 
-    const normalizedInput = input.toLowerCase().trim();
+    const normalizedInput = normalizeText(input);
+    const normalizedRomaji = normalizeText(currentWord.romaji);
+    const normalizedKana = normalizeText(currentWord.kana);
+    const normalizedKanji = currentWord.kanji ? normalizeText(currentWord.kanji) : '';
+
     return (
-      normalizedInput === currentWord.romaji.toLowerCase() ||
-      normalizedInput === currentWord.kana ||
-      (!!currentWord.kanji && normalizedInput === currentWord.kanji)
+      normalizedInput === normalizedRomaji ||
+      normalizedInput === normalizedKana ||
+      (!!normalizedKanji && normalizedInput === normalizedKanji)
     );
   };
 
@@ -79,7 +109,10 @@ export function VocabStudy({ lessonData }: VocabStudyProps) {
   const handleShowAnswer = () => {
     setShowAnswer(true);
     setShake(true);
-    setTimeout(() => setShake(false), 500);
+    setTimeout(() => {
+      setShake(false);
+      inputRef.current?.focus();
+    }, 500);
   };
 
   if (!currentWord) {
@@ -131,6 +164,7 @@ export function VocabStudy({ lessonData }: VocabStudyProps) {
 
         <div className="space-y-4">
           <Input
+            ref={inputRef}
             type="text"
             placeholder={t2("enterJapanese")}
             value={input}
@@ -138,11 +172,12 @@ export function VocabStudy({ lessonData }: VocabStudyProps) {
             className={cn(shake && "animate-shake", "font-japanese")}
             autoComplete="off"
             lang="ja"
+            autoFocus
           />
 
           <div className="flex justify-between items-center">
             <Button variant="outline" onClick={handleShowAnswer}>
-              {t2("showAnswer")}
+              {t2("showAnswer")} (Ctrl + Space)
             </Button>
           </div>
 
