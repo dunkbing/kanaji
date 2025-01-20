@@ -416,7 +416,7 @@
     {
       "kanji": "",
       "kana": "～でございます",
-      "romaji": "~de gozaimasu",
+      "romaji": "de gozaimasu",
       "meaning": {
         "en": "polite form of 'desu'",
         "vi": "(cách nói lịch sự của 「です」)"
@@ -449,7 +449,7 @@
     {
       "kanji": "",
       "kana": "～をください",
-      "romaji": "~o kudasai",
+      "romaji": "o kudasai",
       "meaning": {
         "en": "please give me ~",
         "vi": "cho tôi [~]"
@@ -460,7 +460,7 @@
     {
       "kanji": "新大阪",
       "kana": "しんおおさか",
-      "romaji": "Shin-Osaka",
+      "romaji": "shinoosaka",
       "meaning": {
         "en": "Shin-Osaka (a train station in Osaka)",
         "vi": "tên một nhà ga ở Osaka"
@@ -471,7 +471,7 @@
     {
       "kanji": "",
       "kana": "イタリア",
-      "romaji": "Itaria",
+      "romaji": "itaria",
       "meaning": {
         "en": "Italy",
         "vi": "Ý"
@@ -482,24 +482,13 @@
     {
       "kanji": "",
       "kana": "スイス",
-      "romaji": "Suisu",
+      "romaji": "suisu",
       "meaning": {
         "en": "Switzerland",
         "vi": "Thụy Sĩ"
       },
       "partOfSpeech": "noun",
       "emoji": "🇨🇭"
-    },
-    {
-      "kanji": "",
-      "kana": "ＭＴ/ヨーネン/アキックス",
-      "romaji": "MT/Yonen/Akikkusu",
-      "meaning": {
-        "en": "fictional company names",
-        "vi": "tên các công ty giả tưởng"
-      },
-      "partOfSpeech": "noun",
-      "emoji": ""
     }
   ]
 }

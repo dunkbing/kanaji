@@ -152,7 +152,7 @@
     {
       "kanji": "",
       "kana": "カード",
-      "romaji": "kādo",
+      "romaji": "ka-do",
       "meaning": {
         "en": "Card",
         "vi": "Thẻ, cạc"
@@ -163,7 +163,7 @@
     {
       "kanji": "",
       "kana": "テレホンカード",
-      "romaji": "terefonkādo",
+      "romaji": "terefonka-do",
       "meaning": {
         "en": "Phone card",
         "vi": "Thẻ điện thoại"
@@ -185,7 +185,7 @@
     {
       "kanji": "",
       "kana": "ボールペン",
-      "romaji": "bōrupen",
+      "romaji": "bo-rupen",
       "meaning": {
         "en": "Ballpoint pen",
         "vi": "Bút bi"
@@ -196,7 +196,7 @@
     {
       "kanji": "",
       "kana": "シャープペンシル",
-      "romaji": "shāpupenshiru",
+      "romaji": "sha-pupenshiru",
       "meaning": {
         "en": "Mechanical pencil",
         "vi": "Bút chì kim, bút chì bấm"
@@ -251,7 +251,7 @@
     {
       "kanji": "",
       "kana": "[カセット] テープ",
-      "romaji": "[kasetto] tēpu",
+      "romaji": "[kasetto] te-pu",
       "meaning": {
         "en": "[Cassette] tape",
         "vi": "Băng [cát-xét]"
@@ -262,7 +262,7 @@
     {
       "kanji": "",
       "kana": "テープレコーダー",
-      "romaji": "tēpurekōdā",
+      "romaji": "te-purekōdā",
       "meaning": {
         "en": "Tape recorder",
         "vi": "Máy ghi âm"
@@ -306,7 +306,7 @@
     {
       "kanji": "",
       "kana": "コンピュータ",
-      "romaji": "konpyūta",
+      "romaji": "konpyuuta",
       "meaning": {
         "en": "Computer",
         "vi": "Máy vi tính"
@@ -317,7 +317,7 @@
     {
       "kanji": "自動車",
       "kana": "じどうしゃ",
-      "romaji": "jidōsha",
+      "romaji": "jidousha",
       "meaning": {
         "en": "Car",
         "vi": "Ô tô, xe hơi"
@@ -350,7 +350,7 @@
     {
       "kanji": "",
       "kana": "チョコレート",
-      "romaji": "chokorēto",
+      "romaji": "chokore-to",
       "meaning": {
         "en": "Chocolate",
         "vi": "Chocolate"
@@ -361,7 +361,7 @@
     {
       "kanji": "",
       "kana": "コーヒー",
-      "romaji": "kōhī",
+      "romaji": "ko-hi-",
       "meaning": {
         "en": "Coffee",
         "vi": "Cà phê"
@@ -394,7 +394,7 @@
     {
       "kanji": "∼語",
       "kana": "∼ご",
-      "romaji": "~go",
+      "romaji": "go",
       "meaning": {
         "en": "~ language",
         "vi": "Tiếng~"
@@ -416,7 +416,7 @@
     {
       "kanji": "",
       "kana": "そう",
-      "romaji": "sō",
+      "romaji": "sou",
       "meaning": {
         "en": "That's right",
         "vi": "Đúng vậy"
@@ -438,7 +438,7 @@
     {
       "kanji": "",
       "kana": "そうですか",
-      "romaji": "sō desu ka",
+      "romaji": "sou desu ka",
       "meaning": {
         "en": "Is that so?",
         "vi": "Thế à?"
@@ -449,7 +449,7 @@
     {
       "kanji": "",
       "kana": "あのう",
-      "romaji": "anō",
+      "romaji": "anou",
       "meaning": {
         "en": "Um... (used to show hesitation)",
         "vi": "À…(được sử dụng để thể hiện sự do dự)"
@@ -471,7 +471,7 @@
     {
       "kanji": "",
       "kana": "どうぞ",
-      "romaji": "dōzo",
+      "romaji": "douzo",
       "meaning": {
         "en": "Please",
         "vi": "Xin mời"
@@ -482,7 +482,7 @@
     {
       "kanji": "",
       "kana": "どうも",
-      "romaji": "dōmo",
+      "romaji": "doumo",
       "meaning": {
         "en": "Thank you",
         "vi": "Cảm ơn"
@@ -493,7 +493,7 @@
     {
       "kanji": "",
       "kana": "[どうも] ありがとう[ございます]",
-      "romaji": "[dōmo] arigatō [gozaimasu]",
+      "romaji": "[doumo] arigatou [gozaimasu]",
       "meaning": {
         "en": "Thank you very much",
         "vi": "Cảm ơn nhiều"

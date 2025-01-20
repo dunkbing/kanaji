@@ -12,12 +12,7 @@ export default async function MinnaVocabStudyPage({ params }: PageParams) {
 
   const lessonModule = await import(`@/data/${lesson}.json`);
 
-  const lessonData: VocabLesson = {
-    id: lessonModule.id,
-    number: lessonModule.number,
-    title: lessonModule.title,
-    words: lessonModule.words,
-  };
+  const lessonData: VocabLesson = lessonModule.default;
 
   return (
     <div className="container max-w-screen-sm mx-auto py-6">

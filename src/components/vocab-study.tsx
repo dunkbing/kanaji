@@ -1,3 +1,4 @@
+// src/components/vocab-study.tsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -27,9 +28,21 @@ export function VocabStudy({ lessonData }: VocabStudyProps) {
   const { locale } = useParams<{ locale: string }>();
 
   useEffect(() => {
-    const shuffled = [...lessonData.words].sort(() => Math.random() - 0.5);
-    setWords(shuffled);
-  }, [lessonData.words]);
+    const savedSelected = localStorage.getItem(`selectedWords_${lessonData.id}`) || '[]';
+    if (savedSelected) {
+      const selectedKeys = JSON.parse(savedSelected) as string[];
+      const selectedWords = lessonData.words.filter(word =>
+        selectedKeys.includes(`${word.kanji}_${word.kana}`)
+      );
+      if (selectedWords.length) {
+        const shuffled = [...selectedWords].sort(() => Math.random() - 0.5);
+        setWords(shuffled);
+      } else {
+        const shuffled = [...lessonData.words].sort(() => Math.random() - 0.5);
+                setWords(shuffled);
+      }
+    }
+  }, [lessonData]);
 
   const currentWord = words[currentIndex];
 
@@ -69,7 +82,20 @@ export function VocabStudy({ lessonData }: VocabStudyProps) {
     setTimeout(() => setShake(false), 500);
   };
 
-  if (!currentWord) return null;
+  if (!currentWord) {
+    return (
+      <Card>
+        <CardContent className="p-6 text-center">
+          <p className="text-muted-foreground">No words selected for study</p>
+          <Button asChild className="mt-4">
+            <Link href={`/${locale}/minna-vocab/${lessonData.id}`}>
+              Go Back
+            </Link>
+          </Button>
+        </CardContent>
+      </Card>
+    );
+  }
 
   return (
     <Card className="w-full">

@@ -162,8 +162,8 @@
     },
     {
       "kanji": "社員",
-      "kana": "～しゃいん",
-      "romaji": "~shain",
+      "kana": "しゃいん",
+      "romaji": "shain",
       "meaning": {
         "en": "Employee of ~ company",
         "vi": "Nhân viên công ty ～"
@@ -260,9 +260,9 @@
       "emoji": "❓"
     },
     {
-      "kanji": "～歳",
-      "kana": "～さい",
-      "romaji": "~sai",
+      "kanji": "歳",
+      "kana": "さい",
+      "romaji": "sai",
       "meaning": {
         "en": "Years old",
         "vi": "Tuổi"
@@ -359,9 +359,9 @@
       "emoji": "👤"
     },
     {
-      "kanji": "～から来ました",
-      "kana": "～からきました。",
-      "romaji": "~kara kimashita.",
+      "kanji": "から来ました",
+      "kana": "からきました。",
+      "romaji": "kara kimashita.",
       "meaning": {
         "en": "I came from ~",
         "vi": "Đến từ ～"
